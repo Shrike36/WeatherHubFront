@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  WeatherHub
+
+  Created by Дмитрий Демьянов on 06.05.2021.
+  
+*/
+
+// MARK: - Tabs
+
+"Tabs.location" = "Places";
+"Tabs.weather" = "Weather";
+"Tabs.more" = "More";
+
+// MARK: - Weather tab
+
+"Date.today" = "Today, ";
+"Date.tomorrow" = "Tomorrow, ";
