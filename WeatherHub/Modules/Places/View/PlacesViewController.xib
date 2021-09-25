@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customModule="Bethowen" customClass="PlacesViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlacesViewController" customModule="WeatherHub" customModuleProvider="target">
             <connections>
+                <outlet property="buttonBar" destination="lKn-DS-Kgl" id="6Q4-iz-gXA"/>
+                <outlet property="locationButton" destination="6yU-nO-4kK" id="3e5-hU-WCb"/>
+                <outlet property="mapButton" destination="qie-O6-x5I" id="bPU-BS-9sY"/>
+                <outlet property="placesTable" destination="TMi-gd-JKA" id="dGi-hX-efA"/>
+                <outlet property="searchButton" destination="XDC-yE-2af" id="PeM-hx-xJ4"/>
+                <outlet property="titleLabel" destination="two-ub-QuC" id="MiI-JN-Sz1"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Q3p-Ee-1CD"/>
             </connections>
         </placeholder>
@@ -17,7 +24,81 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="two-ub-QuC" userLabel="Title Label">
+                    <rect key="frame" x="16" y="16" width="288" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TMi-gd-JKA" userLabel="Places Table View">
+                    <rect key="frame" x="16" y="52.5" width="288" height="499.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lKn-DS-Kgl" userLabel="Buttom Bar View">
+                    <rect key="frame" x="32" y="476" width="256" height="60"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="dl6-tb-koz">
+                            <rect key="frame" x="16" y="0.0" width="224" height="60"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDC-yE-2af" userLabel="Search Button">
+                                    <rect key="frame" x="0.0" y="10" width="64" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="afh-Cg-h09"/>
+                                    </constraints>
+                                    <connections>
+                                        <action selector="handleSearchPressed:" destination="-1" eventType="touchUpInside" id="eRn-Hw-GsU"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qie-O6-x5I" userLabel="Map Button">
+                                    <rect key="frame" x="80" y="10" width="64" height="40"/>
+                                    <connections>
+                                        <action selector="handleMapPressed:" destination="-1" eventType="touchUpInside" id="fZV-jY-bkz"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6yU-nO-4kK" userLabel="Location Button">
+                                    <rect key="frame" x="160" y="10" width="64" height="40"/>
+                                    <connections>
+                                        <action selector="handleLocationPressed:" destination="-1" eventType="touchUpInside" id="6WU-6x-ZHn"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="6yU-nO-4kK" firstAttribute="height" secondItem="XDC-yE-2af" secondAttribute="height" id="CQa-J6-dz6"/>
+                                <constraint firstItem="qie-O6-x5I" firstAttribute="height" secondItem="XDC-yE-2af" secondAttribute="height" id="x3h-l7-PO4"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="dl6-tb-koz" firstAttribute="leading" secondItem="lKn-DS-Kgl" secondAttribute="leading" constant="16" id="KCI-6M-ajC"/>
+                        <constraint firstItem="dl6-tb-koz" firstAttribute="top" secondItem="lKn-DS-Kgl" secondAttribute="top" id="OAg-mh-6P1"/>
+                        <constraint firstAttribute="height" constant="60" id="nOb-U7-qxq"/>
+                        <constraint firstAttribute="trailing" secondItem="dl6-tb-koz" secondAttribute="trailing" constant="16" id="yoi-Wd-pKg"/>
+                        <constraint firstAttribute="bottom" secondItem="dl6-tb-koz" secondAttribute="bottom" id="z7l-Bx-NLL"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="9BR-UF-RxP"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="9BR-UF-RxP" firstAttribute="trailing" secondItem="lKn-DS-Kgl" secondAttribute="trailing" constant="32" id="0ee-ES-7BY"/>
+                <constraint firstItem="two-ub-QuC" firstAttribute="leading" secondItem="9BR-UF-RxP" secondAttribute="leading" constant="16" id="30l-XE-wq2"/>
+                <constraint firstItem="lKn-DS-Kgl" firstAttribute="leading" secondItem="9BR-UF-RxP" secondAttribute="leading" constant="32" id="4zm-8E-tOL"/>
+                <constraint firstItem="9BR-UF-RxP" firstAttribute="trailing" secondItem="two-ub-QuC" secondAttribute="trailing" constant="16" id="KX7-UZ-CNZ"/>
+                <constraint firstItem="two-ub-QuC" firstAttribute="top" secondItem="9BR-UF-RxP" secondAttribute="top" constant="16" id="LYo-MD-xEj"/>
+                <constraint firstItem="TMi-gd-JKA" firstAttribute="leading" secondItem="9BR-UF-RxP" secondAttribute="leading" constant="16" id="Ma9-63-5pK"/>
+                <constraint firstItem="9BR-UF-RxP" firstAttribute="bottom" secondItem="lKn-DS-Kgl" secondAttribute="bottom" constant="32" id="NZ3-Ou-dYr"/>
+                <constraint firstItem="9BR-UF-RxP" firstAttribute="trailing" secondItem="TMi-gd-JKA" secondAttribute="trailing" constant="16" id="Qd3-hv-2d3"/>
+                <constraint firstItem="TMi-gd-JKA" firstAttribute="top" secondItem="two-ub-QuC" secondAttribute="bottom" constant="16" id="eIr-4v-Bya"/>
+                <constraint firstItem="9BR-UF-RxP" firstAttribute="bottom" secondItem="TMi-gd-JKA" secondAttribute="bottom" constant="16" id="hT1-K3-eG3"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="137"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

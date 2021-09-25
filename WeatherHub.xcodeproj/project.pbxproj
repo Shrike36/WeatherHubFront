@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A19859926FFD34000809DA6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A19859826FFD34000809DA6 /* LocationManager.swift */; };
 		0A42DA42265A74440095DB1C /* DateCollecttionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A42DA40265A74440095DB1C /* DateCollecttionCell.swift */; };
 		0A42DA43265A74440095DB1C /* DateCollecttionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A42DA41265A74440095DB1C /* DateCollecttionCell.xib */; };
 		0A42DA4C265A852C0095DB1C /* DateStringBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A42DA4B265A852C0095DB1C /* DateStringBuilder.swift */; };
@@ -92,6 +93,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A19859826FFD34000809DA6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		0A42DA40265A74440095DB1C /* DateCollecttionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCollecttionCell.swift; sourceTree = "<group>"; };
 		0A42DA41265A74440095DB1C /* DateCollecttionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateCollecttionCell.xib; sourceTree = "<group>"; };
 		0A42DA4B265A852C0095DB1C /* DateStringBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateStringBuilder.swift; sourceTree = "<group>"; };
@@ -124,7 +126,6 @@
 		0A69888626434DC000F97207 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A69888F26434DC300F97207 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A69889226434DC300F97207 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0A69889426434DC300F97207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A69889926434DC400F97207 /* WeatherHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A69889D26434DC400F97207 /* WeatherHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherHubTests.swift; sourceTree = "<group>"; };
 		0A69889F26434DC400F97207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -210,6 +211,7 @@
 			children = (
 				0A42DA4B265A852C0095DB1C /* DateStringBuilder.swift */,
 				0A42DA5D265AD7F60095DB1C /* TemperatureStringBuilder.swift */,
+				0A19859826FFD34000809DA6 /* LocationManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -307,7 +309,6 @@
 			children = (
 				0A69888626434DC000F97207 /* AppDelegate.swift */,
 				0A69889126434DC300F97207 /* LaunchScreen.storyboard */,
-				0A69889426434DC300F97207 /* Info.plist */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -858,6 +859,7 @@
 				0A7CEA7426498641008E2D2E /* PlacesViewController.swift in Sources */,
 				0A7CEA8726498641008E2D2E /* SettingsModuleTestConfigurator.swift in Sources */,
 				0A7CEA8126498641008E2D2E /* SettingsPresenter.swift in Sources */,
+				0A19859926FFD34000809DA6 /* LocationManager.swift in Sources */,
 				0A7CEA7C26498641008E2D2E /* WeatherViewInput.swift in Sources */,
 				0A7CEA8526498641008E2D2E /* SettingsViewController.swift in Sources */,
 				0A69888726434DC000F97207 /* AppDelegate.swift in Sources */,
@@ -992,6 +994,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = WeatherHub/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1049,6 +1052,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = WeatherHub/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

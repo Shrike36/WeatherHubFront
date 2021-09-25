@@ -14,5 +14,9 @@
 
 // MARK: - Weather tab
 
+"Places.title" = "Мои места";
+
+// MARK: - Weather tab
+
 "Date.today" = "Сегодня, ";
 "Date.tomorrow" = "Завтра, ";

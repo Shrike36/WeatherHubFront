@@ -29,6 +29,10 @@ final class Coordinator {
 
     func showPlaces() {
         let components = PlacesModuleConfigurator().configure()
+        components.output.onAlertNeeded = { [weak self] alert in
+            self?.router.present(alert)
+        }
+
         router.setNavigationControllerRootModule(components.view, animated: false, hideBar: false)
     }
 

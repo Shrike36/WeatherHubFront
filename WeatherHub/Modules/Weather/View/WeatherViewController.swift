@@ -12,8 +12,6 @@ final class WeatherViewController: UIViewController {
 
     private enum Constants {
         static let addedTouchRadius: CGFloat = 7
-        static let titleFont: UIFont = .systemFont(ofSize: 36, weight: .bold)
-        static let dateFont: UIFont = .systemFont(ofSize: 24, weight: .medium)
 
         static let dateCellHorizontalInset: CGFloat = 16
         static let dateCellVerticalInset: CGFloat = 16
@@ -132,14 +130,14 @@ private extension WeatherViewController {
     }
 
     func configureCityLabel() {
-        cityLabel.font = Constants.titleFont
+        cityLabel.font = .systemFont(ofSize: 36, weight: .bold)
         cityLabel.adjustsFontSizeToFitWidth = true
         cityLabel.adjustsFontForContentSizeCategory = true
         cityLabel.textAlignment = .center
     }
 
     func configureDateLabel() {
-        dateLabel.font = Constants.dateFont
+        dateLabel.font = .systemFont(ofSize: 24, weight: .medium)
         dateLabel.textAlignment = .center
     }
 

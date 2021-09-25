@@ -10,7 +10,6 @@ final class TabBarViewController: UITabBarController {
 
     private enum Constants {
         static let itemsFont: UIFont = .systemFont(ofSize: 10, weight: .medium)
-        static let borderWidth: CGFloat = 1
     }
 
     // MARK: - Properties
@@ -58,6 +57,8 @@ private extension TabBarViewController {
         appearance.stackedLayoutAppearance.selected.iconColor = Asset.Colors.tint.color
 
         tabBar.standardAppearance = appearance
+
+        tabBar.clipsToBounds = true
     }
 
     func configureControllers() {

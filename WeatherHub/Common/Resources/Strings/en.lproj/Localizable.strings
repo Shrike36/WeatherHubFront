@@ -14,5 +14,9 @@
 
 // MARK: - Weather tab
 
+"Places.title" = "Saved places";
+
+// MARK: - Weather tab
+
 "Date.today" = "Today, ";
 "Date.tomorrow" = "Tomorrow, ";

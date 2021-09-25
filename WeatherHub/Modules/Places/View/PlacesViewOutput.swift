@@ -5,4 +5,6 @@
 protocol PlacesViewOutput {
     /// Notify presenter that view is ready
     func viewLoaded()
+    /// User requested current location
+    func handleLocationRequested()
 }
