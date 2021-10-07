@@ -18,7 +18,7 @@
 		0A42DA5B265AC7AB0095DB1C /* WeatherInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A42DA59265AC7AB0095DB1C /* WeatherInfoCell.swift */; };
 		0A42DA5C265AC7AB0095DB1C /* WeatherInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A42DA5A265AC7AB0095DB1C /* WeatherInfoCell.xib */; };
 		0A42DA5E265AD7F60095DB1C /* TemperatureStringBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A42DA5D265AD7F60095DB1C /* TemperatureStringBuilder.swift */; };
-		0A5137B126472B180026640F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5137B026472B180026640F /* Coordinator.swift */; };
+		0A5137B126472B180026640F /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5137B026472B180026640F /* MainCoordinator.swift */; };
 		0A51388226474A850026640F /* TabBarModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A51387726474A850026640F /* TabBarModuleOutput.swift */; };
 		0A51388326474A850026640F /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A51387826474A850026640F /* TabBarPresenter.swift */; };
 		0A51388426474A850026640F /* TabBarModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A51387926474A850026640F /* TabBarModuleInput.swift */; };
@@ -70,6 +70,32 @@
 		0A7CEA8626498641008E2D2E /* SettingsViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7CEA6A26498641008E2D2E /* SettingsViewInput.swift */; };
 		0A7CEA8726498641008E2D2E /* SettingsModuleTestConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7CEA6C26498641008E2D2E /* SettingsModuleTestConfigurator.swift */; };
 		0A7CEA8826498641008E2D2E /* SettingsModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7CEA6D26498641008E2D2E /* SettingsModuleConfigurator.swift */; };
+		0A83EF2A270F0A00008D1BCF /* LocationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EF28270F0A00008D1BCF /* LocationCoordinator.swift */; };
+		0A83EF2B270F0A00008D1BCF /* LocationCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EF29270F0A00008D1BCF /* LocationCoordinatorOutput.swift */; };
+		0A83EF2E270F0A7D008D1BCF /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EF2D270F0A7D008D1BCF /* BaseCoordinator.swift */; };
+		0A83EF33270F144C008D1BCF /* PersonalCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EF31270F144C008D1BCF /* PersonalCoordinator.swift */; };
+		0A83EF34270F144C008D1BCF /* PersonalCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EF32270F144C008D1BCF /* PersonalCoordinatorOutput.swift */; };
+		0A83EF38270F1521008D1BCF /* WeatherCoordinatorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EF36270F1521008D1BCF /* WeatherCoordinatorOutput.swift */; };
+		0A83EF39270F1521008D1BCF /* WeatherCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EF37270F1521008D1BCF /* WeatherCoordinator.swift */; };
+		0A83EF47270F1651008D1BCF /* MapModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EF3C270F1651008D1BCF /* MapModuleOutput.swift */; };
+		0A83EF48270F1651008D1BCF /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EF3D270F1651008D1BCF /* MapPresenter.swift */; };
+		0A83EF49270F1651008D1BCF /* MapModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EF3E270F1651008D1BCF /* MapModuleInput.swift */; };
+		0A83EF4A270F1651008D1BCF /* MapViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EF40270F1651008D1BCF /* MapViewOutput.swift */; };
+		0A83EF4B270F1651008D1BCF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EF41270F1651008D1BCF /* MapViewController.swift */; };
+		0A83EF4C270F1651008D1BCF /* MapViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EF42270F1651008D1BCF /* MapViewInput.swift */; };
+		0A83EF4D270F1651008D1BCF /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A83EF43270F1651008D1BCF /* MapViewController.xib */; };
+		0A83EF4E270F1651008D1BCF /* MapModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EF45270F1651008D1BCF /* MapModuleConfigurator.swift */; };
+		0A83EF4F270F1651008D1BCF /* MapModuleTestConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EF46270F1651008D1BCF /* MapModuleTestConfigurator.swift */; };
+		0A83EF51270F57EC008D1BCF /* UIButton+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EF50270F57EC008D1BCF /* UIButton+Style.swift */; };
+		0A83EF5F270F91F4008D1BCF /* PlaceSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EF54270F91F4008D1BCF /* PlaceSearchPresenter.swift */; };
+		0A83EF60270F91F4008D1BCF /* PlaceSearchModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EF55270F91F4008D1BCF /* PlaceSearchModuleOutput.swift */; };
+		0A83EF61270F91F4008D1BCF /* PlaceSearchModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EF56270F91F4008D1BCF /* PlaceSearchModuleInput.swift */; };
+		0A83EF62270F91F4008D1BCF /* PlaceSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A83EF58270F91F4008D1BCF /* PlaceSearchViewController.xib */; };
+		0A83EF63270F91F4008D1BCF /* PlaceSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EF59270F91F4008D1BCF /* PlaceSearchViewController.swift */; };
+		0A83EF64270F91F4008D1BCF /* PlaceSearchViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EF5A270F91F4008D1BCF /* PlaceSearchViewInput.swift */; };
+		0A83EF65270F91F4008D1BCF /* PlaceSearchViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EF5B270F91F4008D1BCF /* PlaceSearchViewOutput.swift */; };
+		0A83EF66270F91F4008D1BCF /* PlaceSearchModuleTestConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EF5D270F91F4008D1BCF /* PlaceSearchModuleTestConfigurator.swift */; };
+		0A83EF67270F91F4008D1BCF /* PlaceSearchModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EF5E270F91F4008D1BCF /* PlaceSearchModuleConfigurator.swift */; };
 		0A998C222645982100555828 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A998C212645982100555828 /* Colors.xcassets */; };
 		1E4D6A807840188C56C824C4 /* Pods_WeatherHubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93F3333AAAB6EDD3F97176A /* Pods_WeatherHubTests.framework */; };
 		7C46264531DCC1AC9814A17F /* Pods_WeatherHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E134E0AC5E71F55FD2D2C6B4 /* Pods_WeatherHub.framework */; };
@@ -104,7 +130,7 @@
 		0A42DA59265AC7AB0095DB1C /* WeatherInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfoCell.swift; sourceTree = "<group>"; };
 		0A42DA5A265AC7AB0095DB1C /* WeatherInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherInfoCell.xib; sourceTree = "<group>"; };
 		0A42DA5D265AD7F60095DB1C /* TemperatureStringBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureStringBuilder.swift; sourceTree = "<group>"; };
-		0A5137B026472B180026640F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		0A5137B026472B180026640F /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		0A51387726474A850026640F /* TabBarModuleOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarModuleOutput.swift; sourceTree = "<group>"; };
 		0A51387826474A850026640F /* TabBarPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
 		0A51387926474A850026640F /* TabBarModuleInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarModuleInput.swift; sourceTree = "<group>"; };
@@ -161,6 +187,32 @@
 		0A7CEA6A26498641008E2D2E /* SettingsViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewInput.swift; sourceTree = "<group>"; };
 		0A7CEA6C26498641008E2D2E /* SettingsModuleTestConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsModuleTestConfigurator.swift; sourceTree = "<group>"; };
 		0A7CEA6D26498641008E2D2E /* SettingsModuleConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsModuleConfigurator.swift; sourceTree = "<group>"; };
+		0A83EF28270F0A00008D1BCF /* LocationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCoordinator.swift; sourceTree = "<group>"; };
+		0A83EF29270F0A00008D1BCF /* LocationCoordinatorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCoordinatorOutput.swift; sourceTree = "<group>"; };
+		0A83EF2D270F0A7D008D1BCF /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		0A83EF31270F144C008D1BCF /* PersonalCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalCoordinator.swift; sourceTree = "<group>"; };
+		0A83EF32270F144C008D1BCF /* PersonalCoordinatorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalCoordinatorOutput.swift; sourceTree = "<group>"; };
+		0A83EF36270F1521008D1BCF /* WeatherCoordinatorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCoordinatorOutput.swift; sourceTree = "<group>"; };
+		0A83EF37270F1521008D1BCF /* WeatherCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCoordinator.swift; sourceTree = "<group>"; };
+		0A83EF3C270F1651008D1BCF /* MapModuleOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapModuleOutput.swift; sourceTree = "<group>"; };
+		0A83EF3D270F1651008D1BCF /* MapPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
+		0A83EF3E270F1651008D1BCF /* MapModuleInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapModuleInput.swift; sourceTree = "<group>"; };
+		0A83EF40270F1651008D1BCF /* MapViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewOutput.swift; sourceTree = "<group>"; };
+		0A83EF41270F1651008D1BCF /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0A83EF42270F1651008D1BCF /* MapViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewInput.swift; sourceTree = "<group>"; };
+		0A83EF43270F1651008D1BCF /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		0A83EF45270F1651008D1BCF /* MapModuleConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapModuleConfigurator.swift; sourceTree = "<group>"; };
+		0A83EF46270F1651008D1BCF /* MapModuleTestConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapModuleTestConfigurator.swift; sourceTree = "<group>"; };
+		0A83EF50270F57EC008D1BCF /* UIButton+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Style.swift"; sourceTree = "<group>"; };
+		0A83EF54270F91F4008D1BCF /* PlaceSearchPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSearchPresenter.swift; sourceTree = "<group>"; };
+		0A83EF55270F91F4008D1BCF /* PlaceSearchModuleOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSearchModuleOutput.swift; sourceTree = "<group>"; };
+		0A83EF56270F91F4008D1BCF /* PlaceSearchModuleInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSearchModuleInput.swift; sourceTree = "<group>"; };
+		0A83EF58270F91F4008D1BCF /* PlaceSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaceSearchViewController.xib; sourceTree = "<group>"; };
+		0A83EF59270F91F4008D1BCF /* PlaceSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSearchViewController.swift; sourceTree = "<group>"; };
+		0A83EF5A270F91F4008D1BCF /* PlaceSearchViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSearchViewInput.swift; sourceTree = "<group>"; };
+		0A83EF5B270F91F4008D1BCF /* PlaceSearchViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSearchViewOutput.swift; sourceTree = "<group>"; };
+		0A83EF5D270F91F4008D1BCF /* PlaceSearchModuleTestConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSearchModuleTestConfigurator.swift; sourceTree = "<group>"; };
+		0A83EF5E270F91F4008D1BCF /* PlaceSearchModuleConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSearchModuleConfigurator.swift; sourceTree = "<group>"; };
 		0A998C212645982100555828 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		0AC81423C4FE29719A05FE86 /* Pods-WeatherHubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherHubTests.debug.xcconfig"; path = "Target Support Files/Pods-WeatherHubTests/Pods-WeatherHubTests.debug.xcconfig"; sourceTree = "<group>"; };
 		96FCE23662F13AC62C729575 /* Pods-WeatherHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherHub.release.xcconfig"; path = "Target Support Files/Pods-WeatherHub/Pods-WeatherHub.release.xcconfig"; sourceTree = "<group>"; };
@@ -255,11 +307,10 @@
 		0A5137AF26472AF70026640F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				0A5137B026472B180026640F /* Coordinator.swift */,
-				0A51387526474A850026640F /* TabBar */,
-				0A7CEA4726498641008E2D2E /* Places */,
-				0A7CEA5426498641008E2D2E /* Weather */,
-				0A7CEA6126498641008E2D2E /* Settings */,
+				0A83EF25270EFD93008D1BCF /* Main */,
+				0A83EF26270EFDB2008D1BCF /* Location */,
+				0A83EF35270F1521008D1BCF /* Weather */,
+				0A83EF27270EFDCC008D1BCF /* Personal */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -316,6 +367,7 @@
 		0A5138942647F83F0026640F /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				0A83EF2C270F0A63008D1BCF /* Base */,
 				0A42DA4A265A851B0095DB1C /* Utils */,
 				0A5138AF264800BA0026640F /* Routers */,
 				0A5138AE264800B30026640F /* Protocols */,
@@ -332,6 +384,7 @@
 				0A51389E2647F8C20026640F /* Foundation.swift */,
 				0A5138BA26482EEA0026640F /* UIApplication.swift */,
 				0A5138C9264832320026640F /* UINavigationController.swift */,
+				0A83EF50270F57EC008D1BCF /* UIButton+Style.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -569,6 +622,135 @@
 			path = Configurator;
 			sourceTree = "<group>";
 		};
+		0A83EF25270EFD93008D1BCF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0A51387526474A850026640F /* TabBar */,
+				0A5137B026472B180026640F /* MainCoordinator.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		0A83EF26270EFDB2008D1BCF /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				0A83EF28270F0A00008D1BCF /* LocationCoordinator.swift */,
+				0A83EF29270F0A00008D1BCF /* LocationCoordinatorOutput.swift */,
+				0A7CEA4726498641008E2D2E /* Places */,
+				0A83EF52270F91F4008D1BCF /* PlaceSearch */,
+				0A83EF3A270F1651008D1BCF /* Map */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		0A83EF27270EFDCC008D1BCF /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				0A83EF31270F144C008D1BCF /* PersonalCoordinator.swift */,
+				0A83EF32270F144C008D1BCF /* PersonalCoordinatorOutput.swift */,
+				0A7CEA6126498641008E2D2E /* Settings */,
+			);
+			path = Personal;
+			sourceTree = "<group>";
+		};
+		0A83EF2C270F0A63008D1BCF /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0A83EF2D270F0A7D008D1BCF /* BaseCoordinator.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		0A83EF35270F1521008D1BCF /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				0A7CEA5426498641008E2D2E /* Weather */,
+				0A83EF37270F1521008D1BCF /* WeatherCoordinator.swift */,
+				0A83EF36270F1521008D1BCF /* WeatherCoordinatorOutput.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		0A83EF3A270F1651008D1BCF /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				0A83EF3B270F1651008D1BCF /* Presenter */,
+				0A83EF3F270F1651008D1BCF /* View */,
+				0A83EF44270F1651008D1BCF /* Configurator */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		0A83EF3B270F1651008D1BCF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0A83EF3C270F1651008D1BCF /* MapModuleOutput.swift */,
+				0A83EF3D270F1651008D1BCF /* MapPresenter.swift */,
+				0A83EF3E270F1651008D1BCF /* MapModuleInput.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0A83EF3F270F1651008D1BCF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0A83EF40270F1651008D1BCF /* MapViewOutput.swift */,
+				0A83EF41270F1651008D1BCF /* MapViewController.swift */,
+				0A83EF42270F1651008D1BCF /* MapViewInput.swift */,
+				0A83EF43270F1651008D1BCF /* MapViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0A83EF44270F1651008D1BCF /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				0A83EF45270F1651008D1BCF /* MapModuleConfigurator.swift */,
+				0A83EF46270F1651008D1BCF /* MapModuleTestConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		0A83EF52270F91F4008D1BCF /* PlaceSearch */ = {
+			isa = PBXGroup;
+			children = (
+				0A83EF53270F91F4008D1BCF /* Presenter */,
+				0A83EF57270F91F4008D1BCF /* View */,
+				0A83EF5C270F91F4008D1BCF /* Configurator */,
+			);
+			path = PlaceSearch;
+			sourceTree = "<group>";
+		};
+		0A83EF53270F91F4008D1BCF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0A83EF54270F91F4008D1BCF /* PlaceSearchPresenter.swift */,
+				0A83EF55270F91F4008D1BCF /* PlaceSearchModuleOutput.swift */,
+				0A83EF56270F91F4008D1BCF /* PlaceSearchModuleInput.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0A83EF57270F91F4008D1BCF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0A83EF58270F91F4008D1BCF /* PlaceSearchViewController.xib */,
+				0A83EF59270F91F4008D1BCF /* PlaceSearchViewController.swift */,
+				0A83EF5A270F91F4008D1BCF /* PlaceSearchViewInput.swift */,
+				0A83EF5B270F91F4008D1BCF /* PlaceSearchViewOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0A83EF5C270F91F4008D1BCF /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				0A83EF5D270F91F4008D1BCF /* PlaceSearchModuleTestConfigurator.swift */,
+				0A83EF5E270F91F4008D1BCF /* PlaceSearchModuleConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
 		7E8B955B4C6719690D6CDCC0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -702,9 +884,11 @@
 				0A998C222645982100555828 /* Colors.xcassets in Resources */,
 				0A7CEA7B26498641008E2D2E /* WeatherViewController.xib in Resources */,
 				0A69889326434DC300F97207 /* LaunchScreen.storyboard in Resources */,
+				0A83EF4D270F1651008D1BCF /* MapViewController.xib in Resources */,
 				0A7CEA7126498641008E2D2E /* PlacesViewController.xib in Resources */,
 				0A6988DF264357EA00F97207 /* Localizable.strings in Resources */,
 				0A7CEA8426498641008E2D2E /* SettingsViewController.xib in Resources */,
+				0A83EF62270F91F4008D1BCF /* PlaceSearchViewController.xib in Resources */,
 				0A42DA5C265AC7AB0095DB1C /* WeatherInfoCell.xib in Resources */,
 				0A42DA43265A74440095DB1C /* DateCollecttionCell.xib in Resources */,
 				0A69889026434DC300F97207 /* Assets.xcassets in Resources */,
@@ -836,6 +1020,7 @@
 				0A51388A26474A850026640F /* TabBarModuleConfigurator.swift in Sources */,
 				0A5138C02648309F0026640F /* Presentable.swift in Sources */,
 				0A7CEA7226498641008E2D2E /* PlacesViewInput.swift in Sources */,
+				0A83EF49270F1651008D1BCF /* MapModuleInput.swift in Sources */,
 				0A7CEA8226498641008E2D2E /* SettingsModuleInput.swift in Sources */,
 				0A7CEA6E26498641008E2D2E /* PlacesModuleInput.swift in Sources */,
 				0A7CEA342648AAFA008E2D2E /* Strings.swift in Sources */,
@@ -843,40 +1028,63 @@
 				0A5138B6264801050026640F /* MainRouter.swift in Sources */,
 				0A51388826474A850026640F /* TabBarViewController.swift in Sources */,
 				0A5138BB26482EEB0026640F /* UIApplication.swift in Sources */,
+				0A83EF38270F1521008D1BCF /* WeatherCoordinatorOutput.swift in Sources */,
+				0A83EF2A270F0A00008D1BCF /* LocationCoordinator.swift in Sources */,
 				0A51388326474A850026640F /* TabBarPresenter.swift in Sources */,
 				0A7CEA8826498641008E2D2E /* SettingsModuleConfigurator.swift in Sources */,
 				0A7CEA7A26498641008E2D2E /* WeatherViewController.swift in Sources */,
 				0A42DA50265A91340095DB1C /* WeatherViewModel.swift in Sources */,
 				0A7CEA6F26498641008E2D2E /* PlacesModuleOutput.swift in Sources */,
+				0A83EF67270F91F4008D1BCF /* PlaceSearchModuleConfigurator.swift in Sources */,
 				0A7CEA352648AAFA008E2D2E /* Assets.swift in Sources */,
 				0A5138972647F85A0026640F /* UIViewController.swift in Sources */,
-				0A5137B126472B180026640F /* Coordinator.swift in Sources */,
+				0A83EF4F270F1651008D1BCF /* MapModuleTestConfigurator.swift in Sources */,
+				0A83EF4C270F1651008D1BCF /* MapViewInput.swift in Sources */,
+				0A5137B126472B180026640F /* MainCoordinator.swift in Sources */,
 				0A51388426474A850026640F /* TabBarModuleInput.swift in Sources */,
+				0A83EF5F270F91F4008D1BCF /* PlaceSearchPresenter.swift in Sources */,
 				0A51389F2647F8C20026640F /* Foundation.swift in Sources */,
 				0A51388526474A850026640F /* TabBarViewInput.swift in Sources */,
 				0A7CEA7026498641008E2D2E /* PlacesPresenter.swift in Sources */,
+				0A83EF66270F91F4008D1BCF /* PlaceSearchModuleTestConfigurator.swift in Sources */,
+				0A83EF63270F91F4008D1BCF /* PlaceSearchViewController.swift in Sources */,
 				0A42DA54265AAE410095DB1C /* DateViewModel.swift in Sources */,
 				0A7CEA7426498641008E2D2E /* PlacesViewController.swift in Sources */,
 				0A7CEA8726498641008E2D2E /* SettingsModuleTestConfigurator.swift in Sources */,
 				0A7CEA8126498641008E2D2E /* SettingsPresenter.swift in Sources */,
+				0A83EF61270F91F4008D1BCF /* PlaceSearchModuleInput.swift in Sources */,
 				0A19859926FFD34000809DA6 /* LocationManager.swift in Sources */,
+				0A83EF48270F1651008D1BCF /* MapPresenter.swift in Sources */,
+				0A83EF60270F91F4008D1BCF /* PlaceSearchModuleOutput.swift in Sources */,
 				0A7CEA7C26498641008E2D2E /* WeatherViewInput.swift in Sources */,
+				0A83EF4E270F1651008D1BCF /* MapModuleConfigurator.swift in Sources */,
+				0A83EF34270F144C008D1BCF /* PersonalCoordinatorOutput.swift in Sources */,
 				0A7CEA8526498641008E2D2E /* SettingsViewController.swift in Sources */,
 				0A69888726434DC000F97207 /* AppDelegate.swift in Sources */,
 				0A42DA4C265A852C0095DB1C /* DateStringBuilder.swift in Sources */,
 				0A7CEA7626498641008E2D2E /* PlacesModuleTestConfigurator.swift in Sources */,
 				0A51388626474A850026640F /* TabBarViewOutput.swift in Sources */,
+				0A83EF2E270F0A7D008D1BCF /* BaseCoordinator.swift in Sources */,
 				0A42DA5E265AD7F60095DB1C /* TemperatureStringBuilder.swift in Sources */,
+				0A83EF51270F57EC008D1BCF /* UIButton+Style.swift in Sources */,
+				0A83EF33270F144C008D1BCF /* PersonalCoordinator.swift in Sources */,
 				0A42DA52265A91460095DB1C /* WeatherConditions.swift in Sources */,
 				0A51388926474A850026640F /* TabBarModuleTestConfigurator.swift in Sources */,
 				0A5138C5264831C80026640F /* Closures.swift in Sources */,
 				0A5138CA264832320026640F /* UINavigationController.swift in Sources */,
 				0A42DA5B265AC7AB0095DB1C /* WeatherInfoCell.swift in Sources */,
+				0A83EF39270F1521008D1BCF /* WeatherCoordinator.swift in Sources */,
+				0A83EF2B270F0A00008D1BCF /* LocationCoordinatorOutput.swift in Sources */,
+				0A83EF4A270F1651008D1BCF /* MapViewOutput.swift in Sources */,
 				0A7CEA7E26498641008E2D2E /* WeatherModuleTestConfigurator.swift in Sources */,
+				0A83EF64270F91F4008D1BCF /* PlaceSearchViewInput.swift in Sources */,
 				0A7CEA7926498641008E2D2E /* WeatherPresenter.swift in Sources */,
 				0A7CEA8026498641008E2D2E /* SettingsModuleOutput.swift in Sources */,
+				0A83EF47270F1651008D1BCF /* MapModuleOutput.swift in Sources */,
 				0A51388226474A850026640F /* TabBarModuleOutput.swift in Sources */,
 				0A42DA42265A74440095DB1C /* DateCollecttionCell.swift in Sources */,
+				0A83EF4B270F1651008D1BCF /* MapViewController.swift in Sources */,
+				0A83EF65270F91F4008D1BCF /* PlaceSearchViewOutput.swift in Sources */,
 				0A7CEA7D26498641008E2D2E /* WeatherViewOutput.swift in Sources */,
 				0A7CEA7F26498641008E2D2E /* WeatherModuleConfigurator.swift in Sources */,
 				0A7CEA8626498641008E2D2E /* SettingsViewInput.swift in Sources */,

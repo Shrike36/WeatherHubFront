@@ -16,7 +16,11 @@
 
 "Places.title" = "Мои места";
 
-// MARK: - Weather tab
+// MARK: - Weather screen
 
 "Date.today" = "Сегодня, ";
 "Date.tomorrow" = "Завтра, ";
+
+// MARK: - Map screen
+
+"Map.select" = "Выбрать";

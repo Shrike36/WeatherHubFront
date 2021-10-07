@@ -18,6 +18,11 @@ internal enum L10n {
     internal static let tomorrow = L10n.tr("Localizable", "Date.tomorrow")
   }
 
+  internal enum Map {
+    /// Select
+    internal static let select = L10n.tr("Localizable", "Map.select")
+  }
+
   internal enum Places {
     /// Saved places
     internal static let title = L10n.tr("Localizable", "Places.title")

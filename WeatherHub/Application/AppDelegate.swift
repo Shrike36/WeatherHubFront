@@ -12,7 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    private lazy var coordinator = Coordinator()
+    private lazy var mainCoordinator = MainCoordinator()
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -32,6 +32,6 @@ private extension AppDelegate {
     }
 
     func runAppFlow() {
-        coordinator.showTabBar()
+        mainCoordinator.start()
     }
 }

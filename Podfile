@@ -17,7 +17,8 @@ target 'WeatherHub' do
   pod 'SurfUtils/LoadingView', :git => "https://github.com/surfstudio/iOS-Utils.git"
   pod 'SurfUtils/ItemsScrollManager', :git => "https://github.com/surfstudio/iOS-Utils.git"
 
-  pod 'ReactiveDataDisplayManager', "~> 7.0.0"
+  pod 'ReactiveDataDisplayManager', '~> 7.0.0'
+  pod 'NodeKit/UrlCache', :git => 'https://github.com/surfstudio/NodeKit', :tag => '3.2.0'
 
   target 'WeatherHubTests' do
     inherit! :search_paths

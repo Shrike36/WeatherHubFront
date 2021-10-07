@@ -108,7 +108,6 @@ final class LocationManager: NSObject {
         removeLocationObserver(observer: LocationObserver(identifier: observerID))
     }
 
-    // TODO: Настройте свои тексты или если используете Permission шаблон - дополните и замените на него
     func getPermissionCustomAlert() -> UIAlertController {
         let openSettings = UIAlertAction(title: "Настройки", style: .default) { _ in
             guard let url = URL(string: UIApplication.openSettingsURLString),

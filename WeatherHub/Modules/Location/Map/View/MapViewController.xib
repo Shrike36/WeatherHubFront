@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController" customModule="WeatherHub" customModuleProvider="target">
+            <connections>
+                <outlet property="actionButton" destination="FNl-L5-7fm" id="PCS-uj-jit"/>
+                <outlet property="mapView" destination="Bag-Os-av9" id="um6-bi-UR5"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Q3p-Ee-1CD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Bag-Os-av9">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </mapView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLW-sG-VOn" userLabel="Close Button">
+                    <rect key="frame" x="256" y="16" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="1KH-PJ-015"/>
+                        <constraint firstAttribute="width" constant="48" id="GSM-cC-xTR"/>
+                    </constraints>
+                    <connections>
+                        <action selector="handleClosePressed" destination="-1" eventType="touchUpInside" id="y8p-Zf-214"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNl-L5-7fm" userLabel="Action Button">
+                    <rect key="frame" x="16" y="490" width="288" height="62"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="62" id="Ehr-WC-LfQ"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="handleActionPressed" destination="-1" eventType="touchUpInside" id="StX-2L-wkO"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jLW-sG-VOn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="FGV-ln-MEG"/>
+                <constraint firstAttribute="bottomMargin" secondItem="FNl-L5-7fm" secondAttribute="bottom" constant="16" id="KUu-TD-dgK"/>
+                <constraint firstAttribute="trailing" secondItem="Bag-Os-av9" secondAttribute="trailing" id="OmP-ma-qFo"/>
+                <constraint firstAttribute="trailing" secondItem="jLW-sG-VOn" secondAttribute="trailing" constant="16" id="QLl-OL-JAb"/>
+                <constraint firstItem="FNl-L5-7fm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="QOX-IP-f4m"/>
+                <constraint firstAttribute="bottom" secondItem="Bag-Os-av9" secondAttribute="bottom" id="WzK-F6-ANh"/>
+                <constraint firstAttribute="trailingMargin" secondItem="FNl-L5-7fm" secondAttribute="trailing" id="Xyc-kZ-zpr"/>
+                <constraint firstItem="Bag-Os-av9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="oVb-Qw-DWa"/>
+                <constraint firstItem="Bag-Os-av9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="u1c-Pu-bvk"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="99"/>
+        </view>
+    </objects>
+</document>

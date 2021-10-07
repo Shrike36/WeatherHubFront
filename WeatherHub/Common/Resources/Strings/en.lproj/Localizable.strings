@@ -16,7 +16,11 @@
 
 "Places.title" = "Saved places";
 
-// MARK: - Weather tab
+// MARK: - Weather screen
 
 "Date.today" = "Today, ";
 "Date.tomorrow" = "Tomorrow, ";
+
+// MARK: - Map screen
+
+"Map.select" = "Select";
