@@ -4,4 +4,5 @@
 
 protocol PlaceSearchViewInput: AnyObject {
     func setupInitialState()
+    func fillResults(_ results: [SearchResult])
 }

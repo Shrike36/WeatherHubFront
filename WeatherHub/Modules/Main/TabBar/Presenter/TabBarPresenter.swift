@@ -21,6 +21,11 @@ final class TabBarPresenter: TabBarModuleOutput {
 // MARK: - TabBarModuleInput
 
 extension TabBarPresenter: TabBarModuleInput {
+
+    func selectTab(_ tab: MainTab) {
+        view?.selectTab(tab)
+    }
+
 }
 
 // MARK: - TabBarViewOutput

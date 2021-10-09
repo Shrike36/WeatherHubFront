@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchBar" customModule="SearchComponent">
+            <connections>
+                <outlet property="cancelButton" destination="Ri0-6h-SZF" id="aK4-IF-oJE"/>
+                <outlet property="clearButton" destination="zSn-YN-42I" id="4TM-2H-XWL"/>
+                <outlet property="containerRightConstraint" destination="ZCV-OH-m8s" id="cZr-j0-fWG"/>
+                <outlet property="containerView" destination="hyU-Bg-qqE" id="ZtZ-Uh-C4e"/>
+                <outlet property="searchIconImageView" destination="0i0-cO-Key" id="8dW-wy-fUs"/>
+                <outlet property="textField" destination="GbL-qm-oQ7" id="vnk-wS-MCo"/>
+                <outlet property="voiceButton" destination="BEC-kH-cWq" id="VgC-MU-aWw"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="36"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ri0-6h-SZF" customClass="CommonButton" customModule="SurfUtils">
+                    <rect key="frame" x="316" y="0.0" width="104" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="104" id="rqC-rW-vxF"/>
+                    </constraints>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" systemColor="systemBlueColor"/>
+                    </state>
+                    <connections>
+                        <action selector="cancel:" destination="-1" eventType="touchUpInside" id="1Ch-fY-O7i"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hyU-Bg-qqE">
+                    <rect key="frame" x="4" y="0.0" width="312" height="36"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0i0-cO-Key">
+                            <rect key="frame" x="12" y="10" width="16" height="16"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="16" id="cq0-nJ-XxI"/>
+                                <constraint firstAttribute="height" constant="16" id="ioQ-UJ-6WK"/>
+                            </constraints>
+                        </imageView>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GbL-qm-oQ7" customClass="SearchTextField" customModule="WeatherHub" customModuleProvider="target">
+                            <rect key="frame" x="38" y="0.0" width="234" height="36"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSn-YN-42I" customClass="CommonButton" customModule="SurfUtils">
+                            <rect key="frame" x="272" y="0.0" width="40" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="acE-qg-orD"/>
+                            </constraints>
+                            <state key="normal">
+                                <color key="titleColor" systemColor="systemBlueColor"/>
+                            </state>
+                            <connections>
+                                <action selector="clear:" destination="-1" eventType="touchUpInside" id="DW2-TW-Ie3"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEC-kH-cWq" userLabel="voice" customClass="CommonButton" customModule="SurfUtils">
+                            <rect key="frame" x="272" y="0.0" width="40" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="JSW-Do-P6g"/>
+                            </constraints>
+                            <connections>
+                                <action selector="voice:" destination="-1" eventType="touchUpInside" id="pJ2-F1-sMF"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="0i0-cO-Key" firstAttribute="centerY" secondItem="hyU-Bg-qqE" secondAttribute="centerY" id="1aL-wc-pRc"/>
+                        <constraint firstItem="zSn-YN-42I" firstAttribute="top" secondItem="hyU-Bg-qqE" secondAttribute="top" id="5Xm-Ji-VpR"/>
+                        <constraint firstAttribute="trailing" secondItem="BEC-kH-cWq" secondAttribute="trailing" id="78A-V6-Dpv"/>
+                        <constraint firstItem="0i0-cO-Key" firstAttribute="leading" secondItem="hyU-Bg-qqE" secondAttribute="leading" constant="12" id="Krc-fj-CMr"/>
+                        <constraint firstAttribute="bottom" secondItem="zSn-YN-42I" secondAttribute="bottom" id="LN5-zb-7Wk"/>
+                        <constraint firstItem="BEC-kH-cWq" firstAttribute="top" secondItem="hyU-Bg-qqE" secondAttribute="top" id="S53-0J-6t6"/>
+                        <constraint firstAttribute="bottom" secondItem="BEC-kH-cWq" secondAttribute="bottom" id="di3-BW-obT"/>
+                        <constraint firstAttribute="bottom" secondItem="GbL-qm-oQ7" secondAttribute="bottom" id="kc4-OO-Ny2"/>
+                        <constraint firstAttribute="height" constant="36" id="kfp-3U-3D5"/>
+                        <constraint firstItem="GbL-qm-oQ7" firstAttribute="top" secondItem="hyU-Bg-qqE" secondAttribute="top" id="lN1-5w-t6E"/>
+                        <constraint firstItem="BEC-kH-cWq" firstAttribute="leading" secondItem="GbL-qm-oQ7" secondAttribute="trailing" id="o0w-jL-dXX"/>
+                        <constraint firstAttribute="trailing" secondItem="zSn-YN-42I" secondAttribute="trailing" id="tjk-sd-qw5"/>
+                        <constraint firstItem="zSn-YN-42I" firstAttribute="leading" secondItem="GbL-qm-oQ7" secondAttribute="trailing" id="z9l-w3-INp"/>
+                        <constraint firstItem="GbL-qm-oQ7" firstAttribute="leading" secondItem="0i0-cO-Key" secondAttribute="trailing" constant="10" id="zkC-BX-IHn"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hyU-Bg-qqE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="4" id="0JW-Qa-3NX"/>
+                <constraint firstAttribute="bottom" secondItem="hyU-Bg-qqE" secondAttribute="bottom" id="JuQ-0T-bk4"/>
+                <constraint firstItem="Ri0-6h-SZF" firstAttribute="leading" secondItem="hyU-Bg-qqE" secondAttribute="trailing" id="VQ4-6x-3Mk"/>
+                <constraint firstItem="Ri0-6h-SZF" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="XiY-Cq-Jvb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hyU-Bg-qqE" secondAttribute="trailing" constant="4" id="ZCV-OH-m8s"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Ri0-6h-SZF" secondAttribute="bottom" id="hoV-j3-Yug"/>
+                <constraint firstItem="hyU-Bg-qqE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lvP-SJ-LMj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.25" y="-146.83098591549296"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

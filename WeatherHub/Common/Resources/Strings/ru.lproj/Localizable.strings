@@ -6,21 +6,37 @@
   
 */
 
+// MARK: - Common
+
+"Common.loading" = "Загрузка...";
+
+
 // MARK: - Tabs
 
 "Tabs.location" = "Места";
 "Tabs.weather" = "Погода";
 "Tabs.more" = "Ещё";
 
-// MARK: - Weather tab
+
+// MARK: - Places screen
 
 "Places.title" = "Мои места";
+"Places.error.title" = "Не удалось найти данные для этого места :(";
+"Places.error.advice" = "Попробуйте ещё раз или выберите другое место";
+
 
 // MARK: - Weather screen
 
 "Date.today" = "Сегодня, ";
 "Date.tomorrow" = "Завтра, ";
 
+
 // MARK: - Map screen
 
 "Map.select" = "Выбрать";
+
+
+// MARK: - Search screen
+
+"Search.search" = "Поиск";
+"Search.cancel" = "Отмена";

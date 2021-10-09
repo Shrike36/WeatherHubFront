@@ -35,6 +35,14 @@ extension TabBarViewController: TabBarViewInput {
         configureControllers()
     }
 
+    func selectTab(_ tab: MainTab) {
+        guard let view = viewControllers?[tab.rawValue], tabBarController(self, shouldSelect: view) else {
+            return
+        }
+        selectedIndex = tab.rawValue
+        tabBarController(self, didSelect: view)
+    }
+
 }
 
 private extension TabBarViewController {
@@ -84,6 +92,21 @@ private extension TabBarViewController {
 // MARK: - UITabBarControllerDelegate
 
 extension TabBarViewController: UITabBarControllerDelegate {
+
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        guard let fromView = selectedViewController?.view, let toView = viewController.view, fromView != toView else {
+            return true
+        }
+
+        UIView.transition(
+            from: fromView,
+            to: toView,
+            duration: 0.3,
+            options: [.transitionCrossDissolve]
+        )
+
+        return true
+    }
 
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         guard let tab = MainTab(rawValue: viewController.tabBarItem.tag) else {

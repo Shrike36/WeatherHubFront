@@ -6,21 +6,37 @@
   
 */
 
+// MARK: - Common
+
+"Common.loading" = "Loading...";
+
+
 // MARK: - Tabs
 
 "Tabs.location" = "Places";
 "Tabs.weather" = "Weather";
 "Tabs.more" = "More";
 
-// MARK: - Weather tab
+
+// MARK: - Places screen
 
 "Places.title" = "Saved places";
+"Places.error.title" = "Could not find data for this place :(";
+"Places.error.advice" = "Try again or select another place";
+
 
 // MARK: - Weather screen
 
 "Date.today" = "Today, ";
 "Date.tomorrow" = "Tomorrow, ";
 
+
 // MARK: - Map screen
 
 "Map.select" = "Select";
+
+
+// MARK: - Search screen
+
+"Search.search" = "Search";
+"Search.cancel" = "Cancel";

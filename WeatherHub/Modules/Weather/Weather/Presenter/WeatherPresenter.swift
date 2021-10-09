@@ -3,6 +3,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 final class WeatherPresenter: WeatherModuleOutput {
 
@@ -24,6 +25,10 @@ final class WeatherPresenter: WeatherModuleOutput {
 // MARK: - WeatherModuleInput
 
 extension WeatherPresenter: WeatherModuleInput {
+
+    func showWeather(for place: CLPlacemark) {
+    }
+
 }
 
 // MARK: - WeatherViewOutput

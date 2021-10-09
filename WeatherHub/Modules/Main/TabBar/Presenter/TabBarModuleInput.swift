@@ -3,4 +3,5 @@
 //
 
 protocol TabBarModuleInput: AnyObject {
+    func selectTab(_ tab: MainTab)
 }

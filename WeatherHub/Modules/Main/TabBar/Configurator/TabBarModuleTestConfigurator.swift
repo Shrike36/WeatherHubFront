@@ -7,7 +7,7 @@ import UIKit
 final class TabBarModuleTestConfigurator {
 
     func configure() -> (UIViewController, [AnyObject]) {
-        let (view, output) = TabBarModuleConfigurator().configure()
+        let (view, _, output) = TabBarModuleConfigurator().configure()
         return (view, [output])
     }
 

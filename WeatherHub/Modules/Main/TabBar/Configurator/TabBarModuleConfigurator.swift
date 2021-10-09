@@ -6,6 +6,7 @@ import UIKit
 
 typealias TabBarModuleComponents = (
     view: UIViewController,
+    input: TabBarModuleInput,
     output: TabBarModuleOutput
 )
 
@@ -18,7 +19,7 @@ final class TabBarModuleConfigurator {
         presenter.view = view
         view.output = presenter
 
-        return (view, presenter)
+        return (view, presenter, presenter)
     }
 
 }

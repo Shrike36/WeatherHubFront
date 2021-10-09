@@ -4,4 +4,6 @@
 
 protocol PlaceSearchViewOutput {
     func viewLoaded()
+    func inputChanged(text: String)
+    func resultSelected(at index: Int)
 }

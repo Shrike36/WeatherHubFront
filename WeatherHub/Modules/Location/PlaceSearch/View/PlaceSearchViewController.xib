@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customModule="Bethowen" customClass="PlaceSearchViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlaceSearchViewController" customModule="WeatherHub" customModuleProvider="target">
             <connections>
+                <outlet property="resultsTable" destination="bTb-KY-Suo" id="mj6-6n-NM5"/>
+                <outlet property="searchBar" destination="5Jb-IO-hv2" id="Mh0-W2-IND"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Q3p-Ee-1CD"/>
             </connections>
         </placeholder>
@@ -17,7 +20,36 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Jb-IO-hv2" customClass="SearchBar" customModule="WeatherHub" customModuleProvider="target">
+                    <rect key="frame" x="16" y="16" width="288" height="36"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="Kpd-3Q-ykJ"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bTb-KY-Suo">
+                    <rect key="frame" x="16" y="68" width="288" height="484"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="oRo-WG-Vpw"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="oRo-WG-Vpw" firstAttribute="bottom" secondItem="bTb-KY-Suo" secondAttribute="bottom" constant="16" id="7Qd-Ca-Xfc"/>
+                <constraint firstItem="bTb-KY-Suo" firstAttribute="leading" secondItem="oRo-WG-Vpw" secondAttribute="leading" constant="16" id="Keg-tX-004"/>
+                <constraint firstItem="oRo-WG-Vpw" firstAttribute="trailing" secondItem="bTb-KY-Suo" secondAttribute="trailing" constant="16" id="TcE-Nf-8CY"/>
+                <constraint firstItem="oRo-WG-Vpw" firstAttribute="trailing" secondItem="5Jb-IO-hv2" secondAttribute="trailing" constant="16" id="aqo-X2-3hA"/>
+                <constraint firstItem="5Jb-IO-hv2" firstAttribute="top" secondItem="oRo-WG-Vpw" secondAttribute="top" constant="16" id="hFn-3t-SXC"/>
+                <constraint firstItem="5Jb-IO-hv2" firstAttribute="leading" secondItem="oRo-WG-Vpw" secondAttribute="leading" constant="16" id="uPc-ir-b3p"/>
+                <constraint firstItem="bTb-KY-Suo" firstAttribute="top" secondItem="5Jb-IO-hv2" secondAttribute="bottom" constant="16" id="v4y-NV-q7B"/>
+            </constraints>
+            <point key="canvasLocation" x="53" y="115"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -96,7 +96,18 @@
 		0A83EF65270F91F4008D1BCF /* PlaceSearchViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EF5B270F91F4008D1BCF /* PlaceSearchViewOutput.swift */; };
 		0A83EF66270F91F4008D1BCF /* PlaceSearchModuleTestConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EF5D270F91F4008D1BCF /* PlaceSearchModuleTestConfigurator.swift */; };
 		0A83EF67270F91F4008D1BCF /* PlaceSearchModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EF5E270F91F4008D1BCF /* PlaceSearchModuleConfigurator.swift */; };
+		0A83EF9E270F9A90008D1BCF /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EF9C270F9A90008D1BCF /* SearchBar.swift */; };
+		0A83EF9F270F9A90008D1BCF /* SearchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A83EF9D270F9A90008D1BCF /* SearchBar.xib */; };
+		0A83EFA1270F9A96008D1BCF /* SearchBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EFA0270F9A96008D1BCF /* SearchBarExtension.swift */; };
+		0A83EFA4270F9AAA008D1BCF /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EFA3270F9AAA008D1BCF /* SearchTextField.swift */; };
 		0A998C222645982100555828 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A998C212645982100555828 /* Colors.xcassets */; };
+		0AD28E622710B148007EEEF2 /* SearchResultCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E602710B148007EEEF2 /* SearchResultCellTableViewCell.swift */; };
+		0AD28E632710B148007EEEF2 /* SearchResultCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD28E612710B148007EEEF2 /* SearchResultCellTableViewCell.xib */; };
+		0AD28E652710F309007EEEF2 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E642710F309007EEEF2 /* SearchResult.swift */; };
+		0AD28E672711ABD4007EEEF2 /* UIViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E662711ABD4007EEEF2 /* UIViewController+Loading.swift */; };
+		0AD28E6B2711AF0E007EEEF2 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E6A2711AF0E007EEEF2 /* LoadingView.swift */; };
+		0AD28E6D2711C25E007EEEF2 /* LoadingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E6C2711C25E007EEEF2 /* LoadingPresenter.swift */; };
+		0AD28E6F2711C55C007EEEF2 /* WeatherCoordinatorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E6E2711C55C007EEEF2 /* WeatherCoordinatorInput.swift */; };
 		1E4D6A807840188C56C824C4 /* Pods_WeatherHubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93F3333AAAB6EDD3F97176A /* Pods_WeatherHubTests.framework */; };
 		7C46264531DCC1AC9814A17F /* Pods_WeatherHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E134E0AC5E71F55FD2D2C6B4 /* Pods_WeatherHub.framework */; };
 /* End PBXBuildFile section */
@@ -213,8 +224,19 @@
 		0A83EF5B270F91F4008D1BCF /* PlaceSearchViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSearchViewOutput.swift; sourceTree = "<group>"; };
 		0A83EF5D270F91F4008D1BCF /* PlaceSearchModuleTestConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSearchModuleTestConfigurator.swift; sourceTree = "<group>"; };
 		0A83EF5E270F91F4008D1BCF /* PlaceSearchModuleConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceSearchModuleConfigurator.swift; sourceTree = "<group>"; };
+		0A83EF9C270F9A90008D1BCF /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		0A83EF9D270F9A90008D1BCF /* SearchBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchBar.xib; sourceTree = "<group>"; };
+		0A83EFA0270F9A96008D1BCF /* SearchBarExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarExtension.swift; sourceTree = "<group>"; };
+		0A83EFA3270F9AAA008D1BCF /* SearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		0A998C212645982100555828 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		0AC81423C4FE29719A05FE86 /* Pods-WeatherHubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherHubTests.debug.xcconfig"; path = "Target Support Files/Pods-WeatherHubTests/Pods-WeatherHubTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0AD28E602710B148007EEEF2 /* SearchResultCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCellTableViewCell.swift; sourceTree = "<group>"; };
+		0AD28E612710B148007EEEF2 /* SearchResultCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCellTableViewCell.xib; sourceTree = "<group>"; };
+		0AD28E642710F309007EEEF2 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		0AD28E662711ABD4007EEEF2 /* UIViewController+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loading.swift"; sourceTree = "<group>"; };
+		0AD28E6A2711AF0E007EEEF2 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		0AD28E6C2711C25E007EEEF2 /* LoadingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPresenter.swift; sourceTree = "<group>"; };
+		0AD28E6E2711C55C007EEEF2 /* WeatherCoordinatorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCoordinatorInput.swift; sourceTree = "<group>"; };
 		96FCE23662F13AC62C729575 /* Pods-WeatherHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherHub.release.xcconfig"; path = "Target Support Files/Pods-WeatherHub/Pods-WeatherHub.release.xcconfig"; sourceTree = "<group>"; };
 		D40B11A38FB72F3C2C1391F5 /* Pods-WeatherHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherHub.debug.xcconfig"; path = "Target Support Files/Pods-WeatherHub/Pods-WeatherHub.debug.xcconfig"; sourceTree = "<group>"; };
 		E134E0AC5E71F55FD2D2C6B4 /* Pods_WeatherHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -367,6 +389,7 @@
 		0A5138942647F83F0026640F /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				0AD28E682711AE8A007EEEF2 /* Reusable */,
 				0A83EF2C270F0A63008D1BCF /* Base */,
 				0A42DA4A265A851B0095DB1C /* Utils */,
 				0A5138AF264800BA0026640F /* Routers */,
@@ -380,11 +403,12 @@
 		0A5138952647F8460026640F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				0A5138962647F85A0026640F /* UIViewController.swift */,
 				0A51389E2647F8C20026640F /* Foundation.swift */,
 				0A5138BA26482EEA0026640F /* UIApplication.swift */,
-				0A5138C9264832320026640F /* UINavigationController.swift */,
 				0A83EF50270F57EC008D1BCF /* UIButton+Style.swift */,
+				0A5138C9264832320026640F /* UINavigationController.swift */,
+				0A5138962647F85A0026640F /* UIViewController.swift */,
+				0AD28E662711ABD4007EEEF2 /* UIViewController+Loading.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -394,6 +418,7 @@
 			children = (
 				0A5138B0264800F60026640F /* Router.swift */,
 				0A5138BF2648309F0026640F /* Presentable.swift */,
+				0AD28E6C2711C25E007EEEF2 /* LoadingPresenter.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -664,9 +689,10 @@
 		0A83EF35270F1521008D1BCF /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				0A7CEA5426498641008E2D2E /* Weather */,
 				0A83EF37270F1521008D1BCF /* WeatherCoordinator.swift */,
+				0AD28E6E2711C55C007EEEF2 /* WeatherCoordinatorInput.swift */,
 				0A83EF36270F1521008D1BCF /* WeatherCoordinatorOutput.swift */,
+				0A7CEA5426498641008E2D2E /* Weather */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -734,6 +760,9 @@
 		0A83EF57270F91F4008D1BCF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0AD28E5F2710B11B007EEEF2 /* SearchResultCell */,
+				0A83EFA2270F9A9B008D1BCF /* SearchTextField */,
+				0A83EF9B270F9A80008D1BCF /* SearchBar */,
 				0A83EF58270F91F4008D1BCF /* PlaceSearchViewController.xib */,
 				0A83EF59270F91F4008D1BCF /* PlaceSearchViewController.swift */,
 				0A83EF5A270F91F4008D1BCF /* PlaceSearchViewInput.swift */,
@@ -749,6 +778,50 @@
 				0A83EF5E270F91F4008D1BCF /* PlaceSearchModuleConfigurator.swift */,
 			);
 			path = Configurator;
+			sourceTree = "<group>";
+		};
+		0A83EF9B270F9A80008D1BCF /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				0A83EF9C270F9A90008D1BCF /* SearchBar.swift */,
+				0A83EF9D270F9A90008D1BCF /* SearchBar.xib */,
+				0A83EFA0270F9A96008D1BCF /* SearchBarExtension.swift */,
+			);
+			path = SearchBar;
+			sourceTree = "<group>";
+		};
+		0A83EFA2270F9A9B008D1BCF /* SearchTextField */ = {
+			isa = PBXGroup;
+			children = (
+				0A83EFA3270F9AAA008D1BCF /* SearchTextField.swift */,
+			);
+			path = SearchTextField;
+			sourceTree = "<group>";
+		};
+		0AD28E5F2710B11B007EEEF2 /* SearchResultCell */ = {
+			isa = PBXGroup;
+			children = (
+				0AD28E602710B148007EEEF2 /* SearchResultCellTableViewCell.swift */,
+				0AD28E612710B148007EEEF2 /* SearchResultCellTableViewCell.xib */,
+				0AD28E642710F309007EEEF2 /* SearchResult.swift */,
+			);
+			path = SearchResultCell;
+			sourceTree = "<group>";
+		};
+		0AD28E682711AE8A007EEEF2 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				0AD28E692711AE93007EEEF2 /* LoadingView */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		0AD28E692711AE93007EEEF2 /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				0AD28E6A2711AF0E007EEEF2 /* LoadingView.swift */,
+			);
+			path = LoadingView;
 			sourceTree = "<group>";
 		};
 		7E8B955B4C6719690D6CDCC0 /* Frameworks */ = {
@@ -886,9 +959,11 @@
 				0A69889326434DC300F97207 /* LaunchScreen.storyboard in Resources */,
 				0A83EF4D270F1651008D1BCF /* MapViewController.xib in Resources */,
 				0A7CEA7126498641008E2D2E /* PlacesViewController.xib in Resources */,
+				0A83EF9F270F9A90008D1BCF /* SearchBar.xib in Resources */,
 				0A6988DF264357EA00F97207 /* Localizable.strings in Resources */,
 				0A7CEA8426498641008E2D2E /* SettingsViewController.xib in Resources */,
 				0A83EF62270F91F4008D1BCF /* PlaceSearchViewController.xib in Resources */,
+				0AD28E632710B148007EEEF2 /* SearchResultCellTableViewCell.xib in Resources */,
 				0A42DA5C265AC7AB0095DB1C /* WeatherInfoCell.xib in Resources */,
 				0A42DA43265A74440095DB1C /* DateCollecttionCell.xib in Resources */,
 				0A69889026434DC300F97207 /* Assets.xcassets in Resources */,
@@ -1019,7 +1094,9 @@
 			files = (
 				0A51388A26474A850026640F /* TabBarModuleConfigurator.swift in Sources */,
 				0A5138C02648309F0026640F /* Presentable.swift in Sources */,
+				0AD28E6B2711AF0E007EEEF2 /* LoadingView.swift in Sources */,
 				0A7CEA7226498641008E2D2E /* PlacesViewInput.swift in Sources */,
+				0AD28E672711ABD4007EEEF2 /* UIViewController+Loading.swift in Sources */,
 				0A83EF49270F1651008D1BCF /* MapModuleInput.swift in Sources */,
 				0A7CEA8226498641008E2D2E /* SettingsModuleInput.swift in Sources */,
 				0A7CEA6E26498641008E2D2E /* PlacesModuleInput.swift in Sources */,
@@ -1028,20 +1105,26 @@
 				0A5138B6264801050026640F /* MainRouter.swift in Sources */,
 				0A51388826474A850026640F /* TabBarViewController.swift in Sources */,
 				0A5138BB26482EEB0026640F /* UIApplication.swift in Sources */,
+				0A83EFA1270F9A96008D1BCF /* SearchBarExtension.swift in Sources */,
 				0A83EF38270F1521008D1BCF /* WeatherCoordinatorOutput.swift in Sources */,
 				0A83EF2A270F0A00008D1BCF /* LocationCoordinator.swift in Sources */,
 				0A51388326474A850026640F /* TabBarPresenter.swift in Sources */,
 				0A7CEA8826498641008E2D2E /* SettingsModuleConfigurator.swift in Sources */,
 				0A7CEA7A26498641008E2D2E /* WeatherViewController.swift in Sources */,
+				0A83EFA4270F9AAA008D1BCF /* SearchTextField.swift in Sources */,
 				0A42DA50265A91340095DB1C /* WeatherViewModel.swift in Sources */,
 				0A7CEA6F26498641008E2D2E /* PlacesModuleOutput.swift in Sources */,
+				0AD28E622710B148007EEEF2 /* SearchResultCellTableViewCell.swift in Sources */,
 				0A83EF67270F91F4008D1BCF /* PlaceSearchModuleConfigurator.swift in Sources */,
+				0AD28E652710F309007EEEF2 /* SearchResult.swift in Sources */,
 				0A7CEA352648AAFA008E2D2E /* Assets.swift in Sources */,
 				0A5138972647F85A0026640F /* UIViewController.swift in Sources */,
 				0A83EF4F270F1651008D1BCF /* MapModuleTestConfigurator.swift in Sources */,
 				0A83EF4C270F1651008D1BCF /* MapViewInput.swift in Sources */,
 				0A5137B126472B180026640F /* MainCoordinator.swift in Sources */,
 				0A51388426474A850026640F /* TabBarModuleInput.swift in Sources */,
+				0AD28E6D2711C25E007EEEF2 /* LoadingPresenter.swift in Sources */,
+				0AD28E6F2711C55C007EEEF2 /* WeatherCoordinatorInput.swift in Sources */,
 				0A83EF5F270F91F4008D1BCF /* PlaceSearchPresenter.swift in Sources */,
 				0A51389F2647F8C20026640F /* Foundation.swift in Sources */,
 				0A51388526474A850026640F /* TabBarViewInput.swift in Sources */,
@@ -1091,6 +1174,7 @@
 				0A5138B1264800F60026640F /* Router.swift in Sources */,
 				0A7CEA7826498641008E2D2E /* WeatherModuleOutput.swift in Sources */,
 				0A7CEA8326498641008E2D2E /* SettingsViewOutput.swift in Sources */,
+				0A83EF9E270F9A90008D1BCF /* SearchBar.swift in Sources */,
 				0A42DA56265AAEB00095DB1C /* WeatherScreenViewModel.swift in Sources */,
 				0A7CEA7526498641008E2D2E /* PlacesModuleConfigurator.swift in Sources */,
 				0A7CEA7326498641008E2D2E /* PlacesViewOutput.swift in Sources */,

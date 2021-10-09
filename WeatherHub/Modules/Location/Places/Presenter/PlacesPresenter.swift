@@ -19,6 +19,8 @@ final class PlacesPresenter: PlacesModuleOutput {
     var onSearchNeeded: EmptyClosure?
     var onMapNeeded: EmptyClosure?
 
+    var onPlaceSelected: Closure<CLPlacemark?>?
+
     // MARK: - Properties
 
     weak var view: PlacesViewInput?
@@ -26,6 +28,7 @@ final class PlacesPresenter: PlacesModuleOutput {
     // MARK: - Private Properties
 
     private let locationManager = LocationManager()
+    private let geocoder = CLGeocoder()
 
 }
 
@@ -34,7 +37,13 @@ final class PlacesPresenter: PlacesModuleOutput {
 extension PlacesPresenter: PlacesModuleInput {
 
     func handleLocationSelected(_ location: CLLocationCoordinate2D) {
-        print(location)
+        view?.showLoading()
+        geocoder.reverseGeocodeLocation(CLLocation(latitude: location.latitude,
+                                                   longitude: location.longitude),
+                                        preferredLocale: .current) { [weak self] placemarks, _ in
+            self?.view?.hideLoading()
+            self?.onPlaceSelected?(placemarks?.first)
+        }
     }
 
 }

@@ -11,6 +11,11 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
 
+  internal enum Common {
+    /// Loading...
+    internal static let loading = L10n.tr("Localizable", "Common.loading")
+  }
+
   internal enum Date {
     /// Today, 
     internal static let today = L10n.tr("Localizable", "Date.today")
@@ -26,6 +31,19 @@ internal enum L10n {
   internal enum Places {
     /// Saved places
     internal static let title = L10n.tr("Localizable", "Places.title")
+    internal enum Error {
+      /// Try again or select another place
+      internal static let advice = L10n.tr("Localizable", "Places.error.advice")
+      /// Could not find data for this place :(
+      internal static let title = L10n.tr("Localizable", "Places.error.title")
+    }
+  }
+
+  internal enum Search {
+    /// Cancel
+    internal static let cancel = L10n.tr("Localizable", "Search.cancel")
+    /// Search
+    internal static let search = L10n.tr("Localizable", "Search.search")
   }
 
   internal enum Tabs {

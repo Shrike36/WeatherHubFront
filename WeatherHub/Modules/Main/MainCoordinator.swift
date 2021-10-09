@@ -7,7 +7,14 @@
 
 final class MainCoordinator: BaseCoordinator {
 
+    // MARK: - Private Properties
+
     private let router: Router = MainRouter()
+
+    private weak var tabBarInput: TabBarModuleInput?
+    private weak var weatherInput: WeatherCoordinatorInput?
+
+    // MARK: - Coordinator
 
     override func start() {
         super.start()
@@ -22,6 +29,7 @@ private extension MainCoordinator {
 
     func showTabBar() {
         let components = TabBarModuleConfigurator().configure()
+        tabBarInput = components.input
 
         components.output.onTabSelected = { [weak self] tab in
             switch tab {
@@ -40,12 +48,17 @@ private extension MainCoordinator {
 
     func runLocationFlow() {
         let coordinator = LocationCoordinator(router: router)
+        coordinator.onPlaceSelected = { [weak self] place in
+            self?.tabBarInput?.selectTab(.weather)
+            self?.weatherInput?.showWeather(for: place)
+        }
         addDependency(coordinator)
         coordinator.start()
     }
 
     func runWeatherFlow() {
         let coordinator = WeatherCoordinator(router: router)
+        weatherInput = coordinator
         addDependency(coordinator)
         coordinator.start()
     }

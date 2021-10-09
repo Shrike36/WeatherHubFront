@@ -12,10 +12,27 @@ target 'WeatherHub' do
   pod 'SwiftLint', '~> 0.43.1'
   pod 'SFSafeSymbols', '~> 2.1.3'
 
-  pod 'SurfUtils/GeolocationService', :git => "https://github.com/surfstudio/iOS-Utils.git"
-  pod 'SurfUtils/CommonButton', :git => "https://github.com/surfstudio/iOS-Utils.git"
-  pod 'SurfUtils/LoadingView', :git => "https://github.com/surfstudio/iOS-Utils.git"
-  pod 'SurfUtils/ItemsScrollManager', :git => "https://github.com/surfstudio/iOS-Utils.git"
+
+  $SurfUtils = "https://github.com/surfstudio/iOS-Utils.git"
+  $Tag = '11.0.0'
+
+  pod 'SurfUtils/StringAttributes', :git => $SurfUtils, :tag => $Tag
+  pod 'SurfUtils/UIStyle', :git => $SurfUtils, :tag => $Tag
+  pod 'SurfUtils/WordDeclinationSelector', :git => $SurfUtils, :tag => $Tag
+  pod 'SurfUtils/CommonButton', :git => $SurfUtils, :tag => $Tag
+  # pod 'SurfUtils/VibrationFeedbackManager', :git => $SurfUtils, :tag => $Tag
+  pod 'SurfUtils/ItemsScrollManager', :git => $SurfUtils, :tag => $Tag
+  pod 'SurfUtils/LayoutHelper', :git => $SurfUtils, :tag => $Tag
+  pod 'SurfUtils/XibView', :git => $SurfUtils, :tag => $Tag
+  pod 'SurfUtils/SkeletonView', :git => $SurfUtils, :tag => $Tag
+  pod 'SurfUtils/KeyboardPresentable', :git => $SurfUtils, :tag => $Tag
+  # pod 'SurfUtils/BlurBuilder', :git => $SurfUtils, :tag => $Tag
+  pod 'SurfUtils/AdvancedNavigationStackManagement', :git => $SurfUtils, :tag => $Tag
+  # pod 'SurfUtils/SettingsRouter', :git => $SurfUtils, :tag => $Tag
+  pod 'SurfUtils/RouteMeasurer', :git => $SurfUtils, :tag => $Tag
+  # pod 'SurfUtils/MailSender', :git => $SurfUtils, :tag => $Tag
+  pod 'SurfUtils/GeolocationService', :git => $SurfUtils, :tag => $Tag
+
 
   pod 'ReactiveDataDisplayManager', '~> 7.0.0'
   pod 'NodeKit/UrlCache', :git => 'https://github.com/surfstudio/NodeKit', :tag => '3.2.0'

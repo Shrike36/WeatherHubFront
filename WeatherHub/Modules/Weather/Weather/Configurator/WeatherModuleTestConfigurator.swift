@@ -7,7 +7,7 @@ import UIKit
 final class WeatherModuleTestConfigurator {
 
     func configure() -> (UIViewController, [AnyObject]) {
-        let (view, output) = WeatherModuleConfigurator().configure()
+        let (view, _, output) = WeatherModuleConfigurator().configure()
         return (view, [output])
     }
 

@@ -16,4 +16,14 @@ extension UIButton {
         titleLabel?.font = .boldSystemFont(ofSize: 18)
     }
 
+    func applyImageStyle(icon: UIImage) {
+        let image: UIImage
+        image = icon.withRenderingMode(.alwaysOriginal)
+
+        setTitle("", for: .normal)
+        setImage(image, for: .normal)
+        setImage(image.mask(with: 0.5), for: .highlighted)
+        setImage(image.mask(with: 0.5), for: .selected)
+        layer.masksToBounds = true
+    }
 }

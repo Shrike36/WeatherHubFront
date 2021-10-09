@@ -6,6 +6,7 @@ import UIKit
 
 typealias WeatherModuleComponents = (
     view: UIViewController,
+    input: WeatherModuleInput,
     output: WeatherModuleOutput
 )
 
@@ -18,7 +19,7 @@ final class WeatherModuleConfigurator {
         presenter.view = view
         view.output = presenter
 
-        return (view, presenter)
+        return (view, presenter, presenter)
     }
 
 }
