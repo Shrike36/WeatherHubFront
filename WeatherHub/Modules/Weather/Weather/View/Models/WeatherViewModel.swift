@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct WeatherViewModel {
+public struct WeatherViewModel {
 
     // MARK: - Properties
 
@@ -15,5 +15,27 @@ struct WeatherViewModel {
     let weatherConditions: WeatherConditions
     let dayTemperature: Int
     let nightTemperature: Int
+
+}
+
+extension WeatherViewModel {
+
+    static func fromYandex(forecast: YandexForecastEntity) -> WeatherViewModel {
+        return WeatherViewModel(
+            serviceName: L10n.Common.yandex,
+            weatherConditions: .fromYandex(conditions: forecast.parts.day.conditions),
+            dayTemperature: forecast.parts.day.temperature,
+            nightTemperature: forecast.parts.night.temperature
+        )
+    }
+
+    static func fromOWM(forecast: OWMForecastDayEntity) -> WeatherViewModel {
+        return WeatherViewModel(
+            serviceName: L10n.Common.owm,
+            weatherConditions: .fromOWM(conditions: forecast.conditions.code),
+            dayTemperature: forecast.temperature.day,
+            nightTemperature: forecast.temperature.night
+        )
+    }
 
 }

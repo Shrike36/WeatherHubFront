@@ -9,6 +9,8 @@
 // MARK: - Common
 
 "Common.loading" = "Loading...";
+"Common.yandex" = "Yandex";
+"Common.owm" = "OpenWeatherMap";
 
 
 // MARK: - Tabs

@@ -3,3 +3,5 @@ pod:
 
 lint:
 	./Pods/SwiftLint/swiftlint autocorrect
+gen:
+	./Pods/SwiftGen/bin/swiftgen

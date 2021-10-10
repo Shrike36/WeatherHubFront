@@ -7,6 +7,12 @@ import CoreLocation
 
 final class WeatherPresenter: WeatherModuleOutput {
 
+    // MARK: - Constants
+
+    private enum Constants {
+        static let days = 5
+    }
+
     // MARK: - WeatherModuleOutput
 
     // MARK: - Properties
@@ -18,7 +24,10 @@ final class WeatherPresenter: WeatherModuleOutput {
     private var isViewReady = false
     private var dateIndex = 0
 
+    private var place: CLPlacemark!
     private var viewModel: WeatherScreenViewModel!
+
+    private var interactors = WeatherSupplier.allCases.map { WeatherInteractor(service: $0.makeService()) }
 
 }
 
@@ -27,6 +36,13 @@ final class WeatherPresenter: WeatherModuleOutput {
 extension WeatherPresenter: WeatherModuleInput {
 
     func showWeather(for place: CLPlacemark) {
+        self.place = place
+        interactors.forEach {
+            $0.getForecast(for: place.location!.coordinate) { [weak self] in
+                self?.updateViewIfResponsesAreReady()
+            }
+
+        }
     }
 
 }
@@ -41,7 +57,8 @@ extension WeatherPresenter: WeatherViewOutput {
 
     func layoutFinished() {
         isViewReady = true
-        view?.configure(with: mockViewModel)
+        viewModel = mockViewModel
+        view?.configure(with: viewModel)
         view?.setDateChangeButtonsVisisble(left: false, right: true)
     }
 
@@ -83,6 +100,18 @@ private extension WeatherPresenter {
         view?.setDateChangeButtonsVisisble(left: dateIndex > 0, right: dateIndex + 1 < viewModel.dates.count)
     }
 
+    func resetResponseReceiveFlags() {
+        interactors.forEach { $0.resetState() }
+    }
+
+    func updateViewIfResponsesAreReady() {
+        if interactors.allSatisfy({ $0.isUpdated }) {
+            viewModel = actualViewModel
+            view?.configure(with: viewModel)
+            resetResponseReceiveFlags()
+        }
+    }
+
 }
 
 // MARK: - Demo
@@ -91,9 +120,9 @@ private extension WeatherPresenter {
 
     var mockViewModel: WeatherScreenViewModel {
         let startDay = 0
-        let endDay = 10
+        let endDay = 1
         let days = Array(startDay...endDay).map { Calendar.current.date(byAdding: .day, value: $0, to: Date())! }
-        let suppliers = ["Yandex Weather", "OpenWeatherMap", "Gismeteo", "Test", "Test2"]
+        let suppliers = [L10n.Common.yandex]
         let dates = days.map { date -> DateViewModel in
             let weather = suppliers.map { name -> WeatherViewModel in
                 let temperature = Int.random(in: -20...30)
@@ -105,8 +134,20 @@ private extension WeatherPresenter {
             }
             return DateViewModel(date: date, weather: weather)
         }
-        viewModel = WeatherScreenViewModel(cityName: "Санкт-Петербург", dates: dates)
-        return viewModel!
+        return WeatherScreenViewModel(cityName: "Санкт-Петербург", dates: dates)
+    }
+
+    var actualViewModel: WeatherScreenViewModel {
+        let days = Array(0...Constants.days).map {
+            Calendar.current.date(byAdding: .day, value: $0, to: Date())!
+        }
+
+        let dates = days.enumerated().map { (index, date) -> DateViewModel in
+            return DateViewModel(date: date,
+                                 weather: interactors.compactMap { $0.response?.getForecastForDay(index: index) })
+        }
+
+        return WeatherScreenViewModel(cityName: place.locality!, dates: dates)
     }
 
 }

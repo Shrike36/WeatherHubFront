@@ -14,6 +14,10 @@ internal enum L10n {
   internal enum Common {
     /// Loading...
     internal static let loading = L10n.tr("Localizable", "Common.loading")
+    /// OpenWeatherMap
+    internal static let owm = L10n.tr("Localizable", "Common.owm")
+    /// Yandex
+    internal static let yandex = L10n.tr("Localizable", "Common.yandex")
   }
 
   internal enum Date {

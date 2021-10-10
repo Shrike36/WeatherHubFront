@@ -101,6 +101,20 @@
 		0A83EFA1270F9A96008D1BCF /* SearchBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EFA0270F9A96008D1BCF /* SearchBarExtension.swift */; };
 		0A83EFA4270F9AAA008D1BCF /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EFA3270F9AAA008D1BCF /* SearchTextField.swift */; };
 		0A998C222645982100555828 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A998C212645982100555828 /* Colors.xcassets */; };
+		0ACBF9072712F7B00045B9EF /* OWMConditionsEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF9062712F7B00045B9EF /* OWMConditionsEntry.swift */; };
+		0ACBF9092712F7B60045B9EF /* OWMConditionsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF9082712F7B60045B9EF /* OWMConditionsEntity.swift */; };
+		0ACBF90B2712F7C10045B9EF /* OWMTemperatureEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF90A2712F7C10045B9EF /* OWMTemperatureEntry.swift */; };
+		0ACBF90D2712F7C80045B9EF /* OWMTemperatureEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF90C2712F7C80045B9EF /* OWMTemperatureEntity.swift */; };
+		0ACBF90F2712F7D10045B9EF /* OWMForecastDayEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF90E2712F7D10045B9EF /* OWMForecastDayEntry.swift */; };
+		0ACBF9112712F7D60045B9EF /* OWMForecastDayEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF9102712F7D60045B9EF /* OWMForecastDayEntity.swift */; };
+		0ACBF9132712F7DD0045B9EF /* OWMResponseEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF9122712F7DD0045B9EF /* OWMResponseEntry.swift */; };
+		0ACBF9152712F7E10045B9EF /* OWMResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF9142712F7E10045B9EF /* OWMResponseEntity.swift */; };
+		0ACBF9182712FCA20045B9EF /* OWMUrlRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF9172712FCA20045B9EF /* OWMUrlRoute.swift */; };
+		0ACBF91A2712FCAB0045B9EF /* OWMService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF9192712FCAB0045B9EF /* OWMService.swift */; };
+		0ACBF91C2712FF6C0045B9EF /* ServiceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF91B2712FF6C0045B9EF /* ServiceKeys.swift */; };
+		0ACBF91F271318C80045B9EF /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF91E271318C80045B9EF /* WeatherService.swift */; };
+		0ACBF9212713265F0045B9EF /* WeatherInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF9202713265F0045B9EF /* WeatherInteractor.swift */; };
+		0ACBF924271326BD0045B9EF /* ForecastProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF923271326BD0045B9EF /* ForecastProvider.swift */; };
 		0AD28E622710B148007EEEF2 /* SearchResultCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E602710B148007EEEF2 /* SearchResultCellTableViewCell.swift */; };
 		0AD28E632710B148007EEEF2 /* SearchResultCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD28E612710B148007EEEF2 /* SearchResultCellTableViewCell.xib */; };
 		0AD28E652710F309007EEEF2 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E642710F309007EEEF2 /* SearchResult.swift */; };
@@ -108,6 +122,20 @@
 		0AD28E6B2711AF0E007EEEF2 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E6A2711AF0E007EEEF2 /* LoadingView.swift */; };
 		0AD28E6D2711C25E007EEEF2 /* LoadingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E6C2711C25E007EEEF2 /* LoadingPresenter.swift */; };
 		0AD28E6F2711C55C007EEEF2 /* WeatherCoordinatorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E6E2711C55C007EEEF2 /* WeatherCoordinatorInput.swift */; };
+		0AD28E732711CD5C007EEEF2 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E722711CD5C007EEEF2 /* Urls.swift */; };
+		0AD28E7C2711D6EA007EEEF2 /* YandexWeatherUrlRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E7A2711D6EA007EEEF2 /* YandexWeatherUrlRoute.swift */; };
+		0AD28E7D2711D6EA007EEEF2 /* YandexWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E7B2711D6EA007EEEF2 /* YandexWeatherService.swift */; };
+		0AD28E7F2711D947007EEEF2 /* YandexWeatherMetadataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E7E2711D947007EEEF2 /* YandexWeatherMetadataProvider.swift */; };
+		0AD28E832711DBAF007EEEF2 /* YandexWeatherResponseEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E822711DBAF007EEEF2 /* YandexWeatherResponseEntry.swift */; };
+		0AD28E852711DBB9007EEEF2 /* YandexWeatherResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E842711DBB9007EEEF2 /* YandexWeatherResponseEntity.swift */; };
+		0AD28E8A2711FB9E007EEEF2 /* YandexForecastPartEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E892711FB9E007EEEF2 /* YandexForecastPartEntry.swift */; };
+		0AD28E8C2711FBA4007EEEF2 /* YandexForecastPartEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E8B2711FBA4007EEEF2 /* YandexForecastPartEntity.swift */; };
+		0AD28E8E2711FBAC007EEEF2 /* YandexForecastDayEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E8D2711FBAC007EEEF2 /* YandexForecastDayEntry.swift */; };
+		0AD28E902711FBC4007EEEF2 /* YandexForecastDayEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E8F2711FBC4007EEEF2 /* YandexForecastDayEntity.swift */; };
+		0AD28E922711FBCC007EEEF2 /* YandexForecastEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E912711FBCC007EEEF2 /* YandexForecastEntry.swift */; };
+		0AD28E942711FBD3007EEEF2 /* YandexForecastEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E932711FBD3007EEEF2 /* YandexForecastEntity.swift */; };
+		0AD28E972711FCCD007EEEF2 /* YandexConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E962711FCCD007EEEF2 /* YandexConditions.swift */; };
+		0AD28E9927120DA1007EEEF2 /* WeatherSupplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E9827120DA1007EEEF2 /* WeatherSupplier.swift */; };
 		1E4D6A807840188C56C824C4 /* Pods_WeatherHubTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93F3333AAAB6EDD3F97176A /* Pods_WeatherHubTests.framework */; };
 		7C46264531DCC1AC9814A17F /* Pods_WeatherHub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E134E0AC5E71F55FD2D2C6B4 /* Pods_WeatherHub.framework */; };
 /* End PBXBuildFile section */
@@ -230,6 +258,20 @@
 		0A83EFA3270F9AAA008D1BCF /* SearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		0A998C212645982100555828 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		0AC81423C4FE29719A05FE86 /* Pods-WeatherHubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherHubTests.debug.xcconfig"; path = "Target Support Files/Pods-WeatherHubTests/Pods-WeatherHubTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0ACBF9062712F7B00045B9EF /* OWMConditionsEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMConditionsEntry.swift; sourceTree = "<group>"; };
+		0ACBF9082712F7B60045B9EF /* OWMConditionsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMConditionsEntity.swift; sourceTree = "<group>"; };
+		0ACBF90A2712F7C10045B9EF /* OWMTemperatureEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMTemperatureEntry.swift; sourceTree = "<group>"; };
+		0ACBF90C2712F7C80045B9EF /* OWMTemperatureEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMTemperatureEntity.swift; sourceTree = "<group>"; };
+		0ACBF90E2712F7D10045B9EF /* OWMForecastDayEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMForecastDayEntry.swift; sourceTree = "<group>"; };
+		0ACBF9102712F7D60045B9EF /* OWMForecastDayEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMForecastDayEntity.swift; sourceTree = "<group>"; };
+		0ACBF9122712F7DD0045B9EF /* OWMResponseEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMResponseEntry.swift; sourceTree = "<group>"; };
+		0ACBF9142712F7E10045B9EF /* OWMResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMResponseEntity.swift; sourceTree = "<group>"; };
+		0ACBF9172712FCA20045B9EF /* OWMUrlRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMUrlRoute.swift; sourceTree = "<group>"; };
+		0ACBF9192712FCAB0045B9EF /* OWMService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMService.swift; sourceTree = "<group>"; };
+		0ACBF91B2712FF6C0045B9EF /* ServiceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceKeys.swift; sourceTree = "<group>"; };
+		0ACBF91E271318C80045B9EF /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		0ACBF9202713265F0045B9EF /* WeatherInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInteractor.swift; sourceTree = "<group>"; };
+		0ACBF923271326BD0045B9EF /* ForecastProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastProvider.swift; sourceTree = "<group>"; };
 		0AD28E602710B148007EEEF2 /* SearchResultCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCellTableViewCell.swift; sourceTree = "<group>"; };
 		0AD28E612710B148007EEEF2 /* SearchResultCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCellTableViewCell.xib; sourceTree = "<group>"; };
 		0AD28E642710F309007EEEF2 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
@@ -237,6 +279,20 @@
 		0AD28E6A2711AF0E007EEEF2 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		0AD28E6C2711C25E007EEEF2 /* LoadingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPresenter.swift; sourceTree = "<group>"; };
 		0AD28E6E2711C55C007EEEF2 /* WeatherCoordinatorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCoordinatorInput.swift; sourceTree = "<group>"; };
+		0AD28E722711CD5C007EEEF2 /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
+		0AD28E7A2711D6EA007EEEF2 /* YandexWeatherUrlRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YandexWeatherUrlRoute.swift; sourceTree = "<group>"; };
+		0AD28E7B2711D6EA007EEEF2 /* YandexWeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YandexWeatherService.swift; sourceTree = "<group>"; };
+		0AD28E7E2711D947007EEEF2 /* YandexWeatherMetadataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YandexWeatherMetadataProvider.swift; sourceTree = "<group>"; };
+		0AD28E822711DBAF007EEEF2 /* YandexWeatherResponseEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YandexWeatherResponseEntry.swift; sourceTree = "<group>"; };
+		0AD28E842711DBB9007EEEF2 /* YandexWeatherResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YandexWeatherResponseEntity.swift; sourceTree = "<group>"; };
+		0AD28E892711FB9E007EEEF2 /* YandexForecastPartEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YandexForecastPartEntry.swift; sourceTree = "<group>"; };
+		0AD28E8B2711FBA4007EEEF2 /* YandexForecastPartEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YandexForecastPartEntity.swift; sourceTree = "<group>"; };
+		0AD28E8D2711FBAC007EEEF2 /* YandexForecastDayEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YandexForecastDayEntry.swift; sourceTree = "<group>"; };
+		0AD28E8F2711FBC4007EEEF2 /* YandexForecastDayEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YandexForecastDayEntity.swift; sourceTree = "<group>"; };
+		0AD28E912711FBCC007EEEF2 /* YandexForecastEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YandexForecastEntry.swift; sourceTree = "<group>"; };
+		0AD28E932711FBD3007EEEF2 /* YandexForecastEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YandexForecastEntity.swift; sourceTree = "<group>"; };
+		0AD28E962711FCCD007EEEF2 /* YandexConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YandexConditions.swift; sourceTree = "<group>"; };
+		0AD28E9827120DA1007EEEF2 /* WeatherSupplier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherSupplier.swift; sourceTree = "<group>"; };
 		96FCE23662F13AC62C729575 /* Pods-WeatherHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherHub.release.xcconfig"; path = "Target Support Files/Pods-WeatherHub/Pods-WeatherHub.release.xcconfig"; sourceTree = "<group>"; };
 		D40B11A38FB72F3C2C1391F5 /* Pods-WeatherHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherHub.debug.xcconfig"; path = "Target Support Files/Pods-WeatherHub/Pods-WeatherHub.debug.xcconfig"; sourceTree = "<group>"; };
 		E134E0AC5E71F55FD2D2C6B4 /* Pods_WeatherHub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeatherHub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -293,7 +349,11 @@
 		0A42DA4D265A8F290095DB1C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0ACBF922271326AD0045B9EF /* Common */,
+				0AD28E9A2712E908007EEEF2 /* OWM */,
+				0AD28E802711DB84007EEEF2 /* YandexWeather */,
 				0A42DA51265A91460095DB1C /* WeatherConditions.swift */,
+				0AD28E9827120DA1007EEEF2 /* WeatherSupplier.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -459,6 +519,7 @@
 				0A6988D22643574B00F97207 /* Common */,
 				0A5138942647F83F0026640F /* Library */,
 				0A5137AF26472AF70026640F /* Modules */,
+				0AD28E702711CC2C007EEEF2 /* Services */,
 			);
 			path = WeatherHub;
 			sourceTree = "<group>";
@@ -581,6 +642,7 @@
 				0A7CEA5626498641008E2D2E /* WeatherModuleInput.swift */,
 				0A7CEA5726498641008E2D2E /* WeatherModuleOutput.swift */,
 				0A7CEA5826498641008E2D2E /* WeatherPresenter.swift */,
+				0ACBF9202713265F0045B9EF /* WeatherInteractor.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -798,6 +860,49 @@
 			path = SearchTextField;
 			sourceTree = "<group>";
 		};
+		0ACBF9042712F7450045B9EF /* OWMTemperature */ = {
+			isa = PBXGroup;
+			children = (
+				0ACBF90A2712F7C10045B9EF /* OWMTemperatureEntry.swift */,
+				0ACBF90C2712F7C80045B9EF /* OWMTemperatureEntity.swift */,
+			);
+			path = OWMTemperature;
+			sourceTree = "<group>";
+		};
+		0ACBF9052712F7980045B9EF /* OWMConditions */ = {
+			isa = PBXGroup;
+			children = (
+				0ACBF9062712F7B00045B9EF /* OWMConditionsEntry.swift */,
+				0ACBF9082712F7B60045B9EF /* OWMConditionsEntity.swift */,
+			);
+			path = OWMConditions;
+			sourceTree = "<group>";
+		};
+		0ACBF9162712FC8E0045B9EF /* OpenWeatherMap */ = {
+			isa = PBXGroup;
+			children = (
+				0ACBF9172712FCA20045B9EF /* OWMUrlRoute.swift */,
+				0ACBF9192712FCAB0045B9EF /* OWMService.swift */,
+			);
+			path = OpenWeatherMap;
+			sourceTree = "<group>";
+		};
+		0ACBF91D271318BA0045B9EF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0ACBF91E271318C80045B9EF /* WeatherService.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0ACBF922271326AD0045B9EF /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0ACBF923271326BD0045B9EF /* ForecastProvider.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		0AD28E5F2710B11B007EEEF2 /* SearchResultCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -822,6 +927,113 @@
 				0AD28E6A2711AF0E007EEEF2 /* LoadingView.swift */,
 			);
 			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		0AD28E702711CC2C007EEEF2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0ACBF91D271318BA0045B9EF /* Common */,
+				0ACBF9162712FC8E0045B9EF /* OpenWeatherMap */,
+				0AD28E792711D6EA007EEEF2 /* YandexWeather */,
+				0AD28E722711CD5C007EEEF2 /* Urls.swift */,
+				0ACBF91B2712FF6C0045B9EF /* ServiceKeys.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0AD28E792711D6EA007EEEF2 /* YandexWeather */ = {
+			isa = PBXGroup;
+			children = (
+				0AD28E7A2711D6EA007EEEF2 /* YandexWeatherUrlRoute.swift */,
+				0AD28E7B2711D6EA007EEEF2 /* YandexWeatherService.swift */,
+				0AD28E7E2711D947007EEEF2 /* YandexWeatherMetadataProvider.swift */,
+			);
+			path = YandexWeather;
+			sourceTree = "<group>";
+		};
+		0AD28E802711DB84007EEEF2 /* YandexWeather */ = {
+			isa = PBXGroup;
+			children = (
+				0AD28E952711FCB2007EEEF2 /* YandexConditions */,
+				0AD28E882711FA9A007EEEF2 /* YandexForecastPart */,
+				0AD28E872711FA4B007EEEF2 /* YandexForecastDay */,
+				0AD28E862711DF05007EEEF2 /* YandexForecast */,
+				0AD28E812711DB93007EEEF2 /* YandexWeatherResponse */,
+			);
+			path = YandexWeather;
+			sourceTree = "<group>";
+		};
+		0AD28E812711DB93007EEEF2 /* YandexWeatherResponse */ = {
+			isa = PBXGroup;
+			children = (
+				0AD28E822711DBAF007EEEF2 /* YandexWeatherResponseEntry.swift */,
+				0AD28E842711DBB9007EEEF2 /* YandexWeatherResponseEntity.swift */,
+			);
+			path = YandexWeatherResponse;
+			sourceTree = "<group>";
+		};
+		0AD28E862711DF05007EEEF2 /* YandexForecast */ = {
+			isa = PBXGroup;
+			children = (
+				0AD28E912711FBCC007EEEF2 /* YandexForecastEntry.swift */,
+				0AD28E932711FBD3007EEEF2 /* YandexForecastEntity.swift */,
+			);
+			path = YandexForecast;
+			sourceTree = "<group>";
+		};
+		0AD28E872711FA4B007EEEF2 /* YandexForecastDay */ = {
+			isa = PBXGroup;
+			children = (
+				0AD28E8D2711FBAC007EEEF2 /* YandexForecastDayEntry.swift */,
+				0AD28E8F2711FBC4007EEEF2 /* YandexForecastDayEntity.swift */,
+			);
+			path = YandexForecastDay;
+			sourceTree = "<group>";
+		};
+		0AD28E882711FA9A007EEEF2 /* YandexForecastPart */ = {
+			isa = PBXGroup;
+			children = (
+				0AD28E892711FB9E007EEEF2 /* YandexForecastPartEntry.swift */,
+				0AD28E8B2711FBA4007EEEF2 /* YandexForecastPartEntity.swift */,
+			);
+			path = YandexForecastPart;
+			sourceTree = "<group>";
+		};
+		0AD28E952711FCB2007EEEF2 /* YandexConditions */ = {
+			isa = PBXGroup;
+			children = (
+				0AD28E962711FCCD007EEEF2 /* YandexConditions.swift */,
+			);
+			path = YandexConditions;
+			sourceTree = "<group>";
+		};
+		0AD28E9A2712E908007EEEF2 /* OWM */ = {
+			isa = PBXGroup;
+			children = (
+				0ACBF9052712F7980045B9EF /* OWMConditions */,
+				0ACBF9042712F7450045B9EF /* OWMTemperature */,
+				0AD28E9C2712ECB0007EEEF2 /* OWMForecastDay */,
+				0AD28E9B2712E90E007EEEF2 /* OWMResponse */,
+			);
+			path = OWM;
+			sourceTree = "<group>";
+		};
+		0AD28E9B2712E90E007EEEF2 /* OWMResponse */ = {
+			isa = PBXGroup;
+			children = (
+				0ACBF9122712F7DD0045B9EF /* OWMResponseEntry.swift */,
+				0ACBF9142712F7E10045B9EF /* OWMResponseEntity.swift */,
+			);
+			path = OWMResponse;
+			sourceTree = "<group>";
+		};
+		0AD28E9C2712ECB0007EEEF2 /* OWMForecastDay */ = {
+			isa = PBXGroup;
+			children = (
+				0ACBF90E2712F7D10045B9EF /* OWMForecastDayEntry.swift */,
+				0ACBF9102712F7D60045B9EF /* OWMForecastDayEntity.swift */,
+			);
+			path = OWMForecastDay;
 			sourceTree = "<group>";
 		};
 		7E8B955B4C6719690D6CDCC0 /* Frameworks */ = {
@@ -1100,18 +1312,24 @@
 				0A83EF49270F1651008D1BCF /* MapModuleInput.swift in Sources */,
 				0A7CEA8226498641008E2D2E /* SettingsModuleInput.swift in Sources */,
 				0A7CEA6E26498641008E2D2E /* PlacesModuleInput.swift in Sources */,
+				0ACBF91A2712FCAB0045B9EF /* OWMService.swift in Sources */,
 				0A7CEA342648AAFA008E2D2E /* Strings.swift in Sources */,
 				0A5138D2264883F40026640F /* MainTab.swift in Sources */,
+				0AD28E832711DBAF007EEEF2 /* YandexWeatherResponseEntry.swift in Sources */,
 				0A5138B6264801050026640F /* MainRouter.swift in Sources */,
+				0AD28E7D2711D6EA007EEEF2 /* YandexWeatherService.swift in Sources */,
 				0A51388826474A850026640F /* TabBarViewController.swift in Sources */,
 				0A5138BB26482EEB0026640F /* UIApplication.swift in Sources */,
 				0A83EFA1270F9A96008D1BCF /* SearchBarExtension.swift in Sources */,
+				0AD28E8C2711FBA4007EEEF2 /* YandexForecastPartEntity.swift in Sources */,
 				0A83EF38270F1521008D1BCF /* WeatherCoordinatorOutput.swift in Sources */,
 				0A83EF2A270F0A00008D1BCF /* LocationCoordinator.swift in Sources */,
 				0A51388326474A850026640F /* TabBarPresenter.swift in Sources */,
+				0AD28E972711FCCD007EEEF2 /* YandexConditions.swift in Sources */,
 				0A7CEA8826498641008E2D2E /* SettingsModuleConfigurator.swift in Sources */,
 				0A7CEA7A26498641008E2D2E /* WeatherViewController.swift in Sources */,
 				0A83EFA4270F9AAA008D1BCF /* SearchTextField.swift in Sources */,
+				0ACBF91C2712FF6C0045B9EF /* ServiceKeys.swift in Sources */,
 				0A42DA50265A91340095DB1C /* WeatherViewModel.swift in Sources */,
 				0A7CEA6F26498641008E2D2E /* PlacesModuleOutput.swift in Sources */,
 				0AD28E622710B148007EEEF2 /* SearchResultCellTableViewCell.swift in Sources */,
@@ -1121,40 +1339,58 @@
 				0A5138972647F85A0026640F /* UIViewController.swift in Sources */,
 				0A83EF4F270F1651008D1BCF /* MapModuleTestConfigurator.swift in Sources */,
 				0A83EF4C270F1651008D1BCF /* MapViewInput.swift in Sources */,
+				0ACBF9212713265F0045B9EF /* WeatherInteractor.swift in Sources */,
 				0A5137B126472B180026640F /* MainCoordinator.swift in Sources */,
 				0A51388426474A850026640F /* TabBarModuleInput.swift in Sources */,
 				0AD28E6D2711C25E007EEEF2 /* LoadingPresenter.swift in Sources */,
 				0AD28E6F2711C55C007EEEF2 /* WeatherCoordinatorInput.swift in Sources */,
 				0A83EF5F270F91F4008D1BCF /* PlaceSearchPresenter.swift in Sources */,
+				0AD28E7C2711D6EA007EEEF2 /* YandexWeatherUrlRoute.swift in Sources */,
 				0A51389F2647F8C20026640F /* Foundation.swift in Sources */,
+				0AD28E8E2711FBAC007EEEF2 /* YandexForecastDayEntry.swift in Sources */,
 				0A51388526474A850026640F /* TabBarViewInput.swift in Sources */,
+				0ACBF90F2712F7D10045B9EF /* OWMForecastDayEntry.swift in Sources */,
 				0A7CEA7026498641008E2D2E /* PlacesPresenter.swift in Sources */,
 				0A83EF66270F91F4008D1BCF /* PlaceSearchModuleTestConfigurator.swift in Sources */,
 				0A83EF63270F91F4008D1BCF /* PlaceSearchViewController.swift in Sources */,
 				0A42DA54265AAE410095DB1C /* DateViewModel.swift in Sources */,
 				0A7CEA7426498641008E2D2E /* PlacesViewController.swift in Sources */,
 				0A7CEA8726498641008E2D2E /* SettingsModuleTestConfigurator.swift in Sources */,
+				0AD28E852711DBB9007EEEF2 /* YandexWeatherResponseEntity.swift in Sources */,
+				0ACBF9112712F7D60045B9EF /* OWMForecastDayEntity.swift in Sources */,
 				0A7CEA8126498641008E2D2E /* SettingsPresenter.swift in Sources */,
 				0A83EF61270F91F4008D1BCF /* PlaceSearchModuleInput.swift in Sources */,
 				0A19859926FFD34000809DA6 /* LocationManager.swift in Sources */,
 				0A83EF48270F1651008D1BCF /* MapPresenter.swift in Sources */,
 				0A83EF60270F91F4008D1BCF /* PlaceSearchModuleOutput.swift in Sources */,
 				0A7CEA7C26498641008E2D2E /* WeatherViewInput.swift in Sources */,
+				0ACBF9132712F7DD0045B9EF /* OWMResponseEntry.swift in Sources */,
 				0A83EF4E270F1651008D1BCF /* MapModuleConfigurator.swift in Sources */,
 				0A83EF34270F144C008D1BCF /* PersonalCoordinatorOutput.swift in Sources */,
+				0ACBF9152712F7E10045B9EF /* OWMResponseEntity.swift in Sources */,
+				0AD28E922711FBCC007EEEF2 /* YandexForecastEntry.swift in Sources */,
 				0A7CEA8526498641008E2D2E /* SettingsViewController.swift in Sources */,
 				0A69888726434DC000F97207 /* AppDelegate.swift in Sources */,
 				0A42DA4C265A852C0095DB1C /* DateStringBuilder.swift in Sources */,
 				0A7CEA7626498641008E2D2E /* PlacesModuleTestConfigurator.swift in Sources */,
+				0ACBF90D2712F7C80045B9EF /* OWMTemperatureEntity.swift in Sources */,
 				0A51388626474A850026640F /* TabBarViewOutput.swift in Sources */,
 				0A83EF2E270F0A7D008D1BCF /* BaseCoordinator.swift in Sources */,
 				0A42DA5E265AD7F60095DB1C /* TemperatureStringBuilder.swift in Sources */,
+				0AD28E9927120DA1007EEEF2 /* WeatherSupplier.swift in Sources */,
+				0ACBF924271326BD0045B9EF /* ForecastProvider.swift in Sources */,
 				0A83EF51270F57EC008D1BCF /* UIButton+Style.swift in Sources */,
 				0A83EF33270F144C008D1BCF /* PersonalCoordinator.swift in Sources */,
+				0AD28E732711CD5C007EEEF2 /* Urls.swift in Sources */,
 				0A42DA52265A91460095DB1C /* WeatherConditions.swift in Sources */,
+				0AD28E8A2711FB9E007EEEF2 /* YandexForecastPartEntry.swift in Sources */,
 				0A51388926474A850026640F /* TabBarModuleTestConfigurator.swift in Sources */,
+				0ACBF9182712FCA20045B9EF /* OWMUrlRoute.swift in Sources */,
+				0AD28E902711FBC4007EEEF2 /* YandexForecastDayEntity.swift in Sources */,
 				0A5138C5264831C80026640F /* Closures.swift in Sources */,
+				0AD28E942711FBD3007EEEF2 /* YandexForecastEntity.swift in Sources */,
 				0A5138CA264832320026640F /* UINavigationController.swift in Sources */,
+				0ACBF91F271318C80045B9EF /* WeatherService.swift in Sources */,
 				0A42DA5B265AC7AB0095DB1C /* WeatherInfoCell.swift in Sources */,
 				0A83EF39270F1521008D1BCF /* WeatherCoordinator.swift in Sources */,
 				0A83EF2B270F0A00008D1BCF /* LocationCoordinatorOutput.swift in Sources */,
@@ -1166,6 +1402,7 @@
 				0A83EF47270F1651008D1BCF /* MapModuleOutput.swift in Sources */,
 				0A51388226474A850026640F /* TabBarModuleOutput.swift in Sources */,
 				0A42DA42265A74440095DB1C /* DateCollecttionCell.swift in Sources */,
+				0ACBF90B2712F7C10045B9EF /* OWMTemperatureEntry.swift in Sources */,
 				0A83EF4B270F1651008D1BCF /* MapViewController.swift in Sources */,
 				0A83EF65270F91F4008D1BCF /* PlaceSearchViewOutput.swift in Sources */,
 				0A7CEA7D26498641008E2D2E /* WeatherViewOutput.swift in Sources */,
@@ -1173,11 +1410,14 @@
 				0A7CEA8626498641008E2D2E /* SettingsViewInput.swift in Sources */,
 				0A5138B1264800F60026640F /* Router.swift in Sources */,
 				0A7CEA7826498641008E2D2E /* WeatherModuleOutput.swift in Sources */,
+				0ACBF9072712F7B00045B9EF /* OWMConditionsEntry.swift in Sources */,
 				0A7CEA8326498641008E2D2E /* SettingsViewOutput.swift in Sources */,
 				0A83EF9E270F9A90008D1BCF /* SearchBar.swift in Sources */,
 				0A42DA56265AAEB00095DB1C /* WeatherScreenViewModel.swift in Sources */,
+				0AD28E7F2711D947007EEEF2 /* YandexWeatherMetadataProvider.swift in Sources */,
 				0A7CEA7526498641008E2D2E /* PlacesModuleConfigurator.swift in Sources */,
 				0A7CEA7326498641008E2D2E /* PlacesViewOutput.swift in Sources */,
+				0ACBF9092712F7B60045B9EF /* OWMConditionsEntity.swift in Sources */,
 				0A7CEA7726498641008E2D2E /* WeatherModuleInput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

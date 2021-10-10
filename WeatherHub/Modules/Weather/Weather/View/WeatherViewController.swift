@@ -38,6 +38,8 @@ final class WeatherViewController: UIViewController {
 
     // MARK: - Private properties
 
+    private var isInitial = true
+
     private lazy var ddm = datesCollectionView.rddm.baseBuilder
         .add(plugin: .scrollableBehaviour(scrollProvider: self))
         .build()
@@ -60,7 +62,10 @@ final class WeatherViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        output?.layoutFinished()
+        if isInitial {
+            isInitial = false
+            output?.layoutFinished()
+        }
     }
 
 }
@@ -190,6 +195,7 @@ private extension WeatherViewController {
     }
 
     func fillCollection(with models: [DateViewModel]) {
+        ddm.clearCellGenerators()
         for model in models {
             let generator = DateCollecttionCell.rddm.baseGenerator(with: model)
             ddm.addCellGenerator(generator)

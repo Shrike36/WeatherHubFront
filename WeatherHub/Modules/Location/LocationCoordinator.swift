@@ -51,7 +51,7 @@ private extension LocationCoordinator {
         }
 
         components.output.onPlaceSelected = { [weak self] place in
-            guard let place = place else {
+            guard let place = place, place.locality != nil, place.location != nil else {
                 self?.showNoPlaceAlert()
                 return
             }

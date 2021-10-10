@@ -9,6 +9,8 @@
 // MARK: - Common
 
 "Common.loading" = "Загрузка...";
+"Common.yandex" = "Яндекс";
+"Common.owm" = "OpenWeatherMap";
 
 
 // MARK: - Tabs
