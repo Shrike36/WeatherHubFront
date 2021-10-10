@@ -65,4 +65,23 @@ extension WeatherConditions {
         }
     }
 
+    static func fromAeris(weatherCode: String) -> WeatherConditions {
+        let codeParts = weatherCode.components(separatedBy: ":")
+        let conditions = codeParts.last
+        switch conditions {
+        case "FW", "SC":
+            return .partialClouds
+        case "BK", "OV", "BD", "BN":
+            return .clouds
+        case "A", "BY", "L", "R", "RW", "ZR", "ZY":
+            return .rain
+        case "BS", "IC", "IP", "RS", "SI", "WM", "S", "SW", "ZL":
+            return .snow
+        case "T", "WP":
+            return .storm
+        default:
+            return .sun
+        }
+    }
+
 }

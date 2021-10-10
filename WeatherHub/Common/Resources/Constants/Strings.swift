@@ -12,6 +12,8 @@ import Foundation
 internal enum L10n {
 
   internal enum Common {
+    /// Aeris
+    internal static let aeris = L10n.tr("Localizable", "Common.aeris")
     /// Loading...
     internal static let loading = L10n.tr("Localizable", "Common.loading")
     /// OpenWeatherMap

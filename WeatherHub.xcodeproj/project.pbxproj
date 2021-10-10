@@ -115,6 +115,14 @@
 		0ACBF91F271318C80045B9EF /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF91E271318C80045B9EF /* WeatherService.swift */; };
 		0ACBF9212713265F0045B9EF /* WeatherInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF9202713265F0045B9EF /* WeatherInteractor.swift */; };
 		0ACBF924271326BD0045B9EF /* ForecastProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF923271326BD0045B9EF /* ForecastProvider.swift */; };
+		0ACBF92A271347D50045B9EF /* AerisForecastDayEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF929271347D50045B9EF /* AerisForecastDayEntry.swift */; };
+		0ACBF92C271347DA0045B9EF /* AerisForecastDayEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF92B271347DA0045B9EF /* AerisForecastDayEntity.swift */; };
+		0ACBF92E271347E40045B9EF /* AerisForecastEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF92D271347E40045B9EF /* AerisForecastEntry.swift */; };
+		0ACBF930271347E90045B9EF /* AerisForecastEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF92F271347E90045B9EF /* AerisForecastEntity.swift */; };
+		0ACBF932271347F20045B9EF /* AerisResponseEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF931271347F20045B9EF /* AerisResponseEntry.swift */; };
+		0ACBF934271347F70045B9EF /* AerisResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF933271347F70045B9EF /* AerisResponseEntity.swift */; };
+		0ACBF93727134EAC0045B9EF /* AerisUrlRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF93627134EAC0045B9EF /* AerisUrlRoute.swift */; };
+		0ACBF939271351850045B9EF /* AerisService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF938271351850045B9EF /* AerisService.swift */; };
 		0AD28E622710B148007EEEF2 /* SearchResultCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E602710B148007EEEF2 /* SearchResultCellTableViewCell.swift */; };
 		0AD28E632710B148007EEEF2 /* SearchResultCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD28E612710B148007EEEF2 /* SearchResultCellTableViewCell.xib */; };
 		0AD28E652710F309007EEEF2 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E642710F309007EEEF2 /* SearchResult.swift */; };
@@ -272,6 +280,14 @@
 		0ACBF91E271318C80045B9EF /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		0ACBF9202713265F0045B9EF /* WeatherInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInteractor.swift; sourceTree = "<group>"; };
 		0ACBF923271326BD0045B9EF /* ForecastProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastProvider.swift; sourceTree = "<group>"; };
+		0ACBF929271347D50045B9EF /* AerisForecastDayEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AerisForecastDayEntry.swift; sourceTree = "<group>"; };
+		0ACBF92B271347DA0045B9EF /* AerisForecastDayEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AerisForecastDayEntity.swift; sourceTree = "<group>"; };
+		0ACBF92D271347E40045B9EF /* AerisForecastEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AerisForecastEntry.swift; sourceTree = "<group>"; };
+		0ACBF92F271347E90045B9EF /* AerisForecastEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AerisForecastEntity.swift; sourceTree = "<group>"; };
+		0ACBF931271347F20045B9EF /* AerisResponseEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AerisResponseEntry.swift; sourceTree = "<group>"; };
+		0ACBF933271347F70045B9EF /* AerisResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AerisResponseEntity.swift; sourceTree = "<group>"; };
+		0ACBF93627134EAC0045B9EF /* AerisUrlRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AerisUrlRoute.swift; sourceTree = "<group>"; };
+		0ACBF938271351850045B9EF /* AerisService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AerisService.swift; sourceTree = "<group>"; };
 		0AD28E602710B148007EEEF2 /* SearchResultCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCellTableViewCell.swift; sourceTree = "<group>"; };
 		0AD28E612710B148007EEEF2 /* SearchResultCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCellTableViewCell.xib; sourceTree = "<group>"; };
 		0AD28E642710F309007EEEF2 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
@@ -350,6 +366,7 @@
 			isa = PBXGroup;
 			children = (
 				0ACBF922271326AD0045B9EF /* Common */,
+				0ACBF925271346F60045B9EF /* Aeris */,
 				0AD28E9A2712E908007EEEF2 /* OWM */,
 				0AD28E802711DB84007EEEF2 /* YandexWeather */,
 				0A42DA51265A91460095DB1C /* WeatherConditions.swift */,
@@ -903,6 +920,52 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		0ACBF925271346F60045B9EF /* Aeris */ = {
+			isa = PBXGroup;
+			children = (
+				0ACBF928271347780045B9EF /* AerisForecastDay */,
+				0ACBF927271347630045B9EF /* AerisForecast */,
+				0ACBF926271346FF0045B9EF /* AerisResponse */,
+			);
+			path = Aeris;
+			sourceTree = "<group>";
+		};
+		0ACBF926271346FF0045B9EF /* AerisResponse */ = {
+			isa = PBXGroup;
+			children = (
+				0ACBF931271347F20045B9EF /* AerisResponseEntry.swift */,
+				0ACBF933271347F70045B9EF /* AerisResponseEntity.swift */,
+			);
+			path = AerisResponse;
+			sourceTree = "<group>";
+		};
+		0ACBF927271347630045B9EF /* AerisForecast */ = {
+			isa = PBXGroup;
+			children = (
+				0ACBF92D271347E40045B9EF /* AerisForecastEntry.swift */,
+				0ACBF92F271347E90045B9EF /* AerisForecastEntity.swift */,
+			);
+			path = AerisForecast;
+			sourceTree = "<group>";
+		};
+		0ACBF928271347780045B9EF /* AerisForecastDay */ = {
+			isa = PBXGroup;
+			children = (
+				0ACBF929271347D50045B9EF /* AerisForecastDayEntry.swift */,
+				0ACBF92B271347DA0045B9EF /* AerisForecastDayEntity.swift */,
+			);
+			path = AerisForecastDay;
+			sourceTree = "<group>";
+		};
+		0ACBF93527134E980045B9EF /* Aeris */ = {
+			isa = PBXGroup;
+			children = (
+				0ACBF93627134EAC0045B9EF /* AerisUrlRoute.swift */,
+				0ACBF938271351850045B9EF /* AerisService.swift */,
+			);
+			path = Aeris;
+			sourceTree = "<group>";
+		};
 		0AD28E5F2710B11B007EEEF2 /* SearchResultCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -933,6 +996,7 @@
 			isa = PBXGroup;
 			children = (
 				0ACBF91D271318BA0045B9EF /* Common */,
+				0ACBF93527134E980045B9EF /* Aeris */,
 				0ACBF9162712FC8E0045B9EF /* OpenWeatherMap */,
 				0AD28E792711D6EA007EEEF2 /* YandexWeather */,
 				0AD28E722711CD5C007EEEF2 /* Urls.swift */,
@@ -1320,6 +1384,7 @@
 				0AD28E7D2711D6EA007EEEF2 /* YandexWeatherService.swift in Sources */,
 				0A51388826474A850026640F /* TabBarViewController.swift in Sources */,
 				0A5138BB26482EEB0026640F /* UIApplication.swift in Sources */,
+				0ACBF932271347F20045B9EF /* AerisResponseEntry.swift in Sources */,
 				0A83EFA1270F9A96008D1BCF /* SearchBarExtension.swift in Sources */,
 				0AD28E8C2711FBA4007EEEF2 /* YandexForecastPartEntity.swift in Sources */,
 				0A83EF38270F1521008D1BCF /* WeatherCoordinatorOutput.swift in Sources */,
@@ -1329,7 +1394,9 @@
 				0A7CEA8826498641008E2D2E /* SettingsModuleConfigurator.swift in Sources */,
 				0A7CEA7A26498641008E2D2E /* WeatherViewController.swift in Sources */,
 				0A83EFA4270F9AAA008D1BCF /* SearchTextField.swift in Sources */,
+				0ACBF930271347E90045B9EF /* AerisForecastEntity.swift in Sources */,
 				0ACBF91C2712FF6C0045B9EF /* ServiceKeys.swift in Sources */,
+				0ACBF93727134EAC0045B9EF /* AerisUrlRoute.swift in Sources */,
 				0A42DA50265A91340095DB1C /* WeatherViewModel.swift in Sources */,
 				0A7CEA6F26498641008E2D2E /* PlacesModuleOutput.swift in Sources */,
 				0AD28E622710B148007EEEF2 /* SearchResultCellTableViewCell.swift in Sources */,
@@ -1357,6 +1424,7 @@
 				0A7CEA7426498641008E2D2E /* PlacesViewController.swift in Sources */,
 				0A7CEA8726498641008E2D2E /* SettingsModuleTestConfigurator.swift in Sources */,
 				0AD28E852711DBB9007EEEF2 /* YandexWeatherResponseEntity.swift in Sources */,
+				0ACBF939271351850045B9EF /* AerisService.swift in Sources */,
 				0ACBF9112712F7D60045B9EF /* OWMForecastDayEntity.swift in Sources */,
 				0A7CEA8126498641008E2D2E /* SettingsPresenter.swift in Sources */,
 				0A83EF61270F91F4008D1BCF /* PlaceSearchModuleInput.swift in Sources */,
@@ -1369,6 +1437,7 @@
 				0A83EF34270F144C008D1BCF /* PersonalCoordinatorOutput.swift in Sources */,
 				0ACBF9152712F7E10045B9EF /* OWMResponseEntity.swift in Sources */,
 				0AD28E922711FBCC007EEEF2 /* YandexForecastEntry.swift in Sources */,
+				0ACBF92C271347DA0045B9EF /* AerisForecastDayEntity.swift in Sources */,
 				0A7CEA8526498641008E2D2E /* SettingsViewController.swift in Sources */,
 				0A69888726434DC000F97207 /* AppDelegate.swift in Sources */,
 				0A42DA4C265A852C0095DB1C /* DateStringBuilder.swift in Sources */,
@@ -1393,6 +1462,9 @@
 				0ACBF91F271318C80045B9EF /* WeatherService.swift in Sources */,
 				0A42DA5B265AC7AB0095DB1C /* WeatherInfoCell.swift in Sources */,
 				0A83EF39270F1521008D1BCF /* WeatherCoordinator.swift in Sources */,
+				0ACBF92E271347E40045B9EF /* AerisForecastEntry.swift in Sources */,
+				0ACBF934271347F70045B9EF /* AerisResponseEntity.swift in Sources */,
+				0ACBF92A271347D50045B9EF /* AerisForecastDayEntry.swift in Sources */,
 				0A83EF2B270F0A00008D1BCF /* LocationCoordinatorOutput.swift in Sources */,
 				0A83EF4A270F1651008D1BCF /* MapViewOutput.swift in Sources */,
 				0A7CEA7E26498641008E2D2E /* WeatherModuleTestConfigurator.swift in Sources */,

@@ -47,7 +47,7 @@ public class OWMService: WeatherService {
 
 private extension OWMService {
 
-    private func getForecast(for coordinates: CLLocationCoordinate2D) -> Observer<OWMResponseEntity> {
+    func getForecast(for coordinates: CLLocationCoordinate2D) -> Observer<OWMResponseEntity> {
         return builder
             .set(query: [
                 Keys.latitude: coordinates.latitude,

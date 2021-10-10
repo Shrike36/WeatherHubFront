@@ -17,4 +17,8 @@ public enum Urls {
         return "https://api.openweathermap.org/data/2.5"
     }
 
+    public static var aeris: String {
+        return "https://api.aerisapi.com"
+    }
+
 }

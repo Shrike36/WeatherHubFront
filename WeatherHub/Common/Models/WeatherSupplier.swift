@@ -10,6 +10,7 @@ import NodeKit
 public enum WeatherSupplier: CaseIterable {
     case yandex
     case openWeatherMap
+    case aeris
 }
 
 public extension WeatherSupplier {
@@ -20,6 +21,8 @@ public extension WeatherSupplier {
             return YandexWeatherService()
         case .openWeatherMap:
             return OWMService()
+        case .aeris:
+            return AerisService()
         }
     }
 
