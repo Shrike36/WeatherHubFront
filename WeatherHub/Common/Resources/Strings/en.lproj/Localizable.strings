@@ -24,6 +24,7 @@
 // MARK: - Places screen
 
 "Places.title" = "Saved places";
+"Places.remove" = "Remove";
 "Places.error.title" = "Could not find data for this place :(";
 "Places.error.advice" = "Try again or select another place";
 

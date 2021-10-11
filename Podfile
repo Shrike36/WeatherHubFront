@@ -20,7 +20,7 @@ target 'WeatherHub' do
   pod 'SurfUtils/UIStyle', :git => $SurfUtils, :tag => $Tag
   pod 'SurfUtils/WordDeclinationSelector', :git => $SurfUtils, :tag => $Tag
   pod 'SurfUtils/CommonButton', :git => $SurfUtils, :tag => $Tag
-  # pod 'SurfUtils/VibrationFeedbackManager', :git => $SurfUtils, :tag => $Tag
+  pod 'SurfUtils/VibrationFeedbackManager', :git => $SurfUtils, :tag => $Tag
   pod 'SurfUtils/ItemsScrollManager', :git => $SurfUtils, :tag => $Tag
   pod 'SurfUtils/LayoutHelper', :git => $SurfUtils, :tag => $Tag
   pod 'SurfUtils/XibView', :git => $SurfUtils, :tag => $Tag

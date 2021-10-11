@@ -123,9 +123,18 @@
 		0ACBF934271347F70045B9EF /* AerisResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF933271347F70045B9EF /* AerisResponseEntity.swift */; };
 		0ACBF93727134EAC0045B9EF /* AerisUrlRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF93627134EAC0045B9EF /* AerisUrlRoute.swift */; };
 		0ACBF939271351850045B9EF /* AerisService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF938271351850045B9EF /* AerisService.swift */; };
-		0AD28E622710B148007EEEF2 /* SearchResultCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E602710B148007EEEF2 /* SearchResultCellTableViewCell.swift */; };
-		0AD28E632710B148007EEEF2 /* SearchResultCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD28E612710B148007EEEF2 /* SearchResultCellTableViewCell.xib */; };
-		0AD28E652710F309007EEEF2 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E642710F309007EEEF2 /* SearchResult.swift */; };
+		0ACBF93E27136A990045B9EF /* PlaceEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF93D27136A990045B9EF /* PlaceEntry.swift */; };
+		0ACBF94027136AA00045B9EF /* PlaceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF93F27136AA00045B9EF /* PlaceEntity.swift */; };
+		0ACBF94327136DC70045B9EF /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF94227136DC70045B9EF /* StorageService.swift */; };
+		0ACBF94527136F590045B9EF /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF94427136F590045B9EF /* Decodable.swift */; };
+		0ACBF94727136F740045B9EF /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF94627136F740045B9EF /* Encodable.swift */; };
+		0ACBF94A271391820045B9EF /* SavedPlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF949271391820045B9EF /* SavedPlacesService.swift */; };
+		0ACBF94D2713A1940045B9EF /* SavedPlacesEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF94C2713A1940045B9EF /* SavedPlacesEntry.swift */; };
+		0ACBF94F2713A1990045B9EF /* SavedPlacesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF94E2713A1990045B9EF /* SavedPlacesEntity.swift */; };
+		0ACBF9512714232C0045B9EF /* UIView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF9502714232C0045B9EF /* UIView+Reusable.swift */; };
+		0AD28E622710B148007EEEF2 /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E602710B148007EEEF2 /* PlaceTableViewCell.swift */; };
+		0AD28E632710B148007EEEF2 /* PlaceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AD28E612710B148007EEEF2 /* PlaceTableViewCell.xib */; };
+		0AD28E652710F309007EEEF2 /* PlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E642710F309007EEEF2 /* PlaceViewModel.swift */; };
 		0AD28E672711ABD4007EEEF2 /* UIViewController+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E662711ABD4007EEEF2 /* UIViewController+Loading.swift */; };
 		0AD28E6B2711AF0E007EEEF2 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E6A2711AF0E007EEEF2 /* LoadingView.swift */; };
 		0AD28E6D2711C25E007EEEF2 /* LoadingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD28E6C2711C25E007EEEF2 /* LoadingPresenter.swift */; };
@@ -288,9 +297,18 @@
 		0ACBF933271347F70045B9EF /* AerisResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AerisResponseEntity.swift; sourceTree = "<group>"; };
 		0ACBF93627134EAC0045B9EF /* AerisUrlRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AerisUrlRoute.swift; sourceTree = "<group>"; };
 		0ACBF938271351850045B9EF /* AerisService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AerisService.swift; sourceTree = "<group>"; };
-		0AD28E602710B148007EEEF2 /* SearchResultCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCellTableViewCell.swift; sourceTree = "<group>"; };
-		0AD28E612710B148007EEEF2 /* SearchResultCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCellTableViewCell.xib; sourceTree = "<group>"; };
-		0AD28E642710F309007EEEF2 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		0ACBF93D27136A990045B9EF /* PlaceEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceEntry.swift; sourceTree = "<group>"; };
+		0ACBF93F27136AA00045B9EF /* PlaceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceEntity.swift; sourceTree = "<group>"; };
+		0ACBF94227136DC70045B9EF /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		0ACBF94427136F590045B9EF /* Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decodable.swift; sourceTree = "<group>"; };
+		0ACBF94627136F740045B9EF /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		0ACBF949271391820045B9EF /* SavedPlacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPlacesService.swift; sourceTree = "<group>"; };
+		0ACBF94C2713A1940045B9EF /* SavedPlacesEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPlacesEntry.swift; sourceTree = "<group>"; };
+		0ACBF94E2713A1990045B9EF /* SavedPlacesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedPlacesEntity.swift; sourceTree = "<group>"; };
+		0ACBF9502714232C0045B9EF /* UIView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Reusable.swift"; sourceTree = "<group>"; };
+		0AD28E602710B148007EEEF2 /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
+		0AD28E612710B148007EEEF2 /* PlaceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceTableViewCell.xib; sourceTree = "<group>"; };
+		0AD28E642710F309007EEEF2 /* PlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewModel.swift; sourceTree = "<group>"; };
 		0AD28E662711ABD4007EEEF2 /* UIViewController+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Loading.swift"; sourceTree = "<group>"; };
 		0AD28E6A2711AF0E007EEEF2 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		0AD28E6C2711C25E007EEEF2 /* LoadingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingPresenter.swift; sourceTree = "<group>"; };
@@ -366,11 +384,10 @@
 			isa = PBXGroup;
 			children = (
 				0ACBF922271326AD0045B9EF /* Common */,
+				0ACBF93A2713691C0045B9EF /* Location */,
 				0ACBF925271346F60045B9EF /* Aeris */,
 				0AD28E9A2712E908007EEEF2 /* OWM */,
 				0AD28E802711DB84007EEEF2 /* YandexWeather */,
-				0A42DA51265A91460095DB1C /* WeatherConditions.swift */,
-				0AD28E9827120DA1007EEEF2 /* WeatherSupplier.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -481,9 +498,12 @@
 			isa = PBXGroup;
 			children = (
 				0A51389E2647F8C20026640F /* Foundation.swift */,
+				0ACBF94427136F590045B9EF /* Decodable.swift */,
+				0ACBF94627136F740045B9EF /* Encodable.swift */,
 				0A5138BA26482EEA0026640F /* UIApplication.swift */,
 				0A83EF50270F57EC008D1BCF /* UIButton+Style.swift */,
 				0A5138C9264832320026640F /* UINavigationController.swift */,
+				0ACBF9502714232C0045B9EF /* UIView+Reusable.swift */,
 				0A5138962647F85A0026640F /* UIViewController.swift */,
 				0AD28E662711ABD4007EEEF2 /* UIViewController+Loading.swift */,
 			);
@@ -839,7 +859,6 @@
 		0A83EF57270F91F4008D1BCF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0AD28E5F2710B11B007EEEF2 /* SearchResultCell */,
 				0A83EFA2270F9A9B008D1BCF /* SearchTextField */,
 				0A83EF9B270F9A80008D1BCF /* SearchBar */,
 				0A83EF58270F91F4008D1BCF /* PlaceSearchViewController.xib */,
@@ -916,6 +935,8 @@
 			isa = PBXGroup;
 			children = (
 				0ACBF923271326BD0045B9EF /* ForecastProvider.swift */,
+				0A42DA51265A91460095DB1C /* WeatherConditions.swift */,
+				0AD28E9827120DA1007EEEF2 /* WeatherSupplier.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -966,19 +987,56 @@
 			path = Aeris;
 			sourceTree = "<group>";
 		};
-		0AD28E5F2710B11B007EEEF2 /* SearchResultCell */ = {
+		0ACBF93A2713691C0045B9EF /* Location */ = {
 			isa = PBXGroup;
 			children = (
-				0AD28E602710B148007EEEF2 /* SearchResultCellTableViewCell.swift */,
-				0AD28E612710B148007EEEF2 /* SearchResultCellTableViewCell.xib */,
-				0AD28E642710F309007EEEF2 /* SearchResult.swift */,
+				0ACBF94B2713A1780045B9EF /* SavedPlaces */,
+				0ACBF93B27136A640045B9EF /* Place */,
 			);
-			path = SearchResultCell;
+			path = Location;
+			sourceTree = "<group>";
+		};
+		0ACBF93B27136A640045B9EF /* Place */ = {
+			isa = PBXGroup;
+			children = (
+				0ACBF93D27136A990045B9EF /* PlaceEntry.swift */,
+				0ACBF93F27136AA00045B9EF /* PlaceEntity.swift */,
+			);
+			path = Place;
+			sourceTree = "<group>";
+		};
+		0ACBF94127136DA80045B9EF /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				0ACBF94227136DC70045B9EF /* StorageService.swift */,
+				0ACBF949271391820045B9EF /* SavedPlacesService.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		0ACBF94B2713A1780045B9EF /* SavedPlaces */ = {
+			isa = PBXGroup;
+			children = (
+				0ACBF94C2713A1940045B9EF /* SavedPlacesEntry.swift */,
+				0ACBF94E2713A1990045B9EF /* SavedPlacesEntity.swift */,
+			);
+			path = SavedPlaces;
+			sourceTree = "<group>";
+		};
+		0AD28E5F2710B11B007EEEF2 /* PlaceTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0AD28E602710B148007EEEF2 /* PlaceTableViewCell.swift */,
+				0AD28E612710B148007EEEF2 /* PlaceTableViewCell.xib */,
+				0AD28E642710F309007EEEF2 /* PlaceViewModel.swift */,
+			);
+			path = PlaceTableViewCell;
 			sourceTree = "<group>";
 		};
 		0AD28E682711AE8A007EEEF2 /* Reusable */ = {
 			isa = PBXGroup;
 			children = (
+				0AD28E5F2710B11B007EEEF2 /* PlaceTableViewCell */,
 				0AD28E692711AE93007EEEF2 /* LoadingView */,
 			);
 			path = Reusable;
@@ -996,6 +1054,7 @@
 			isa = PBXGroup;
 			children = (
 				0ACBF91D271318BA0045B9EF /* Common */,
+				0ACBF94127136DA80045B9EF /* Storage */,
 				0ACBF93527134E980045B9EF /* Aeris */,
 				0ACBF9162712FC8E0045B9EF /* OpenWeatherMap */,
 				0AD28E792711D6EA007EEEF2 /* YandexWeather */,
@@ -1239,7 +1298,7 @@
 				0A6988DF264357EA00F97207 /* Localizable.strings in Resources */,
 				0A7CEA8426498641008E2D2E /* SettingsViewController.xib in Resources */,
 				0A83EF62270F91F4008D1BCF /* PlaceSearchViewController.xib in Resources */,
-				0AD28E632710B148007EEEF2 /* SearchResultCellTableViewCell.xib in Resources */,
+				0AD28E632710B148007EEEF2 /* PlaceTableViewCell.xib in Resources */,
 				0A42DA5C265AC7AB0095DB1C /* WeatherInfoCell.xib in Resources */,
 				0A42DA43265A74440095DB1C /* DateCollecttionCell.xib in Resources */,
 				0A69889026434DC300F97207 /* Assets.xcassets in Resources */,
@@ -1371,11 +1430,14 @@
 				0A51388A26474A850026640F /* TabBarModuleConfigurator.swift in Sources */,
 				0A5138C02648309F0026640F /* Presentable.swift in Sources */,
 				0AD28E6B2711AF0E007EEEF2 /* LoadingView.swift in Sources */,
+				0ACBF94027136AA00045B9EF /* PlaceEntity.swift in Sources */,
 				0A7CEA7226498641008E2D2E /* PlacesViewInput.swift in Sources */,
 				0AD28E672711ABD4007EEEF2 /* UIViewController+Loading.swift in Sources */,
+				0ACBF94D2713A1940045B9EF /* SavedPlacesEntry.swift in Sources */,
 				0A83EF49270F1651008D1BCF /* MapModuleInput.swift in Sources */,
 				0A7CEA8226498641008E2D2E /* SettingsModuleInput.swift in Sources */,
 				0A7CEA6E26498641008E2D2E /* PlacesModuleInput.swift in Sources */,
+				0ACBF94A271391820045B9EF /* SavedPlacesService.swift in Sources */,
 				0ACBF91A2712FCAB0045B9EF /* OWMService.swift in Sources */,
 				0A7CEA342648AAFA008E2D2E /* Strings.swift in Sources */,
 				0A5138D2264883F40026640F /* MainTab.swift in Sources */,
@@ -1399,9 +1461,9 @@
 				0ACBF93727134EAC0045B9EF /* AerisUrlRoute.swift in Sources */,
 				0A42DA50265A91340095DB1C /* WeatherViewModel.swift in Sources */,
 				0A7CEA6F26498641008E2D2E /* PlacesModuleOutput.swift in Sources */,
-				0AD28E622710B148007EEEF2 /* SearchResultCellTableViewCell.swift in Sources */,
+				0AD28E622710B148007EEEF2 /* PlaceTableViewCell.swift in Sources */,
 				0A83EF67270F91F4008D1BCF /* PlaceSearchModuleConfigurator.swift in Sources */,
-				0AD28E652710F309007EEEF2 /* SearchResult.swift in Sources */,
+				0AD28E652710F309007EEEF2 /* PlaceViewModel.swift in Sources */,
 				0A7CEA352648AAFA008E2D2E /* Assets.swift in Sources */,
 				0A5138972647F85A0026640F /* UIViewController.swift in Sources */,
 				0A83EF4F270F1651008D1BCF /* MapModuleTestConfigurator.swift in Sources */,
@@ -1410,6 +1472,7 @@
 				0A5137B126472B180026640F /* MainCoordinator.swift in Sources */,
 				0A51388426474A850026640F /* TabBarModuleInput.swift in Sources */,
 				0AD28E6D2711C25E007EEEF2 /* LoadingPresenter.swift in Sources */,
+				0ACBF93E27136A990045B9EF /* PlaceEntry.swift in Sources */,
 				0AD28E6F2711C55C007EEEF2 /* WeatherCoordinatorInput.swift in Sources */,
 				0A83EF5F270F91F4008D1BCF /* PlaceSearchPresenter.swift in Sources */,
 				0AD28E7C2711D6EA007EEEF2 /* YandexWeatherUrlRoute.swift in Sources */,
@@ -1427,6 +1490,7 @@
 				0ACBF939271351850045B9EF /* AerisService.swift in Sources */,
 				0ACBF9112712F7D60045B9EF /* OWMForecastDayEntity.swift in Sources */,
 				0A7CEA8126498641008E2D2E /* SettingsPresenter.swift in Sources */,
+				0ACBF94F2713A1990045B9EF /* SavedPlacesEntity.swift in Sources */,
 				0A83EF61270F91F4008D1BCF /* PlaceSearchModuleInput.swift in Sources */,
 				0A19859926FFD34000809DA6 /* LocationManager.swift in Sources */,
 				0A83EF48270F1651008D1BCF /* MapPresenter.swift in Sources */,
@@ -1448,6 +1512,7 @@
 				0A42DA5E265AD7F60095DB1C /* TemperatureStringBuilder.swift in Sources */,
 				0AD28E9927120DA1007EEEF2 /* WeatherSupplier.swift in Sources */,
 				0ACBF924271326BD0045B9EF /* ForecastProvider.swift in Sources */,
+				0ACBF94527136F590045B9EF /* Decodable.swift in Sources */,
 				0A83EF51270F57EC008D1BCF /* UIButton+Style.swift in Sources */,
 				0A83EF33270F144C008D1BCF /* PersonalCoordinator.swift in Sources */,
 				0AD28E732711CD5C007EEEF2 /* Urls.swift in Sources */,
@@ -1463,10 +1528,12 @@
 				0A42DA5B265AC7AB0095DB1C /* WeatherInfoCell.swift in Sources */,
 				0A83EF39270F1521008D1BCF /* WeatherCoordinator.swift in Sources */,
 				0ACBF92E271347E40045B9EF /* AerisForecastEntry.swift in Sources */,
+				0ACBF94327136DC70045B9EF /* StorageService.swift in Sources */,
 				0ACBF934271347F70045B9EF /* AerisResponseEntity.swift in Sources */,
 				0ACBF92A271347D50045B9EF /* AerisForecastDayEntry.swift in Sources */,
 				0A83EF2B270F0A00008D1BCF /* LocationCoordinatorOutput.swift in Sources */,
 				0A83EF4A270F1651008D1BCF /* MapViewOutput.swift in Sources */,
+				0ACBF94727136F740045B9EF /* Encodable.swift in Sources */,
 				0A7CEA7E26498641008E2D2E /* WeatherModuleTestConfigurator.swift in Sources */,
 				0A83EF64270F91F4008D1BCF /* PlaceSearchViewInput.swift in Sources */,
 				0A7CEA7926498641008E2D2E /* WeatherPresenter.swift in Sources */,
@@ -1475,6 +1542,7 @@
 				0A51388226474A850026640F /* TabBarModuleOutput.swift in Sources */,
 				0A42DA42265A74440095DB1C /* DateCollecttionCell.swift in Sources */,
 				0ACBF90B2712F7C10045B9EF /* OWMTemperatureEntry.swift in Sources */,
+				0ACBF9512714232C0045B9EF /* UIView+Reusable.swift in Sources */,
 				0A83EF4B270F1651008D1BCF /* MapViewController.swift in Sources */,
 				0A83EF65270F91F4008D1BCF /* PlaceSearchViewOutput.swift in Sources */,
 				0A7CEA7D26498641008E2D2E /* WeatherViewOutput.swift in Sources */,

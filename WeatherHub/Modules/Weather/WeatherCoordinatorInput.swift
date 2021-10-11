@@ -8,5 +8,5 @@
 import CoreLocation
 
 protocol WeatherCoordinatorInput: AnyObject {
-    func showWeather(for place: CLPlacemark)
+    func showWeather(for place: PlaceEntity)
 }

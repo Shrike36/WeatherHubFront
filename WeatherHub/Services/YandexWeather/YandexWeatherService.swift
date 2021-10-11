@@ -11,7 +11,7 @@ public class YandexWeatherService: WeatherService {
 
     private enum Keys {
         static let latitude = "lat"
-        static let longtitude = "long"
+        static let longtitude = "lon"
         static let needHourly = "hours"
         static let needExtraInfo = "extra"
     }

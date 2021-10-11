@@ -7,4 +7,7 @@ protocol PlacesViewOutput {
     func handleLocationRequested()
     func handleSearchNeeded()
     func handleMapNeeded()
+    func handlePlaceSelected(at index: Int)
+    func handlePlacesAppear()
+    func removePlace(at index: Int)
 }

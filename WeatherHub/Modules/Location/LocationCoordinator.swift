@@ -4,12 +4,13 @@
 
 import CoreLocation
 import UIKit
+import SurfUtils
 
 final class LocationCoordinator: BaseCoordinator, LocationCoordinatorOutput {
 
     // MARK: - LocationCoordinatorOutput
 
-    var onPlaceSelected: Closure<CLPlacemark>?
+    var onPlaceSelected: Closure<PlaceEntity>?
 
     // MARK: - Private Properties
 
@@ -51,11 +52,11 @@ private extension LocationCoordinator {
         }
 
         components.output.onPlaceSelected = { [weak self] place in
-            guard let place = place, place.locality != nil, place.location != nil else {
+            guard let placeModel = place else {
                 self?.showNoPlaceAlert()
                 return
             }
-            self?.onPlaceSelected?(place)
+            self?.onPlaceSelected?(placeModel)
         }
 
         router.setNavigationControllerRootModule(components.view, animated: false, hideBar: false)
@@ -93,6 +94,7 @@ private extension LocationCoordinator {
         )
 
         alert.addAction(UIAlertAction(title: "OK", style: .default))
+        VibrationFeedbackManager.playHapticFeedbackBy(type: .error)
         router.present(alert)
     }
 

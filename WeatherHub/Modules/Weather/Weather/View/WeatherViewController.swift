@@ -39,6 +39,7 @@ final class WeatherViewController: UIViewController {
     // MARK: - Private properties
 
     private var isInitial = true
+    private var canPressHeart = true
 
     private lazy var ddm = datesCollectionView.rddm.baseBuilder
         .add(plugin: .scrollableBehaviour(scrollProvider: self))
@@ -65,6 +66,8 @@ final class WeatherViewController: UIViewController {
         if isInitial {
             isInitial = false
             output?.layoutFinished()
+        } else {
+            output?.viewWillAppear()
         }
     }
 
@@ -85,6 +88,8 @@ extension WeatherViewController: WeatherViewInput {
 
     func configure(with model: WeatherScreenViewModel) {
         cityLabel.text = model.cityName
+        setDateScrollIndex(0, animated: false)
+        setDateChangeButtonsVisisble(left: false, right: true)
         setDateText(model.dates.first!.date)
         configureCollection()
         fillCollection(with: model.dates)
@@ -97,14 +102,18 @@ extension WeatherViewController: WeatherViewInput {
         nextDateButton.isUserInteractionEnabled = rightVisible
     }
 
-    func setDateScrollIndex(_ index: Int) {
+    func setDateScrollIndex(_ index: Int, animated: Bool) {
         datesCollectionView.scrollToItem(at: IndexPath(item: index, section: 0),
                                          at: .centeredHorizontally,
-                                         animated: true)
+                                         animated: animated)
     }
 
     func setDateText(_ date: Date) {
         dateLabel.text = DateStringBuilder().buildString(for: date, withDayName: true)
+    }
+
+    func setFavoriteState(isSaved: Bool) {
+        heartButton.isSelected = isSaved
     }
 
 }
@@ -149,7 +158,8 @@ private extension WeatherViewController {
     func configureHeartButton() {
         heartButton.addedTouchArea = Constants.addedTouchRadius
         heartButton.setTitleForAllState(nil)
-        setFavoriteState(isSaved: true) // remove
+        heartButton.setImage(Asset.Assets.heartFill.image.withTintColor(.gray), for: .normal)
+        heartButton.setImage(Asset.Assets.heartFill.image.withTintColor(.red), for: .selected)
     }
 
     func configurePrevDateButton() {
@@ -189,11 +199,6 @@ private extension WeatherViewController {
 
 private extension WeatherViewController {
 
-    func setFavoriteState(isSaved: Bool) {
-        let buttonColor: UIColor = isSaved ? .red : .gray
-        heartButton.setImage(Asset.Assets.heartFill.image.withTintColor(buttonColor), for: .normal)
-    }
-
     func fillCollection(with models: [DateViewModel]) {
         ddm.clearCellGenerators()
         for model in models {
@@ -210,14 +215,26 @@ private extension WeatherViewController {
 private extension WeatherViewController {
 
     @IBAction func heartTapped(_ sender: Any) {
-//        output
+        guard canPressHeart else {
+            return
+        }
+        canPressHeart = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+            self?.canPressHeart = true
+        }
+        let newState = !heartButton.isSelected
+        setFavoriteState(isSaved: newState)
+        VibrationFeedbackManager.playHapticFeedbackBy(type: .medium)
+        output?.heartSelected(state: newState)
     }
 
     @IBAction func previousTapped(_ sender: Any) {
+        VibrationFeedbackManager.playHapticFeedbackBy(type: .light)
         output?.prevDateAsked()
     }
 
     @IBAction func nextTapped(_ sender: Any) {
+        VibrationFeedbackManager.playHapticFeedbackBy(type: .light)
         output?.nextDateAsked()
     }
 

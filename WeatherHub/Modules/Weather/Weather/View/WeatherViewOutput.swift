@@ -3,14 +3,11 @@
 //
 
 protocol WeatherViewOutput {
-    /// Notify presenter that view is ready
     func viewLoaded()
-    /// Notify presenter that view layout is finished
     func layoutFinished()
-    /// Notify presenter that user wants to see previous date
+    func viewWillAppear()
     func prevDateAsked()
-    /// Notify presenter that user wants to see next date
     func nextDateAsked()
-    /// Notify presenter that user scrolled to given index
     func scrolledToIndex(_ index: Int)
+    func heartSelected(state: Bool)
 }

@@ -5,5 +5,5 @@
 import CoreLocation
 
 protocol LocationCoordinatorOutput: AnyObject {
-    var onPlaceSelected: Closure<CLPlacemark>? { get set }
+    var onPlaceSelected: Closure<PlaceEntity>? { get set }
 }

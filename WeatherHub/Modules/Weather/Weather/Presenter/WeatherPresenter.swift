@@ -4,6 +4,7 @@
 
 import Foundation
 import CoreLocation
+import UIKit
 
 final class WeatherPresenter: WeatherModuleOutput {
 
@@ -11,9 +12,12 @@ final class WeatherPresenter: WeatherModuleOutput {
 
     private enum Constants {
         static let days = 5
+        static let locationObserverID = "currentLocation"
     }
 
     // MARK: - WeatherModuleOutput
+
+    var onAlertNeeded: Closure<UIAlertController>?
 
     // MARK: - Properties
 
@@ -21,13 +25,16 @@ final class WeatherPresenter: WeatherModuleOutput {
 
     // MARK: - Private properties
 
-    private var isViewReady = false
     private var dateIndex = 0
 
-    private var place: CLPlacemark!
+    private var place: PlaceEntity!
     private var viewModel: WeatherScreenViewModel!
 
     private var interactors = WeatherSupplier.allCases.map { WeatherInteractor(service: $0.makeService()) }
+    private let storageService = StorageService()
+    private let locationManager = LocationManager()
+    private let geocoder = CLGeocoder()
+    private let savedPlacesService = SavedPlacesService.shared
 
 }
 
@@ -35,10 +42,12 @@ final class WeatherPresenter: WeatherModuleOutput {
 
 extension WeatherPresenter: WeatherModuleInput {
 
-    func showWeather(for place: CLPlacemark) {
+    func showWeather(for place: PlaceEntity) {
+        view?.showLoading()
         self.place = place
+        storageService.lastPlace = place
         interactors.forEach {
-            $0.getForecast(for: place.location!.coordinate) { [weak self] in
+            $0.getForecast(for: place.coordinates) { [weak self] in
                 self?.updateViewIfResponsesAreReady()
             }
 
@@ -55,11 +64,17 @@ extension WeatherPresenter: WeatherViewOutput {
         view?.setupInitialState()
     }
 
+    func viewWillAppear() {
+        view?.setFavoriteState(isSaved: savedPlacesService.isSaved(place: place))
+    }
+
     func layoutFinished() {
-        isViewReady = true
-        viewModel = mockViewModel
-        view?.configure(with: viewModel)
-        view?.setDateChangeButtonsVisisble(left: false, right: true)
+        view?.showLoading()
+        if let lastPlace = storageService.lastPlace {
+            showWeather(for: lastPlace)
+        } else {
+            getCurrentLocation()
+        }
     }
 
     func prevDateAsked() {
@@ -68,7 +83,7 @@ extension WeatherPresenter: WeatherViewOutput {
         }
         dateIndex -= 1
         updateDate()
-        view?.setDateScrollIndex(dateIndex)
+        view?.setDateScrollIndex(dateIndex, animated: true)
     }
 
     func nextDateAsked() {
@@ -78,7 +93,7 @@ extension WeatherPresenter: WeatherViewOutput {
         }
         dateIndex += 1
         updateDate()
-        view?.setDateScrollIndex(dateIndex)
+        view?.setDateScrollIndex(dateIndex, animated: true)
     }
 
     func scrolledToIndex(_ index: Int) {
@@ -89,6 +104,13 @@ extension WeatherPresenter: WeatherViewOutput {
         updateDate()
     }
 
+    func heartSelected(state isSelected: Bool) {
+        if isSelected {
+            savedPlacesService.add(place: place)
+        } else {
+            savedPlacesService.remove(place: place)
+        }
+    }
 }
 
 // MARK: - Private methods
@@ -106,38 +128,15 @@ private extension WeatherPresenter {
 
     func updateViewIfResponsesAreReady() {
         if interactors.allSatisfy({ $0.isUpdated }) {
-            viewModel = actualViewModel
+            viewModel = buildViewModel()
             view?.configure(with: viewModel)
+            view?.setFavoriteState(isSaved: savedPlacesService.isSaved(place: place))
+            view?.hideLoading()
             resetResponseReceiveFlags()
         }
     }
 
-}
-
-// MARK: - Demo
-
-private extension WeatherPresenter {
-
-    var mockViewModel: WeatherScreenViewModel {
-        let startDay = 0
-        let endDay = 1
-        let days = Array(startDay...endDay).map { Calendar.current.date(byAdding: .day, value: $0, to: Date())! }
-        let suppliers = [L10n.Common.yandex]
-        let dates = days.map { date -> DateViewModel in
-            let weather = suppliers.map { name -> WeatherViewModel in
-                let temperature = Int.random(in: -20...30)
-                let nightTemperature = temperature - .random(in: 1...10)
-                return WeatherViewModel(serviceName: name,
-                                        weatherConditions: WeatherConditions.allCases.randomElement()!,
-                                        dayTemperature: temperature,
-                                        nightTemperature: nightTemperature)
-            }
-            return DateViewModel(date: date, weather: weather)
-        }
-        return WeatherScreenViewModel(cityName: "Санкт-Петербург", dates: dates)
-    }
-
-    var actualViewModel: WeatherScreenViewModel {
+    func buildViewModel() -> WeatherScreenViewModel {
         let days = Array(0...Constants.days).map {
             Calendar.current.date(byAdding: .day, value: $0, to: Date())!
         }
@@ -147,7 +146,49 @@ private extension WeatherPresenter {
                                  weather: interactors.compactMap { $0.response?.getForecastForDay(index: index) })
         }
 
-        return WeatherScreenViewModel(cityName: place.locality!, dates: dates)
+        return WeatherScreenViewModel(cityName: place.city, dates: dates)
+    }
+
+    func getCurrentLocation() {
+        guard let currentLocation = locationManager.currentLocation else {
+            handleNoLocation()
+            return
+        }
+        handleLocationDetected(currentLocation.coordinate)
+    }
+
+    func handleNoLocation() {
+        if locationManager.currentAuthStatus == .notDetermined {
+            getSystemLocationPermissions()
+            return
+        }
+        onAlertNeeded?(locationManager.getPermissionCustomAlert())
+    }
+
+    func getSystemLocationPermissions() {
+        var observer = LocationObserver(identifier: Constants.locationObserverID)
+        observer.authStatusChangeHandler = { [weak self] authStatus in
+            guard authStatus == CLAuthorizationStatus.authorizedAlways
+                || authStatus == CLAuthorizationStatus.authorizedWhenInUse else {
+                    return
+            }
+            self?.getCurrentLocation()
+        }
+
+        locationManager.addLocationObserver(observer: observer)
+        locationManager.requestAuthorization()
+    }
+
+    func handleLocationDetected(_ location: CLLocationCoordinate2D) {
+        geocoder.reverseGeocodeLocation(CLLocation(latitude: location.latitude,
+                                                   longitude: location.longitude),
+                                        preferredLocale: .current) { [weak self] placemarks, _ in
+            guard let place = placemarks?.first, let placeModel = PlaceEntity.from(place: place) else {
+                // ERROR
+                return
+            }
+            self?.showWeather(for: placeModel)
+        }
     }
 
 }

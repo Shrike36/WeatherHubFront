@@ -51,10 +51,10 @@ extension PlaceSearchViewController: PlaceSearchViewInput {
         configureTable()
     }
 
-    func fillResults(_ results: [SearchResult]) {
+    func fillResults(_ results: [PlaceViewModel]) {
         ddm.clearCellGenerators()
         for item in results.enumerated() {
-            let generator = SearchResultCellTableViewCell.rddm.baseGenerator(with: item.element)
+            let generator = PlaceTableViewCell.rddm.baseGenerator(with: item.element)
             generator.didSelectEvent += { [weak self] in
                 self?.output?.resultSelected(at: item.offset)
             }

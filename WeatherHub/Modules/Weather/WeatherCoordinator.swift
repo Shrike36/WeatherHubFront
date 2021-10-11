@@ -32,7 +32,7 @@ final class WeatherCoordinator: BaseCoordinator, WeatherCoordinatorOutput {
 
 extension WeatherCoordinator: WeatherCoordinatorInput {
 
-    func showWeather(for place: CLPlacemark) {
+    func showWeather(for place: PlaceEntity) {
         weatherInput?.showWeather(for: place)
     }
 

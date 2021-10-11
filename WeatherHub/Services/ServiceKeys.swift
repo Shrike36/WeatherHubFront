@@ -7,11 +7,11 @@
 
 /// API Connection keys
 enum ServiceKeys {
-    static let yandex = "key"
-    static let openWeatherMap = "key"
+    static let yandex = ""
+    static let openWeatherMap = ""
 
     enum Aeris {
-        static let clientId = "key"
-        static let clientSecret = "key"
+        static let clientId = ""
+        static let clientSecret = ""
     }
 }

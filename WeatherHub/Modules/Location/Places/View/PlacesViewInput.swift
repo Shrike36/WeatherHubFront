@@ -3,6 +3,6 @@
 //
 
 protocol PlacesViewInput: AnyObject, LoadingPresenter {
-    /// Method for setup initial state of view
     func setupInitialState()
+    func fillPlaces(_ places: [PlaceViewModel])
 }

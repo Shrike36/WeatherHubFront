@@ -19,7 +19,7 @@ final class PlacesPresenter: PlacesModuleOutput {
     var onSearchNeeded: EmptyClosure?
     var onMapNeeded: EmptyClosure?
 
-    var onPlaceSelected: Closure<CLPlacemark?>?
+    var onPlaceSelected: Closure<PlaceEntity?>?
 
     // MARK: - Properties
 
@@ -29,6 +29,7 @@ final class PlacesPresenter: PlacesModuleOutput {
 
     private let locationManager = LocationManager()
     private let geocoder = CLGeocoder()
+    private let savedPlacesService = SavedPlacesService.shared
 
 }
 
@@ -42,7 +43,11 @@ extension PlacesPresenter: PlacesModuleInput {
                                                    longitude: location.longitude),
                                         preferredLocale: .current) { [weak self] placemarks, _ in
             self?.view?.hideLoading()
-            self?.onPlaceSelected?(placemarks?.first)
+            guard let placemark = placemarks?.first else {
+                self?.onPlaceSelected?(nil)
+                return
+            }
+            self?.onPlaceSelected?(PlaceEntity.from(place: placemark))
         }
     }
 
@@ -70,6 +75,18 @@ extension PlacesPresenter: PlacesViewOutput {
 
     func handleMapNeeded() {
         onMapNeeded?()
+    }
+
+    func handlePlaceSelected(at index: Int) {
+        onPlaceSelected?(savedPlacesService.savedPlaces[index])
+    }
+
+    func handlePlacesAppear() {
+        view?.fillPlaces(savedPlacesService.savedPlaces.map { PlaceViewModel(title: $0.city, subtitle: $0.country) })
+    }
+
+    func removePlace(at index: Int) {
+        savedPlacesService.remove(at: index)
     }
 
 }

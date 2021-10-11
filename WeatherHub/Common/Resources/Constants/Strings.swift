@@ -35,6 +35,8 @@ internal enum L10n {
   }
 
   internal enum Places {
+    /// Remove
+    internal static let remove = L10n.tr("Localizable", "Places.remove")
     /// Saved places
     internal static let title = L10n.tr("Localizable", "Places.title")
     internal enum Error {

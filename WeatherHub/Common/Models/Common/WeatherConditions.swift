@@ -24,11 +24,13 @@ extension WeatherConditions {
             return .partialClouds
         case .cloudy, .overcast:
             return .clouds
-        case .partlyCloudyLightRain, .partlyCloudyAndRain, .overcastRain, .cloudyLightRain, .overcastLightRain, .cloudyRain:
+        case .partlyCloudyLightRain, .partlyCloudyAndRain, .overcastRain, .cloudyLightRain, .overcastLightRain, .cloudyRain, .drizzle,
+             .lightRain, .rain, .moderateRain, .heavyRain, .continuousHeavyRain, .showers, .hail:
             return .rain
-        case .overcastWetSnow, .partlyCloudyLightSnow, .partlyCloudySnow, .overcastSnow, .cloudyLightSnow, .overcasrLightSnow, .cloudySnow:
+        case .overcastWetSnow, .partlyCloudyLightSnow, .partlyCloudySnow, .overcastSnow, .cloudyLightSnow, .overcasrLightSnow,
+             .cloudySnow, .wetSnow, .lightSnow, .snow, .snowShowers:
             return .snow
-        case .overcastStorm:
+        case .overcastStorm, .thunderstorm, .thunderstormRain, .thunderstormHail:
             return .storm
         }
     }

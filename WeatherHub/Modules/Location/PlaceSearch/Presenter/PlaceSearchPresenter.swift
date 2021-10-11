@@ -64,8 +64,7 @@ extension PlaceSearchPresenter: PlaceSearchViewOutput {
 extension PlaceSearchPresenter: MKLocalSearchCompleterDelegate {
 
     func completerDidUpdateResults(_ completer: MKLocalSearchCompleter) {
-//        let searchResults = completer.results.compactMap { getCity(from: $0) }
-        view?.fillResults(completer.results.map { SearchResult(title: $0.title, subtitle: $0.subtitle) })
+        view?.fillResults(completer.results.map { PlaceViewModel(title: $0.title, subtitle: $0.subtitle) })
     }
 
 }

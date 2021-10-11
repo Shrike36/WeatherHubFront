@@ -1,5 +1,5 @@
 //
-//  SearchResultCellTableViewCell.swift
+//  PlaceTableViewCell.swift
 //  WeatherHub
 //
 //  Created by Дмитрий Демьянов on 08.10.2021.
@@ -8,7 +8,7 @@
 import UIKit
 import ReactiveDataDisplayManager
 
-class SearchResultCellTableViewCell: UITableViewCell {
+class PlaceTableViewCell: UITableViewCell {
 
     // MARK: - IBOutlets
 
@@ -20,11 +20,6 @@ class SearchResultCellTableViewCell: UITableViewCell {
         super.awakeFromNib()
         containerView.backgroundColor = Asset.Colors.contrastBackground.color
         containerView.layer.cornerRadius = 10
-//        containerView.layer.masksToBounds = true
-        containerView.layer.shadowColor = Asset.Colors.border.color.cgColor
-        containerView.layer.shadowOffset = CGSize(width: 2, height: 2)
-        containerView.layer.shadowRadius = 3
-//        contentView.layer.shadowOpacity
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,9 +30,9 @@ class SearchResultCellTableViewCell: UITableViewCell {
 
 }
 
-extension SearchResultCellTableViewCell: ConfigurableItem {
+extension PlaceTableViewCell: ConfigurableItem {
 
-    func configure(with model: SearchResult) {
+    func configure(with model: PlaceViewModel) {
         cityLabel.text = model.title
         subtitleLabel.text = model.subtitle
     }

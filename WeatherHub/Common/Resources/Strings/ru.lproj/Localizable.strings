@@ -24,6 +24,7 @@
 // MARK: - Places screen
 
 "Places.title" = "Мои места";
+"Places.remove" = "Удалить";
 "Places.error.title" = "Не удалось найти данные для этого места :(";
 "Places.error.advice" = "Попробуйте ещё раз или выберите другое место";
 

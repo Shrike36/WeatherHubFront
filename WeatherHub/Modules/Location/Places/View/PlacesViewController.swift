@@ -10,6 +10,7 @@ final class PlacesViewController: UIViewController {
 
     private enum Constants {
         static let buttonBarCornerRadius: CGFloat = 15
+        static let rowHeight: CGFloat = 95
     }
 
     // MARK: - IBOutlets
@@ -31,11 +32,18 @@ final class PlacesViewController: UIViewController {
         return [searchButton, mapButton, locationButton]
     }
 
+    private var cellModels = [PlaceViewModel]()
+
     // MARK: - UIViewController
 
     override func viewDidLoad() {
         super.viewDidLoad()
         output?.viewLoaded()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        output?.handlePlacesAppear()
     }
 
 }
@@ -49,6 +57,49 @@ extension PlacesViewController: PlacesViewInput {
         configureTitle()
         configurePlacesTable()
         configureButtonBar()
+    }
+
+    func fillPlaces(_ places: [PlaceViewModel]) {
+        cellModels = places
+        placesTable.reloadData()
+    }
+
+}
+
+// MARK: - UITableViewDataSource, UITableViewDelegate
+
+extension PlacesViewController: UITableViewDataSource, UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cellModels.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: PlaceTableViewCell.reuseIdentifier,
+                                                       for: indexPath) as? PlaceTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.configure(with: cellModels[indexPath.row])
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        output?.handlePlaceSelected(at: indexPath.row)
+    }
+
+    func tableView(_ tableView: UITableView,
+                   contextMenuConfigurationForRowAt indexPath: IndexPath,
+                   point: CGPoint) -> UIContextMenuConfiguration? {
+        return UIContextMenuConfiguration(identifier: String(indexPath.row) as NSString,
+                                          previewProvider: nil) { _ in
+            let removeAction = UIAction(title: L10n.Places.remove,
+                                        image: UIImage(systemSymbol: .trash),
+                                        attributes: .destructive) { [weak self] _ in
+                self?.output?.removePlace(at: indexPath.row)
+                self?.removeCell(at: indexPath)
+            }
+            return UIMenu(title: "", image: nil, children: [removeAction])
+        }
     }
 
 }
@@ -71,6 +122,17 @@ private extension PlacesViewController {
     }
 
     func configurePlacesTable() {
+        placesTable.separatorStyle = .none
+        placesTable.backgroundColor = .clear
+        placesTable.showsVerticalScrollIndicator = false
+        placesTable.rowHeight = UITableView.automaticDimension
+        placesTable.estimatedRowHeight = Constants.rowHeight
+        placesTable.contentInset = UIEdgeInsets(top: .zero, left: .zero, bottom: Constants.rowHeight, right: .zero)
+
+        let cellNib = UINib(nibName: PlaceTableViewCell.className, bundle: nil)
+        placesTable.register(cellNib, forCellReuseIdentifier: PlaceTableViewCell.reuseIdentifier)
+        placesTable.dataSource = self
+        placesTable.delegate = self
     }
 
     func configureButtonBar() {
@@ -85,6 +147,11 @@ private extension PlacesViewController {
             $0.backgroundColor = Asset.Colors.contrastBackground.color
             $0.layer.cornerRadius = Constants.buttonBarCornerRadius
         }
+    }
+
+    func removeCell(at indexPath: IndexPath) {
+        cellModels.remove(at: indexPath.row)
+        placesTable.deleteRows(at: [indexPath], with: .automatic)
     }
 
 }
