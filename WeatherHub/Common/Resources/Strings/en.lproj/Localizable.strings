@@ -44,3 +44,7 @@
 
 "Search.search" = "Search";
 "Search.cancel" = "Cancel";
+
+// MARK: - Settings screen
+
+"Settings.title" = "Settings";

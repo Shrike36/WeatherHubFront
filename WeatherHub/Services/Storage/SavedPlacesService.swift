@@ -32,6 +32,9 @@ public class SavedPlacesService {
     }
 
     public func add(place: PlaceEntity) {
+        guard !isSaved(place: place) else {
+            return
+        }
         savedPlaces.append(place)
         storageService.savedPlaces = savedPlaces
     }

@@ -14,7 +14,6 @@ class DateCollecttionCell: UICollectionViewCell {
 
     private enum Constants {
         static let cornerRadius: CGFloat = 15
-        static let cellHeight: CGFloat = 80
     }
 
     // MARK: - IBOutlets

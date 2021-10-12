@@ -54,6 +54,11 @@ internal enum L10n {
     internal static let search = L10n.tr("Localizable", "Search.search")
   }
 
+  internal enum Settings {
+    /// Settings
+    internal static let title = L10n.tr("Localizable", "Settings.title")
+  }
+
   internal enum Tabs {
     /// Places
     internal static let location = L10n.tr("Localizable", "Tabs.location")

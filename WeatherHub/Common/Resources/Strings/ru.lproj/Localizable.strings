@@ -44,3 +44,7 @@
 
 "Search.search" = "Поиск";
 "Search.cancel" = "Отмена";
+
+// MARK: - Settings screen
+
+"Settings.title" = "Опции";

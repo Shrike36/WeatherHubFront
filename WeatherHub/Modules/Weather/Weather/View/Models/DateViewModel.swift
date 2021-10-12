@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DateViewModel {
+public struct DateViewModel: Codable {
 
     // MARK: - Properties
 

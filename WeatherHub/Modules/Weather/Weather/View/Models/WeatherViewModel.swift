@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct WeatherViewModel {
+public struct WeatherViewModel: Codable {
 
     // MARK: - Properties
 

@@ -10,11 +10,25 @@ import NodeKit
 
 public struct PlaceEntity {
 
+    // MARK: -  Constants
+
+    private enum Constants {
+        static let fieldDelimiter = ";"
+    }
+
     // MARK: - Public Properties
 
     public let city: String
     public let country: String
     public let coordinates: CLLocationCoordinate2D
+
+}
+
+extension PlaceEntity {
+
+    public var description: String {
+        [city, country].joined(separator: Constants.fieldDelimiter)
+    }
 
 }
 

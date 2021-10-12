@@ -35,6 +35,7 @@ final class WeatherPresenter: WeatherModuleOutput {
     private let locationManager = LocationManager()
     private let geocoder = CLGeocoder()
     private let savedPlacesService = SavedPlacesService.shared
+    private let cacheService = CacheService()
 
 }
 
@@ -46,11 +47,17 @@ extension WeatherPresenter: WeatherModuleInput {
         view?.showLoading()
         self.place = place
         storageService.lastPlace = place
+        if let cachedWeather = cacheService.getCache(for: place) {
+            viewModel = cachedWeather.weather
+            updateView()
+        }
         interactors.forEach {
             $0.getForecast(for: place.coordinates) { [weak self] in
-                self?.updateViewIfResponsesAreReady()
+                guard let self = self else {
+                    return
+                }
+                self.updateViewIfResponsesAreReady()
             }
-
         }
     }
 
@@ -129,11 +136,16 @@ private extension WeatherPresenter {
     func updateViewIfResponsesAreReady() {
         if interactors.allSatisfy({ $0.isUpdated }) {
             viewModel = buildViewModel()
-            view?.configure(with: viewModel)
-            view?.setFavoriteState(isSaved: savedPlacesService.isSaved(place: place))
-            view?.hideLoading()
+            updateView()
             resetResponseReceiveFlags()
+            cacheService.save(weather: viewModel, for: place)
         }
+    }
+
+    func updateView() {
+        view?.configure(with: viewModel)
+        view?.setFavoriteState(isSaved: savedPlacesService.isSaved(place: place))
+        view?.hideLoading()
     }
 
     func buildViewModel() -> WeatherScreenViewModel {
