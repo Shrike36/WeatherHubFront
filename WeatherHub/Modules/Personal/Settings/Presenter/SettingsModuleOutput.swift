@@ -3,4 +3,5 @@
 //
 
 protocol SettingsModuleOutput: AnyObject {
+    var onLoginRequested: EmptyClosure? { get set }
 }

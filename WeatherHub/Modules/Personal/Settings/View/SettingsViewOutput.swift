@@ -3,6 +3,7 @@
 //
 
 protocol SettingsViewOutput {
-    /// Notify presenter that view is ready
     func viewLoaded()
+    func loginRequested()
+    func logoutRequested()
 }

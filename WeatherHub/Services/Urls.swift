@@ -21,4 +21,7 @@ public enum Urls {
         return "https://api.aerisapi.com"
     }
 
+    public static var weatherHub: String {
+        return "http://techprog.herokuapp.com"
+    }
 }

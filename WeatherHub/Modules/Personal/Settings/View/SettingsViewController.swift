@@ -2,9 +2,17 @@
 //  Copyright © 2021 Dmitry Demyanov. All rights reserved.
 //
 
+import ReactiveDataDisplayManager
 import UIKit
 
 final class SettingsViewController: UIViewController {
+
+    // MARK: - Nested Types
+
+    enum State {
+        case authorized(email: String)
+        case unauthorized
+    }
 
     // MARK: - IBOutlets
 
@@ -14,6 +22,12 @@ final class SettingsViewController: UIViewController {
     // MARK: - Properties
 
     var output: SettingsViewOutput?
+
+    // MARK: - Private Properties
+
+    private lazy var ddm = tableView.rddm.baseBuilder
+        .add(plugin: .selectable())
+        .build()
 
     // MARK: - UIViewController
 
@@ -33,6 +47,28 @@ extension SettingsViewController: SettingsViewInput {
         configureTitleLabel()
         configureBackground()
         configureTableView()
+        setState(.unauthorized)
+    }
+
+    func setState(_ state: State) {
+        ddm.clearCellGenerators()
+
+        switch state {
+        case .authorized(let email):
+            let cellModel = AccountCellModel(email: email) { [weak self] in
+                self?.output?.logoutRequested()
+            }
+            let accountGenerator = AccountTableCell.rddm.baseGenerator(with: cellModel)
+            ddm.addCellGenerator(accountGenerator)
+        case .unauthorized:
+            let loginGenerator = LoginTableCell.rddm.baseGenerator(with: ())
+            loginGenerator.didSelectEvent += { [weak self] in
+                self?.output?.loginRequested()
+            }
+            ddm.addCellGenerator(loginGenerator)
+        }
+
+        ddm.forceRefill()
     }
 
 }
@@ -50,7 +86,7 @@ private extension SettingsViewController {
         titleLabel.adjustsFontSizeToFitWidth = true
         titleLabel.adjustsFontForContentSizeCategory = true
         titleLabel.textAlignment = .center
-        titleLabel.text = L10n.Places.title
+        titleLabel.text = L10n.Settings.title
     }
 
     func configureTableView() {

@@ -45,6 +45,33 @@
 "Search.search" = "Search";
 "Search.cancel" = "Cancel";
 
+
 // MARK: - Settings screen
 
 "Settings.title" = "Settings";
+"Settings.login.title" = "Sign In";
+"Settings.login.description" = "You will be able to synchronize saved places between different devices";
+"Settings.account" = "User: ";
+"Settings.signOut" = "Log out";
+
+
+// MARK: - Auth screen
+
+"Auth.register.title" = "Registration";
+"Auth.register.action" = "Register";
+"Auth.register.error.title" = "Could not register user";
+"Auth.register.error.details" = "Maybe account already exists";
+
+"Auth.signIn.title" = "Sign In";
+"Auth.signIn.action" = "Sign In";
+"Auth.signIn.error.title" = "Could not sign in";
+"Auth.signIn.error.details" = "Check email and password";
+
+"Auth.email" = "E-Mail";
+"Auth.password" = "Password";
+"Auth.repeatPassword" = "Repeat password";
+"Auth.resetPassword" = "I forgot password";
+"Auth.noAccount" = "Have no account?";
+"Auth.hasAccount" = "Already have an account?";
+
+"Auth.validation.passwordsNotMatching" = "Passwords do not match";

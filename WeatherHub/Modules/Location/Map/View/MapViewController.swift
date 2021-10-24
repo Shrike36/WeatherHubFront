@@ -2,6 +2,7 @@
 //  Copyright © 2021 Dmitry Demyanov. All rights reserved.
 //
 
+import SurfUtils
 import MapKit
 import UIKit
 
@@ -10,7 +11,7 @@ final class MapViewController: UIViewController {
     // MARK: - IBOutlets
 
     @IBOutlet private weak var mapView: MKMapView!
-    @IBOutlet private weak var actionButton: UIButton!
+    @IBOutlet private weak var actionButton: CommonButton!
 
     // MARK: - Properties
 

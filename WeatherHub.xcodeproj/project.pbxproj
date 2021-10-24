@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		0A19859926FFD34000809DA6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A19859826FFD34000809DA6 /* LocationManager.swift */; };
+		0A1A67D82724C40100C4E2C9 /* AuthUrlRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A67D72724C40100C4E2C9 /* AuthUrlRoute.swift */; };
+		0A1A67DB2724C58100C4E2C9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A67DA2724C58100C4E2C9 /* AuthService.swift */; };
+		0A1A67DF2724C63A00C4E2C9 /* AuthRequestEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A67DE2724C63A00C4E2C9 /* AuthRequestEntry.swift */; };
+		0A1A67E12724C64000C4E2C9 /* AuthRequestEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A67E02724C64000C4E2C9 /* AuthRequestEntity.swift */; };
+		0A1A67E8272578B300C4E2C9 /* PasswordRepeatValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A67E7272578B300C4E2C9 /* PasswordRepeatValidator.swift */; };
+		0A1A67EA2725AC2C00C4E2C9 /* AuthResponseEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A67E92725AC2C00C4E2C9 /* AuthResponseEntry.swift */; };
+		0A1A67EC2725AC3200C4E2C9 /* AuthResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A67EB2725AC3200C4E2C9 /* AuthResponseEntity.swift */; };
+		0A1A67EF2725B48E00C4E2C9 /* UserEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A67EE2725B48E00C4E2C9 /* UserEntry.swift */; };
+		0A1A67F12725BA1800C4E2C9 /* DetailedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A67F02725BA1800C4E2C9 /* DetailedError.swift */; };
+		0A1A67F527260CD400C4E2C9 /* AccountTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1A67F327260CD400C4E2C9 /* AccountTableCell.swift */; };
+		0A1A67F627260CD400C4E2C9 /* AccountTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A1A67F427260CD400C4E2C9 /* AccountTableCell.xib */; };
 		0A42DA42265A74440095DB1C /* DateCollecttionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A42DA40265A74440095DB1C /* DateCollecttionCell.swift */; };
 		0A42DA43265A74440095DB1C /* DateCollecttionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A42DA41265A74440095DB1C /* DateCollecttionCell.xib */; };
 		0A42DA4C265A852C0095DB1C /* DateStringBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A42DA4B265A852C0095DB1C /* DateStringBuilder.swift */; };
@@ -103,7 +114,20 @@
 		0A83EF9F270F9A90008D1BCF /* SearchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A83EF9D270F9A90008D1BCF /* SearchBar.xib */; };
 		0A83EFA1270F9A96008D1BCF /* SearchBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EFA0270F9A96008D1BCF /* SearchBarExtension.swift */; };
 		0A83EFA4270F9AAA008D1BCF /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A83EFA3270F9AAA008D1BCF /* SearchTextField.swift */; };
+		0A8E620B271C970900BB4F43 /* LoginTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E6209271C970900BB4F43 /* LoginTableCell.swift */; };
+		0A8E620C271C970900BB4F43 /* LoginTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A8E620A271C970900BB4F43 /* LoginTableCell.xib */; };
+		0A8E621A271CB08300BB4F43 /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E620F271CB08300BB4F43 /* AuthPresenter.swift */; };
+		0A8E621B271CB08300BB4F43 /* AuthModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E6210271CB08300BB4F43 /* AuthModuleInput.swift */; };
+		0A8E621C271CB08300BB4F43 /* AuthModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E6211271CB08300BB4F43 /* AuthModuleOutput.swift */; };
+		0A8E621D271CB08300BB4F43 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E6213271CB08300BB4F43 /* AuthViewController.swift */; };
+		0A8E621E271CB08300BB4F43 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A8E6214271CB08300BB4F43 /* AuthViewController.xib */; };
+		0A8E621F271CB08300BB4F43 /* AuthViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E6215271CB08300BB4F43 /* AuthViewOutput.swift */; };
+		0A8E6220271CB08300BB4F43 /* AuthViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E6216271CB08300BB4F43 /* AuthViewInput.swift */; };
+		0A8E6221271CB08300BB4F43 /* AuthModuleTestConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E6218271CB08300BB4F43 /* AuthModuleTestConfigurator.swift */; };
+		0A8E6222271CB08300BB4F43 /* AuthModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E6219271CB08300BB4F43 /* AuthModuleConfigurator.swift */; };
+		0A8E6224271CCF0600BB4F43 /* AuthViewController+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E6223271CCF0600BB4F43 /* AuthViewController+Configuration.swift */; };
 		0A998C222645982100555828 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A998C212645982100555828 /* Colors.xcassets */; };
+		0A9C3EBA27261FE100053941 /* AccountCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9C3EB927261FE100053941 /* AccountCellModel.swift */; };
 		0ACBF9072712F7B00045B9EF /* OWMConditionsEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF9062712F7B00045B9EF /* OWMConditionsEntry.swift */; };
 		0ACBF9092712F7B60045B9EF /* OWMConditionsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF9082712F7B60045B9EF /* OWMConditionsEntity.swift */; };
 		0ACBF90B2712F7C10045B9EF /* OWMTemperatureEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF90A2712F7C10045B9EF /* OWMTemperatureEntry.swift */; };
@@ -179,6 +203,17 @@
 
 /* Begin PBXFileReference section */
 		0A19859826FFD34000809DA6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		0A1A67D72724C40100C4E2C9 /* AuthUrlRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUrlRoute.swift; sourceTree = "<group>"; };
+		0A1A67DA2724C58100C4E2C9 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		0A1A67DE2724C63A00C4E2C9 /* AuthRequestEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestEntry.swift; sourceTree = "<group>"; };
+		0A1A67E02724C64000C4E2C9 /* AuthRequestEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestEntity.swift; sourceTree = "<group>"; };
+		0A1A67E7272578B300C4E2C9 /* PasswordRepeatValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRepeatValidator.swift; sourceTree = "<group>"; };
+		0A1A67E92725AC2C00C4E2C9 /* AuthResponseEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponseEntry.swift; sourceTree = "<group>"; };
+		0A1A67EB2725AC3200C4E2C9 /* AuthResponseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponseEntity.swift; sourceTree = "<group>"; };
+		0A1A67EE2725B48E00C4E2C9 /* UserEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntry.swift; sourceTree = "<group>"; };
+		0A1A67F02725BA1800C4E2C9 /* DetailedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedError.swift; sourceTree = "<group>"; };
+		0A1A67F327260CD400C4E2C9 /* AccountTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableCell.swift; sourceTree = "<group>"; };
+		0A1A67F427260CD400C4E2C9 /* AccountTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountTableCell.xib; sourceTree = "<group>"; };
 		0A42DA40265A74440095DB1C /* DateCollecttionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCollecttionCell.swift; sourceTree = "<group>"; };
 		0A42DA41265A74440095DB1C /* DateCollecttionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateCollecttionCell.xib; sourceTree = "<group>"; };
 		0A42DA4B265A852C0095DB1C /* DateStringBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateStringBuilder.swift; sourceTree = "<group>"; };
@@ -279,7 +314,20 @@
 		0A83EF9D270F9A90008D1BCF /* SearchBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchBar.xib; sourceTree = "<group>"; };
 		0A83EFA0270F9A96008D1BCF /* SearchBarExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarExtension.swift; sourceTree = "<group>"; };
 		0A83EFA3270F9AAA008D1BCF /* SearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
+		0A8E6209271C970900BB4F43 /* LoginTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableCell.swift; sourceTree = "<group>"; };
+		0A8E620A271C970900BB4F43 /* LoginTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginTableCell.xib; sourceTree = "<group>"; };
+		0A8E620F271CB08300BB4F43 /* AuthPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
+		0A8E6210271CB08300BB4F43 /* AuthModuleInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthModuleInput.swift; sourceTree = "<group>"; };
+		0A8E6211271CB08300BB4F43 /* AuthModuleOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthModuleOutput.swift; sourceTree = "<group>"; };
+		0A8E6213271CB08300BB4F43 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		0A8E6214271CB08300BB4F43 /* AuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
+		0A8E6215271CB08300BB4F43 /* AuthViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewOutput.swift; sourceTree = "<group>"; };
+		0A8E6216271CB08300BB4F43 /* AuthViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewInput.swift; sourceTree = "<group>"; };
+		0A8E6218271CB08300BB4F43 /* AuthModuleTestConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthModuleTestConfigurator.swift; sourceTree = "<group>"; };
+		0A8E6219271CB08300BB4F43 /* AuthModuleConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthModuleConfigurator.swift; sourceTree = "<group>"; };
+		0A8E6223271CCF0600BB4F43 /* AuthViewController+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthViewController+Configuration.swift"; sourceTree = "<group>"; };
 		0A998C212645982100555828 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		0A9C3EB927261FE100053941 /* AccountCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCellModel.swift; sourceTree = "<group>"; };
 		0AC81423C4FE29719A05FE86 /* Pods-WeatherHubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherHubTests.debug.xcconfig"; path = "Target Support Files/Pods-WeatherHubTests/Pods-WeatherHubTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0ACBF9062712F7B00045B9EF /* OWMConditionsEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMConditionsEntry.swift; sourceTree = "<group>"; };
 		0ACBF9082712F7B60045B9EF /* OWMConditionsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMConditionsEntity.swift; sourceTree = "<group>"; };
@@ -367,6 +415,95 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A1A67D42724C3B200C4E2C9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0A1A67D62724C3E000C4E2C9 /* Auth */,
+				0A1A67D52724C3C200C4E2C9 /* Weather */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0A1A67D52724C3C200C4E2C9 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				0ACBF93527134E980045B9EF /* Aeris */,
+				0ACBF9162712FC8E0045B9EF /* OpenWeatherMap */,
+				0AD28E792711D6EA007EEEF2 /* YandexWeather */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		0A1A67D62724C3E000C4E2C9 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				0A1A67D72724C40100C4E2C9 /* AuthUrlRoute.swift */,
+				0A1A67DA2724C58100C4E2C9 /* AuthService.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		0A1A67DC2724C60B00C4E2C9 /* WeatherHub */ = {
+			isa = PBXGroup;
+			children = (
+				0A1A67DD2724C62100C4E2C9 /* AuthRequest */,
+				0A1A67E2272566E100C4E2C9 /* AuthResponse */,
+			);
+			path = WeatherHub;
+			sourceTree = "<group>";
+		};
+		0A1A67DD2724C62100C4E2C9 /* AuthRequest */ = {
+			isa = PBXGroup;
+			children = (
+				0A1A67DE2724C63A00C4E2C9 /* AuthRequestEntry.swift */,
+				0A1A67E02724C64000C4E2C9 /* AuthRequestEntity.swift */,
+			);
+			path = AuthRequest;
+			sourceTree = "<group>";
+		};
+		0A1A67E2272566E100C4E2C9 /* AuthResponse */ = {
+			isa = PBXGroup;
+			children = (
+				0A1A67E92725AC2C00C4E2C9 /* AuthResponseEntry.swift */,
+				0A1A67EB2725AC3200C4E2C9 /* AuthResponseEntity.swift */,
+			);
+			path = AuthResponse;
+			sourceTree = "<group>";
+		};
+		0A1A67E52725788D00C4E2C9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0A1A67E62725789700C4E2C9 /* Utils */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0A1A67E62725789700C4E2C9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0A1A67E7272578B300C4E2C9 /* PasswordRepeatValidator.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0A1A67ED2725B46600C4E2C9 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				0A1A67EE2725B48E00C4E2C9 /* UserEntry.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		0A1A67F227260C9600C4E2C9 /* AccountTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				0A1A67F327260CD400C4E2C9 /* AccountTableCell.swift */,
+				0A1A67F427260CD400C4E2C9 /* AccountTableCell.xib */,
+				0A9C3EB927261FE100053941 /* AccountCellModel.swift */,
+			);
+			path = AccountTableCell;
+			sourceTree = "<group>";
+		};
 		0A42DA3F265A74140095DB1C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -389,9 +526,11 @@
 		0A42DA4D265A8F290095DB1C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0A1A67ED2725B46600C4E2C9 /* User */,
 				0A5C4D172714E67C00454197 /* Cache */,
 				0ACBF922271326AD0045B9EF /* Common */,
 				0ACBF93A2713691C0045B9EF /* Location */,
+				0A1A67DC2724C60B00C4E2C9 /* WeatherHub */,
 				0ACBF925271346F60045B9EF /* Aeris */,
 				0AD28E9A2712E908007EEEF2 /* OWM */,
 				0AD28E802711DB84007EEEF2 /* YandexWeather */,
@@ -753,9 +892,10 @@
 		0A7CEA6626498641008E2D2E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0A7CEA6726498641008E2D2E /* SettingsViewOutput.swift */,
+				0A8E6207271C96E700BB4F43 /* Subviews */,
 				0A7CEA6826498641008E2D2E /* SettingsViewController.xib */,
 				0A7CEA6926498641008E2D2E /* SettingsViewController.swift */,
+				0A7CEA6726498641008E2D2E /* SettingsViewOutput.swift */,
 				0A7CEA6A26498641008E2D2E /* SettingsViewInput.swift */,
 			);
 			path = View;
@@ -794,9 +934,11 @@
 		0A83EF27270EFDCC008D1BCF /* Personal */ = {
 			isa = PBXGroup;
 			children = (
+				0A1A67E52725788D00C4E2C9 /* Common */,
 				0A83EF31270F144C008D1BCF /* PersonalCoordinator.swift */,
 				0A83EF32270F144C008D1BCF /* PersonalCoordinatorOutput.swift */,
 				0A7CEA6126498641008E2D2E /* Settings */,
+				0A8E620D271CB08300BB4F43 /* Auth */,
 			);
 			path = Personal;
 			sourceTree = "<group>";
@@ -920,6 +1062,65 @@
 			path = SearchTextField;
 			sourceTree = "<group>";
 		};
+		0A8E6207271C96E700BB4F43 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				0A1A67F227260C9600C4E2C9 /* AccountTableCell */,
+				0A8E6208271C96F300BB4F43 /* LoginTableCell */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		0A8E6208271C96F300BB4F43 /* LoginTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				0A8E6209271C970900BB4F43 /* LoginTableCell.swift */,
+				0A8E620A271C970900BB4F43 /* LoginTableCell.xib */,
+			);
+			path = LoginTableCell;
+			sourceTree = "<group>";
+		};
+		0A8E620D271CB08300BB4F43 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				0A8E620E271CB08300BB4F43 /* Presenter */,
+				0A8E6212271CB08300BB4F43 /* View */,
+				0A8E6217271CB08300BB4F43 /* Configurator */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		0A8E620E271CB08300BB4F43 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0A8E620F271CB08300BB4F43 /* AuthPresenter.swift */,
+				0A8E6210271CB08300BB4F43 /* AuthModuleInput.swift */,
+				0A8E6211271CB08300BB4F43 /* AuthModuleOutput.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0A8E6212271CB08300BB4F43 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0A8E6213271CB08300BB4F43 /* AuthViewController.swift */,
+				0A8E6214271CB08300BB4F43 /* AuthViewController.xib */,
+				0A8E6215271CB08300BB4F43 /* AuthViewOutput.swift */,
+				0A8E6216271CB08300BB4F43 /* AuthViewInput.swift */,
+				0A8E6223271CCF0600BB4F43 /* AuthViewController+Configuration.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0A8E6217271CB08300BB4F43 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				0A8E6218271CB08300BB4F43 /* AuthModuleTestConfigurator.swift */,
+				0A8E6219271CB08300BB4F43 /* AuthModuleConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
 		0ACBF9042712F7450045B9EF /* OWMTemperature */ = {
 			isa = PBXGroup;
 			children = (
@@ -961,6 +1162,7 @@
 				0ACBF923271326BD0045B9EF /* ForecastProvider.swift */,
 				0A42DA51265A91460095DB1C /* WeatherConditions.swift */,
 				0AD28E9827120DA1007EEEF2 /* WeatherSupplier.swift */,
+				0A1A67F02725BA1800C4E2C9 /* DetailedError.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1077,12 +1279,10 @@
 		0AD28E702711CC2C007EEEF2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0A1A67D42724C3B200C4E2C9 /* Network */,
 				0A5C4D1A2714E74100454197 /* Cache */,
 				0ACBF91D271318BA0045B9EF /* Common */,
 				0ACBF94127136DA80045B9EF /* Storage */,
-				0ACBF93527134E980045B9EF /* Aeris */,
-				0ACBF9162712FC8E0045B9EF /* OpenWeatherMap */,
-				0AD28E792711D6EA007EEEF2 /* YandexWeather */,
 				0AD28E722711CD5C007EEEF2 /* Urls.swift */,
 				0ACBF91B2712FF6C0045B9EF /* ServiceKeys.swift */,
 			);
@@ -1320,8 +1520,11 @@
 				0A83EF4D270F1651008D1BCF /* MapViewController.xib in Resources */,
 				0A7CEA7126498641008E2D2E /* PlacesViewController.xib in Resources */,
 				0A83EF9F270F9A90008D1BCF /* SearchBar.xib in Resources */,
+				0A8E620C271C970900BB4F43 /* LoginTableCell.xib in Resources */,
+				0A8E621E271CB08300BB4F43 /* AuthViewController.xib in Resources */,
 				0A6988DF264357EA00F97207 /* Localizable.strings in Resources */,
 				0A7CEA8426498641008E2D2E /* SettingsViewController.xib in Resources */,
+				0A1A67F627260CD400C4E2C9 /* AccountTableCell.xib in Resources */,
 				0A83EF62270F91F4008D1BCF /* PlaceSearchViewController.xib in Resources */,
 				0AD28E632710B148007EEEF2 /* PlaceTableViewCell.xib in Resources */,
 				0A42DA5C265AC7AB0095DB1C /* WeatherInfoCell.xib in Resources */,
@@ -1477,32 +1680,42 @@
 				0AD28E8C2711FBA4007EEEF2 /* YandexForecastPartEntity.swift in Sources */,
 				0A83EF38270F1521008D1BCF /* WeatherCoordinatorOutput.swift in Sources */,
 				0A83EF2A270F0A00008D1BCF /* LocationCoordinator.swift in Sources */,
+				0A8E621A271CB08300BB4F43 /* AuthPresenter.swift in Sources */,
+				0A1A67DF2724C63A00C4E2C9 /* AuthRequestEntry.swift in Sources */,
 				0A51388326474A850026640F /* TabBarPresenter.swift in Sources */,
 				0AD28E972711FCCD007EEEF2 /* YandexConditions.swift in Sources */,
 				0A7CEA8826498641008E2D2E /* SettingsModuleConfigurator.swift in Sources */,
 				0A7CEA7A26498641008E2D2E /* WeatherViewController.swift in Sources */,
 				0A83EFA4270F9AAA008D1BCF /* SearchTextField.swift in Sources */,
 				0ACBF930271347E90045B9EF /* AerisForecastEntity.swift in Sources */,
+				0A8E6221271CB08300BB4F43 /* AuthModuleTestConfigurator.swift in Sources */,
 				0ACBF91C2712FF6C0045B9EF /* ServiceKeys.swift in Sources */,
 				0ACBF93727134EAC0045B9EF /* AerisUrlRoute.swift in Sources */,
 				0A42DA50265A91340095DB1C /* WeatherViewModel.swift in Sources */,
 				0A7CEA6F26498641008E2D2E /* PlacesModuleOutput.swift in Sources */,
 				0AD28E622710B148007EEEF2 /* PlaceTableViewCell.swift in Sources */,
+				0A8E6224271CCF0600BB4F43 /* AuthViewController+Configuration.swift in Sources */,
 				0A5C4D1C2714E74F00454197 /* CacheService.swift in Sources */,
+				0A1A67F527260CD400C4E2C9 /* AccountTableCell.swift in Sources */,
 				0A83EF67270F91F4008D1BCF /* PlaceSearchModuleConfigurator.swift in Sources */,
+				0A1A67F12725BA1800C4E2C9 /* DetailedError.swift in Sources */,
 				0AD28E652710F309007EEEF2 /* PlaceViewModel.swift in Sources */,
 				0A7CEA352648AAFA008E2D2E /* Assets.swift in Sources */,
 				0A5138972647F85A0026640F /* UIViewController.swift in Sources */,
 				0A83EF4F270F1651008D1BCF /* MapModuleTestConfigurator.swift in Sources */,
 				0A83EF4C270F1651008D1BCF /* MapViewInput.swift in Sources */,
+				0A8E621F271CB08300BB4F43 /* AuthViewOutput.swift in Sources */,
 				0ACBF9212713265F0045B9EF /* WeatherInteractor.swift in Sources */,
+				0A1A67DB2724C58100C4E2C9 /* AuthService.swift in Sources */,
 				0A5137B126472B180026640F /* MainCoordinator.swift in Sources */,
 				0A51388426474A850026640F /* TabBarModuleInput.swift in Sources */,
+				0A1A67EA2725AC2C00C4E2C9 /* AuthResponseEntry.swift in Sources */,
 				0AD28E6D2711C25E007EEEF2 /* LoadingPresenter.swift in Sources */,
 				0ACBF93E27136A990045B9EF /* PlaceEntry.swift in Sources */,
 				0AD28E6F2711C55C007EEEF2 /* WeatherCoordinatorInput.swift in Sources */,
 				0A83EF5F270F91F4008D1BCF /* PlaceSearchPresenter.swift in Sources */,
 				0AD28E7C2711D6EA007EEEF2 /* YandexWeatherUrlRoute.swift in Sources */,
+				0A8E621D271CB08300BB4F43 /* AuthViewController.swift in Sources */,
 				0A51389F2647F8C20026640F /* Foundation.swift in Sources */,
 				0AD28E8E2711FBAC007EEEF2 /* YandexForecastDayEntry.swift in Sources */,
 				0A51388526474A850026640F /* TabBarViewInput.swift in Sources */,
@@ -1514,24 +1727,30 @@
 				0A7CEA7426498641008E2D2E /* PlacesViewController.swift in Sources */,
 				0A7CEA8726498641008E2D2E /* SettingsModuleTestConfigurator.swift in Sources */,
 				0AD28E852711DBB9007EEEF2 /* YandexWeatherResponseEntity.swift in Sources */,
+				0A8E6220271CB08300BB4F43 /* AuthViewInput.swift in Sources */,
 				0ACBF939271351850045B9EF /* AerisService.swift in Sources */,
 				0ACBF9112712F7D60045B9EF /* OWMForecastDayEntity.swift in Sources */,
+				0A9C3EBA27261FE100053941 /* AccountCellModel.swift in Sources */,
 				0A7CEA8126498641008E2D2E /* SettingsPresenter.swift in Sources */,
 				0ACBF94F2713A1990045B9EF /* SavedPlacesEntity.swift in Sources */,
 				0A83EF61270F91F4008D1BCF /* PlaceSearchModuleInput.swift in Sources */,
 				0A19859926FFD34000809DA6 /* LocationManager.swift in Sources */,
 				0A83EF48270F1651008D1BCF /* MapPresenter.swift in Sources */,
+				0A1A67EC2725AC3200C4E2C9 /* AuthResponseEntity.swift in Sources */,
 				0A83EF60270F91F4008D1BCF /* PlaceSearchModuleOutput.swift in Sources */,
 				0A7CEA7C26498641008E2D2E /* WeatherViewInput.swift in Sources */,
 				0ACBF9132712F7DD0045B9EF /* OWMResponseEntry.swift in Sources */,
 				0A83EF4E270F1651008D1BCF /* MapModuleConfigurator.swift in Sources */,
 				0A83EF34270F144C008D1BCF /* PersonalCoordinatorOutput.swift in Sources */,
 				0ACBF9152712F7E10045B9EF /* OWMResponseEntity.swift in Sources */,
+				0A1A67D82724C40100C4E2C9 /* AuthUrlRoute.swift in Sources */,
 				0AD28E922711FBCC007EEEF2 /* YandexForecastEntry.swift in Sources */,
 				0ACBF92C271347DA0045B9EF /* AerisForecastDayEntity.swift in Sources */,
+				0A1A67E8272578B300C4E2C9 /* PasswordRepeatValidator.swift in Sources */,
 				0A7CEA8526498641008E2D2E /* SettingsViewController.swift in Sources */,
 				0A69888726434DC000F97207 /* AppDelegate.swift in Sources */,
 				0A42DA4C265A852C0095DB1C /* DateStringBuilder.swift in Sources */,
+				0A8E621C271CB08300BB4F43 /* AuthModuleOutput.swift in Sources */,
 				0A7CEA7626498641008E2D2E /* PlacesModuleTestConfigurator.swift in Sources */,
 				0ACBF90D2712F7C80045B9EF /* OWMTemperatureEntity.swift in Sources */,
 				0A51388626474A850026640F /* TabBarViewOutput.swift in Sources */,
@@ -1549,21 +1768,25 @@
 				0ACBF9182712FCA20045B9EF /* OWMUrlRoute.swift in Sources */,
 				0AD28E902711FBC4007EEEF2 /* YandexForecastDayEntity.swift in Sources */,
 				0A5138C5264831C80026640F /* Closures.swift in Sources */,
+				0A8E621B271CB08300BB4F43 /* AuthModuleInput.swift in Sources */,
 				0AD28E942711FBD3007EEEF2 /* YandexForecastEntity.swift in Sources */,
 				0A5138CA264832320026640F /* UINavigationController.swift in Sources */,
 				0ACBF91F271318C80045B9EF /* WeatherService.swift in Sources */,
 				0A42DA5B265AC7AB0095DB1C /* WeatherInfoCell.swift in Sources */,
 				0A83EF39270F1521008D1BCF /* WeatherCoordinator.swift in Sources */,
 				0ACBF92E271347E40045B9EF /* AerisForecastEntry.swift in Sources */,
+				0A1A67E12724C64000C4E2C9 /* AuthRequestEntity.swift in Sources */,
 				0ACBF94327136DC70045B9EF /* StorageService.swift in Sources */,
 				0ACBF934271347F70045B9EF /* AerisResponseEntity.swift in Sources */,
 				0ACBF92A271347D50045B9EF /* AerisForecastDayEntry.swift in Sources */,
 				0A5C4D1E2714F56D00454197 /* Date.swift in Sources */,
 				0A83EF2B270F0A00008D1BCF /* LocationCoordinatorOutput.swift in Sources */,
+				0A1A67EF2725B48E00C4E2C9 /* UserEntry.swift in Sources */,
 				0A83EF4A270F1651008D1BCF /* MapViewOutput.swift in Sources */,
 				0ACBF94727136F740045B9EF /* Encodable.swift in Sources */,
 				0A7CEA7E26498641008E2D2E /* WeatherModuleTestConfigurator.swift in Sources */,
 				0A83EF64270F91F4008D1BCF /* PlaceSearchViewInput.swift in Sources */,
+				0A8E620B271C970900BB4F43 /* LoginTableCell.swift in Sources */,
 				0A7CEA7926498641008E2D2E /* WeatherPresenter.swift in Sources */,
 				0A7CEA8026498641008E2D2E /* SettingsModuleOutput.swift in Sources */,
 				0A83EF47270F1651008D1BCF /* MapModuleOutput.swift in Sources */,
@@ -1574,6 +1797,7 @@
 				0A83EF4B270F1651008D1BCF /* MapViewController.swift in Sources */,
 				0A83EF65270F91F4008D1BCF /* PlaceSearchViewOutput.swift in Sources */,
 				0A7CEA7D26498641008E2D2E /* WeatherViewOutput.swift in Sources */,
+				0A8E6222271CB08300BB4F43 /* AuthModuleConfigurator.swift in Sources */,
 				0A7CEA7F26498641008E2D2E /* WeatherModuleConfigurator.swift in Sources */,
 				0A7CEA8626498641008E2D2E /* SettingsViewInput.swift in Sources */,
 				0A5138B1264800F60026640F /* Router.swift in Sources */,

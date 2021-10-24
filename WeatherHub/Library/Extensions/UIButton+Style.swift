@@ -5,14 +5,17 @@
 //  Created by Дмитрий Демьянов on 07.10.2021.
 //
 
+import SurfUtils
 import UIKit
 
-extension UIButton {
+extension CommonButton {
 
     func applyActionStyle() {
         layer.cornerRadius = 18
         layer.masksToBounds = true
         backgroundColor = Asset.Colors.tint.color
+        set(backgroundColor: Asset.Colors.tint.color, for: .normal)
+        set(backgroundColor: Asset.Colors.tintFaded.color, for: .highlighted)
         titleLabel?.font = .boldSystemFont(ofSize: 18)
     }
 

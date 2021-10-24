@@ -6,6 +6,7 @@ import UIKit
 
 typealias SettingsModuleComponents = (
     view: UIViewController,
+    input: SettingsModuleInput,
     output: SettingsModuleOutput
 )
 
@@ -18,7 +19,7 @@ final class SettingsModuleConfigurator {
         presenter.view = view
         view.output = presenter
 
-        return (view, presenter)
+        return (view, presenter, presenter)
     }
 
 }

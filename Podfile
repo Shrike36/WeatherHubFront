@@ -36,6 +36,9 @@ target 'WeatherHub' do
 
   pod 'ReactiveDataDisplayManager', '~> 7.0.0'
   pod 'NodeKit/UrlCache', :git => 'https://github.com/surfstudio/NodeKit', :tag => '3.2.0'
+  pod 'TextFieldsCatalog', '~> 0.16.0'
+  pod 'KeychainAccess',  '~> 4.2.2'
+
 
   target 'WeatherHubTests' do
     inherit! :search_paths

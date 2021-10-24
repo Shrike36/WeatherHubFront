@@ -45,6 +45,33 @@
 "Search.search" = "Поиск";
 "Search.cancel" = "Отмена";
 
+
 // MARK: - Settings screen
 
 "Settings.title" = "Опции";
+"Settings.login.title" = "Войти в аккаунт";
+"Settings.login.description" = "Это позволит синхронизировать список сохранённых мест на разных устройствах";
+"Settings.account" = "Аккаунт: ";
+"Settings.signOut" = "Выйти";
+
+
+// MARK: - Auth screen
+
+"Auth.register.title" = "Регистрация";
+"Auth.register.action" = "Зарегистрироваться";
+"Auth.register.error.title" = "Не удалось зарегистрироваться";
+"Auth.register.error.details" = "Возможно, аккаунт уже существует";
+
+"Auth.signIn.title" = "Вход";
+"Auth.signIn.action" = "Войти";
+"Auth.signIn.error.title" = "Не удалось войти";
+"Auth.signIn.error.details" = "Проверьте email и пароль";
+
+"Auth.email" = "E-Mail";
+"Auth.password" = "Пароль";
+"Auth.repeatPassword" = "Подтверждение пароля";
+"Auth.resetPassword" = "Я не помню пароль";
+"Auth.noAccount" = "Нет аккаунта?";
+"Auth.hasAccount" = "Уже есть аккаунт?";
+
+"Auth.validation.passwordsNotMatching" = "Пароли не совпадают";

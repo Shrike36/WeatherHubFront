@@ -11,6 +11,49 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
 
+  internal enum Auth {
+    /// E-Mail
+    internal static let email = L10n.tr("Localizable", "Auth.email")
+    /// Already have an account?
+    internal static let hasAccount = L10n.tr("Localizable", "Auth.hasAccount")
+    /// Have no account?
+    internal static let noAccount = L10n.tr("Localizable", "Auth.noAccount")
+    /// Password
+    internal static let password = L10n.tr("Localizable", "Auth.password")
+    /// Repeat password
+    internal static let repeatPassword = L10n.tr("Localizable", "Auth.repeatPassword")
+    /// I forgot password
+    internal static let resetPassword = L10n.tr("Localizable", "Auth.resetPassword")
+    internal enum Register {
+      /// Register
+      internal static let action = L10n.tr("Localizable", "Auth.register.action")
+      /// Registration
+      internal static let title = L10n.tr("Localizable", "Auth.register.title")
+      internal enum Error {
+        /// Maybe account already exists
+        internal static let details = L10n.tr("Localizable", "Auth.register.error.details")
+        /// Could not register user
+        internal static let title = L10n.tr("Localizable", "Auth.register.error.title")
+      }
+    }
+    internal enum SignIn {
+      /// Sign In
+      internal static let action = L10n.tr("Localizable", "Auth.signIn.action")
+      /// Sign In
+      internal static let title = L10n.tr("Localizable", "Auth.signIn.title")
+      internal enum Error {
+        /// Check email and password
+        internal static let details = L10n.tr("Localizable", "Auth.signIn.error.details")
+        /// Could not sign in
+        internal static let title = L10n.tr("Localizable", "Auth.signIn.error.title")
+      }
+    }
+    internal enum Validation {
+      /// Passwords do not match
+      internal static let passwordsNotMatching = L10n.tr("Localizable", "Auth.validation.passwordsNotMatching")
+    }
+  }
+
   internal enum Common {
     /// Aeris
     internal static let aeris = L10n.tr("Localizable", "Common.aeris")
@@ -55,8 +98,18 @@ internal enum L10n {
   }
 
   internal enum Settings {
+    /// User: 
+    internal static let account = L10n.tr("Localizable", "Settings.account")
+    /// Log out
+    internal static let signOut = L10n.tr("Localizable", "Settings.signOut")
     /// Settings
     internal static let title = L10n.tr("Localizable", "Settings.title")
+    internal enum Login {
+      /// You will be able to synchronize saved places between different devices
+      internal static let description = L10n.tr("Localizable", "Settings.login.description")
+      /// Sign In
+      internal static let title = L10n.tr("Localizable", "Settings.login.title")
+    }
   }
 
   internal enum Tabs {

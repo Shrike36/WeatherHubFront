@@ -40,8 +40,11 @@ internal enum Asset {
     internal static let border = ColorAsset(name: "border")
     internal static let contrastAction = ColorAsset(name: "contrastAction")
     internal static let contrastBackground = ColorAsset(name: "contrastBackground")
+    internal static let destructiveAction = ColorAsset(name: "destructiveAction")
+    internal static let error = ColorAsset(name: "error")
     internal static let shade = ColorAsset(name: "shade")
     internal static let tint = ColorAsset(name: "tint")
+    internal static let tintFaded = ColorAsset(name: "tintFaded")
   }
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

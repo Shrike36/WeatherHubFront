@@ -4,10 +4,10 @@
 
 import UIKit
 
-final class SettingsModuleTestConfigurator {
+final class AuthModuleTestConfigurator {
 
     func configure() -> (UIViewController, [AnyObject]) {
-        let (view, _, output) = SettingsModuleConfigurator().configure()
+        let (view, output) = AuthModuleConfigurator().configure()
         return (view, [output])
     }
 

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import KeychainAccess
 
 public class StorageService {
 
@@ -15,6 +16,8 @@ public class StorageService {
         static let lastPlace = "lastPlace"
         static let savedPlaces = "savedPlaces"
         static let weatherCache = "weatherCache"
+        static let userEmail = "email"
+        static let token = "token"
     }
 
     // MARK: - Public Properties
@@ -64,4 +67,25 @@ public class StorageService {
         }
     }
 
+    public var user: UserEntry? {
+        get {
+            guard let email = try? keychain.get(Keys.userEmail), let token = try? keychain.get(Keys.token) else {
+                return nil
+            }
+            return UserEntry(email: email, token: token)
+        }
+        set {
+            if let user = newValue {
+                try? keychain.set(user.email, key: Keys.userEmail)
+                try? keychain.set(user.token, key: Keys.token)
+            } else {
+                try? keychain.remove(Keys.userEmail)
+                try? keychain.remove(Keys.token)
+            }
+        }
+    }
+
+    // MARK: - Private Properties
+
+    private let keychain = Keychain(service: Bundle.main.bundleIdentifier ?? "")
 }

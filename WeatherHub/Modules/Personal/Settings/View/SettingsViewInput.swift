@@ -3,6 +3,6 @@
 //
 
 protocol SettingsViewInput: AnyObject {
-    /// Method for setup initial state of view
     func setupInitialState()
+    func setState(_ state: SettingsViewController.State)
 }
