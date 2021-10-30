@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -77,7 +77,7 @@
                     </constraints>
                 </stackView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="25R-Ug-Buj" userLabel="Dates Collection View">
-                    <rect key="frame" x="0.0" y="82" width="320" height="486"/>
+                    <rect key="frame" x="0.0" y="98" width="320" height="454"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="y2e-uv-5tE">
                         <size key="itemSize" width="128" height="128"/>
@@ -93,13 +93,13 @@
                 <constraint firstItem="532-pH-bzr" firstAttribute="centerY" secondItem="319-S0-oad" secondAttribute="centerY" id="6AW-lT-Wam"/>
                 <constraint firstItem="kvZ-62-RYm" firstAttribute="trailing" secondItem="532-pH-bzr" secondAttribute="trailing" constant="30" id="7x3-6U-WdM"/>
                 <constraint firstItem="kvZ-62-RYm" firstAttribute="trailing" secondItem="xsg-tx-mTn" secondAttribute="trailing" constant="16" id="Gd0-eN-j1z"/>
-                <constraint firstItem="25R-Ug-Buj" firstAttribute="top" secondItem="xsg-tx-mTn" secondAttribute="bottom" id="Qqg-cB-Y51"/>
+                <constraint firstItem="25R-Ug-Buj" firstAttribute="top" secondItem="xsg-tx-mTn" secondAttribute="bottom" constant="16" id="Qqg-cB-Y51"/>
                 <constraint firstItem="xsg-tx-mTn" firstAttribute="top" secondItem="319-S0-oad" secondAttribute="bottom" constant="16" id="Vqi-gm-aAO"/>
                 <constraint firstItem="xsg-tx-mTn" firstAttribute="leading" secondItem="kvZ-62-RYm" secondAttribute="leading" constant="16" id="gFf-iV-W8Q"/>
                 <constraint firstItem="25R-Ug-Buj" firstAttribute="leading" secondItem="kvZ-62-RYm" secondAttribute="leading" id="h6s-Cv-hIc"/>
                 <constraint firstItem="319-S0-oad" firstAttribute="top" secondItem="kvZ-62-RYm" secondAttribute="top" constant="16" id="iXh-Tr-kVQ"/>
                 <constraint firstItem="319-S0-oad" firstAttribute="leading" secondItem="kvZ-62-RYm" secondAttribute="leading" constant="64" id="nfQ-7X-5Uq"/>
-                <constraint firstItem="kvZ-62-RYm" firstAttribute="bottom" secondItem="25R-Ug-Buj" secondAttribute="bottom" id="vfO-xL-tKA"/>
+                <constraint firstItem="kvZ-62-RYm" firstAttribute="bottom" secondItem="25R-Ug-Buj" secondAttribute="bottom" constant="16" id="vfO-xL-tKA"/>
                 <constraint firstItem="kvZ-62-RYm" firstAttribute="trailing" secondItem="319-S0-oad" secondAttribute="trailing" constant="64" id="vqr-k3-24d"/>
                 <constraint firstItem="kvZ-62-RYm" firstAttribute="trailing" secondItem="25R-Ug-Buj" secondAttribute="trailing" id="zcy-1h-DjK"/>
             </constraints>

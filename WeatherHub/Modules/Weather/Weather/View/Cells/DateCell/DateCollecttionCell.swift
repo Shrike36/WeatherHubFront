@@ -63,9 +63,11 @@ private extension DateCollecttionCell {
     func configureTable() {
         tableView.backgroundColor = Asset.Colors.contrastBackground.color
         tableView.alwaysBounceVertical = false
-        tableView.clipsToBounds = false
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
+        if #available(iOS 15.0, *) {
+            tableView.sectionHeaderTopPadding = 0
+        }
     }
 
 }

@@ -9,6 +9,8 @@
 // MARK: - Common
 
 "Common.loading" = "Loading...";
+"Common.done" = "Done!";
+
 "Common.yandex" = "Yandex";
 "Common.owm" = "OpenWeatherMap";
 "Common.aeris" = "Aeris";
@@ -75,3 +77,23 @@
 "Auth.hasAccount" = "Already have an account?";
 
 "Auth.validation.passwordsNotMatching" = "Passwords do not match";
+
+
+// MARK: - Reset password
+
+"ResetPassword.title" = "Reset password";
+"ResetPassword.details" = "We will send you an e-mail with security code needed to reset password";
+"ResetPassword.send" = "Send code";
+"ResetPassword.error.title" = "Could not reset password";
+"ResetPassword.error.details" = "Check email. Maybe this user does not exist.";
+
+
+// MARK: - New password
+
+"NewPassword.title" = "Set new password";
+"NewPassword.code" = "Security code";
+"NewPassword.password" = "New password";
+"NewPassword.repeatPassword" = "Repeat password";
+"NewPassword.send" = "Set password";
+"NewPassword.error.title" = "Could not set password";
+"NewPassword.error.details" = "Maybe security code is incorrect.";

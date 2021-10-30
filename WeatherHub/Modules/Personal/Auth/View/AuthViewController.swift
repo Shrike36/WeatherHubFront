@@ -116,6 +116,7 @@ final class AuthViewController: UIViewController {
 extension AuthViewController: AuthViewInput {
 
     func setupInitialState() {
+        navigationController?.setNavigationBarHidden(true, animated: false)
         configureBackground()
         configureFields()
         configureForgotButton()

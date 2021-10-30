@@ -2,7 +2,7 @@
 //  Copyright © 2021 Dmitry Demyanov. All rights reserved.
 //
 
-protocol AuthViewInput: AnyObject, LoadingPresenter {
+protocol AuthViewInput: AnyObject, LoadingPresenter, SuccessPresenter {
     var emailValue: String? { get }
     var passwordValue: String? { get }
     var isPasswordRepeated: Bool { get }

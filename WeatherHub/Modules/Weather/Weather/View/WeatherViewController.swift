@@ -13,8 +13,9 @@ final class WeatherViewController: UIViewController {
     private enum Constants {
         static let addedTouchRadius: CGFloat = 7
 
+        static let occupiedContentSize: CGFloat = 157
         static let dateCellHorizontalInset: CGFloat = 16
-        static let dateCellVerticalInset: CGFloat = 16
+        static let dateCellVerticalInset: CGFloat = .zero
         static let dateCellInsets = UIEdgeInsets(top: dateCellVerticalInset,
                                                  left: dateCellHorizontalInset,
                                                  bottom: dateCellVerticalInset,
@@ -45,12 +46,7 @@ final class WeatherViewController: UIViewController {
         .add(plugin: .scrollableBehaviour(scrollProvider: self))
         .build()
 
-    private var dateCellSize: CGSize {
-        return .init(width: datesCollectionView.bounds.width - 2 * Constants.dateCellHorizontalInset,
-                     height: datesCollectionView.bounds.height - 2 * Constants.dateCellVerticalInset)
-    }
-
-    private lazy var scrollManager = ItemsScrollManager(cellWidth: dateCellSize.width,
+    private lazy var scrollManager = ItemsScrollManager(cellWidth: calculateCellWidth(),
                                                         cellOffset: Constants.dateCellHorizontalInset,
                                                         insets: Constants.dateCellInsets)
 
@@ -88,11 +84,11 @@ extension WeatherViewController: WeatherViewInput {
 
     func configure(with model: WeatherScreenViewModel) {
         cityLabel.text = model.cityName
-        setDateScrollIndex(0, animated: false)
         setDateChangeButtonsVisisble(left: false, right: true)
         setDateText(model.dates.first!.date)
         configureCollection()
         fillCollection(with: model.dates)
+        setDateScrollIndex(0, animated: false)
     }
 
     func setDateChangeButtonsVisisble(left leftVisible: Bool, right rightVisible: Bool) {
@@ -134,7 +130,7 @@ extension WeatherViewController: CollectionScrollProvider {
 
 }
 
-// MARK: - Appearance
+// MARK: - Private Methods
 
 private extension WeatherViewController {
 
@@ -181,7 +177,7 @@ private extension WeatherViewController {
     func configureCollection() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.itemSize = dateCellSize
+        layout.itemSize = CGSize(width: calculateCellWidth(), height: calculateCellHeight())
         layout.sectionInset = Constants.dateCellInsets
         layout.minimumLineSpacing = Constants.dateCellHorizontalInset
 
@@ -193,12 +189,6 @@ private extension WeatherViewController {
         datesCollectionView.contentInset = .zero
     }
 
-}
-
-// MARK: - Configuration
-
-private extension WeatherViewController {
-
     func fillCollection(with models: [DateViewModel]) {
         ddm.clearCellGenerators()
         for model in models {
@@ -206,6 +196,15 @@ private extension WeatherViewController {
             ddm.addCellGenerator(generator)
         }
         ddm.forceRefill()
+    }
+
+    func calculateCellWidth() -> CGFloat {
+        return UIScreen.main.bounds.width - 2 * Constants.dateCellHorizontalInset
+    }
+
+    func calculateCellHeight() -> CGFloat {
+        let occupiedHeight = view.safeAreaInsets.top + Constants.occupiedContentSize + (tabBarController?.tabBar.bounds.height ?? 0)
+        return UIScreen.main.bounds.height - occupiedHeight
     }
 
 }

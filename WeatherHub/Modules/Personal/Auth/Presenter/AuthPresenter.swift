@@ -8,6 +8,7 @@ final class AuthPresenter: AuthModuleOutput {
 
     var onErrorOccured: Closure<DetailedError>?
     var onAuthSuccess: EmptyClosure?
+    var onPasswordResetRequested: EmptyClosure?
 
     // MARK: - Properties
 
@@ -46,6 +47,7 @@ extension AuthPresenter: AuthViewOutput {
     }
 
     func handlePasswordReset() {
+        onPasswordResetRequested?()
     }
 
     func chooseAnotherAction() {
@@ -69,7 +71,9 @@ private extension AuthPresenter {
         authService.register(user: authModel)
             .onCompleted { [weak self] response in
                 self?.storageService.user = UserEntry(email: email, token: response.token)
-                self?.onAuthSuccess?()
+                self?.view?.showSuccess {
+                    self?.onAuthSuccess?()
+                }
             }.onError { [weak self] _ in
                 let error = DetailedError(title: L10n.Auth.Register.Error.title,
                                           details: L10n.Auth.Register.Error.details)
@@ -90,7 +94,9 @@ private extension AuthPresenter {
         authService.signIn(user: authModel)
             .onCompleted { [weak self] response in
                 self?.storageService.user = UserEntry(email: email, token: response.token)
-                self?.onAuthSuccess?()
+                self?.view?.showSuccess {
+                    self?.onAuthSuccess?()
+                }
             }.onError { [weak self] _ in
                 let error = DetailedError(title: L10n.Auth.SignIn.Error.title,
                                           details: L10n.Auth.SignIn.Error.details)

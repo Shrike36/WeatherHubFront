@@ -14,12 +14,7 @@ public struct AuthRequestEntity {
 
 }
 
-extension AuthRequestEntity: DTOConvertible {
-
-    public static func from(dto: AuthRequestEntry) throws -> AuthRequestEntity {
-        return .init(email: dto.email,
-                     password: dto.password)
-    }
+extension AuthRequestEntity: DTOEncodable {
 
     public func toDTO() throws -> AuthRequestEntry {
         return.init(email: email,

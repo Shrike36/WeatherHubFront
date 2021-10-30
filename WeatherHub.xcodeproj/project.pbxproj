@@ -125,9 +125,34 @@
 		0A8E6220271CB08300BB4F43 /* AuthViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E6216271CB08300BB4F43 /* AuthViewInput.swift */; };
 		0A8E6221271CB08300BB4F43 /* AuthModuleTestConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E6218271CB08300BB4F43 /* AuthModuleTestConfigurator.swift */; };
 		0A8E6222271CB08300BB4F43 /* AuthModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E6219271CB08300BB4F43 /* AuthModuleConfigurator.swift */; };
-		0A8E6224271CCF0600BB4F43 /* AuthViewController+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8E6223271CCF0600BB4F43 /* AuthViewController+Configuration.swift */; };
 		0A998C222645982100555828 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A998C212645982100555828 /* Colors.xcassets */; };
 		0A9C3EBA27261FE100053941 /* AccountCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9C3EB927261FE100053941 /* AccountCellModel.swift */; };
+		0AAF0840272699CE00439813 /* PasswordResetModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF0835272699CE00439813 /* PasswordResetModuleOutput.swift */; };
+		0AAF0841272699CE00439813 /* PasswordResetModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF0836272699CE00439813 /* PasswordResetModuleInput.swift */; };
+		0AAF0842272699CE00439813 /* PasswordResetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF0837272699CE00439813 /* PasswordResetPresenter.swift */; };
+		0AAF0843272699CE00439813 /* PasswordResetViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF0839272699CE00439813 /* PasswordResetViewOutput.swift */; };
+		0AAF0844272699CE00439813 /* PasswordResetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF083A272699CE00439813 /* PasswordResetViewController.swift */; };
+		0AAF0845272699CE00439813 /* PasswordResetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AAF083B272699CE00439813 /* PasswordResetViewController.xib */; };
+		0AAF0846272699CE00439813 /* PasswordResetViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF083C272699CE00439813 /* PasswordResetViewInput.swift */; };
+		0AAF0847272699CE00439813 /* PasswordResetModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF083E272699CE00439813 /* PasswordResetModuleConfigurator.swift */; };
+		0AAF0848272699CE00439813 /* PasswordResetModuleTestConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF083F272699CE00439813 /* PasswordResetModuleTestConfigurator.swift */; };
+		0AAF084B2727362400439813 /* FieldConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF084A2727362300439813 /* FieldConfiguration.swift */; };
+		0AAF084E2727406C00439813 /* PasswordResetRequestEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF084D2727406C00439813 /* PasswordResetRequestEntry.swift */; };
+		0AAF08502727407300439813 /* PasswordResetRequestEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF084F2727407300439813 /* PasswordResetRequestEntity.swift */; };
+		0AAF085E2727473500439813 /* NewPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF08532727473500439813 /* NewPasswordPresenter.swift */; };
+		0AAF085F2727473500439813 /* NewPasswordModuleOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF08542727473500439813 /* NewPasswordModuleOutput.swift */; };
+		0AAF08602727473500439813 /* NewPasswordModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF08552727473500439813 /* NewPasswordModuleInput.swift */; };
+		0AAF08612727473500439813 /* NewPasswordViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF08572727473500439813 /* NewPasswordViewOutput.swift */; };
+		0AAF08622727473500439813 /* NewPasswordViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF08582727473500439813 /* NewPasswordViewInput.swift */; };
+		0AAF08632727473500439813 /* NewPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AAF08592727473500439813 /* NewPasswordViewController.xib */; };
+		0AAF08642727473500439813 /* NewPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF085A2727473500439813 /* NewPasswordViewController.swift */; };
+		0AAF08652727473500439813 /* NewPasswordModuleTestConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF085C2727473500439813 /* NewPasswordModuleTestConfigurator.swift */; };
+		0AAF08662727473500439813 /* NewPasswordModuleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAF085D2727473500439813 /* NewPasswordModuleConfigurator.swift */; };
+		0AC9A641272CA43100B91D48 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9A640272CA43100B91D48 /* SuccessView.swift */; };
+		0AC9A643272CA62C00B91D48 /* SuccessPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9A642272CA62C00B91D48 /* SuccessPresenter.swift */; };
+		0AC9A645272CA6EC00B91D48 /* UIViewController+Success.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9A644272CA6EC00B91D48 /* UIViewController+Success.swift */; };
+		0AC9A648272D6B2900B91D48 /* NewPasswordRequestEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9A647272D6B2900B91D48 /* NewPasswordRequestEntry.swift */; };
+		0AC9A64A272D6B2E00B91D48 /* NewPasswordRequestEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9A649272D6B2E00B91D48 /* NewPasswordRequestEntity.swift */; };
 		0ACBF9072712F7B00045B9EF /* OWMConditionsEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF9062712F7B00045B9EF /* OWMConditionsEntry.swift */; };
 		0ACBF9092712F7B60045B9EF /* OWMConditionsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF9082712F7B60045B9EF /* OWMConditionsEntity.swift */; };
 		0ACBF90B2712F7C10045B9EF /* OWMTemperatureEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF90A2712F7C10045B9EF /* OWMTemperatureEntry.swift */; };
@@ -325,10 +350,35 @@
 		0A8E6216271CB08300BB4F43 /* AuthViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewInput.swift; sourceTree = "<group>"; };
 		0A8E6218271CB08300BB4F43 /* AuthModuleTestConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthModuleTestConfigurator.swift; sourceTree = "<group>"; };
 		0A8E6219271CB08300BB4F43 /* AuthModuleConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthModuleConfigurator.swift; sourceTree = "<group>"; };
-		0A8E6223271CCF0600BB4F43 /* AuthViewController+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthViewController+Configuration.swift"; sourceTree = "<group>"; };
 		0A998C212645982100555828 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		0A9C3EB927261FE100053941 /* AccountCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCellModel.swift; sourceTree = "<group>"; };
+		0AAF0835272699CE00439813 /* PasswordResetModuleOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordResetModuleOutput.swift; sourceTree = "<group>"; };
+		0AAF0836272699CE00439813 /* PasswordResetModuleInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordResetModuleInput.swift; sourceTree = "<group>"; };
+		0AAF0837272699CE00439813 /* PasswordResetPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordResetPresenter.swift; sourceTree = "<group>"; };
+		0AAF0839272699CE00439813 /* PasswordResetViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordResetViewOutput.swift; sourceTree = "<group>"; };
+		0AAF083A272699CE00439813 /* PasswordResetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordResetViewController.swift; sourceTree = "<group>"; };
+		0AAF083B272699CE00439813 /* PasswordResetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordResetViewController.xib; sourceTree = "<group>"; };
+		0AAF083C272699CE00439813 /* PasswordResetViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordResetViewInput.swift; sourceTree = "<group>"; };
+		0AAF083E272699CE00439813 /* PasswordResetModuleConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordResetModuleConfigurator.swift; sourceTree = "<group>"; };
+		0AAF083F272699CE00439813 /* PasswordResetModuleTestConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordResetModuleTestConfigurator.swift; sourceTree = "<group>"; };
+		0AAF084A2727362300439813 /* FieldConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldConfiguration.swift; sourceTree = "<group>"; };
+		0AAF084D2727406C00439813 /* PasswordResetRequestEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetRequestEntry.swift; sourceTree = "<group>"; };
+		0AAF084F2727407300439813 /* PasswordResetRequestEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetRequestEntity.swift; sourceTree = "<group>"; };
+		0AAF08532727473500439813 /* NewPasswordPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPasswordPresenter.swift; sourceTree = "<group>"; };
+		0AAF08542727473500439813 /* NewPasswordModuleOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPasswordModuleOutput.swift; sourceTree = "<group>"; };
+		0AAF08552727473500439813 /* NewPasswordModuleInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPasswordModuleInput.swift; sourceTree = "<group>"; };
+		0AAF08572727473500439813 /* NewPasswordViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPasswordViewOutput.swift; sourceTree = "<group>"; };
+		0AAF08582727473500439813 /* NewPasswordViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPasswordViewInput.swift; sourceTree = "<group>"; };
+		0AAF08592727473500439813 /* NewPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewPasswordViewController.xib; sourceTree = "<group>"; };
+		0AAF085A2727473500439813 /* NewPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPasswordViewController.swift; sourceTree = "<group>"; };
+		0AAF085C2727473500439813 /* NewPasswordModuleTestConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPasswordModuleTestConfigurator.swift; sourceTree = "<group>"; };
+		0AAF085D2727473500439813 /* NewPasswordModuleConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPasswordModuleConfigurator.swift; sourceTree = "<group>"; };
 		0AC81423C4FE29719A05FE86 /* Pods-WeatherHubTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherHubTests.debug.xcconfig"; path = "Target Support Files/Pods-WeatherHubTests/Pods-WeatherHubTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0AC9A640272CA43100B91D48 /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
+		0AC9A642272CA62C00B91D48 /* SuccessPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessPresenter.swift; sourceTree = "<group>"; };
+		0AC9A644272CA6EC00B91D48 /* UIViewController+Success.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Success.swift"; sourceTree = "<group>"; };
+		0AC9A647272D6B2900B91D48 /* NewPasswordRequestEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordRequestEntry.swift; sourceTree = "<group>"; };
+		0AC9A649272D6B2E00B91D48 /* NewPasswordRequestEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordRequestEntity.swift; sourceTree = "<group>"; };
 		0ACBF9062712F7B00045B9EF /* OWMConditionsEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMConditionsEntry.swift; sourceTree = "<group>"; };
 		0ACBF9082712F7B60045B9EF /* OWMConditionsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMConditionsEntity.swift; sourceTree = "<group>"; };
 		0ACBF90A2712F7C10045B9EF /* OWMTemperatureEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMTemperatureEntry.swift; sourceTree = "<group>"; };
@@ -446,6 +496,8 @@
 		0A1A67DC2724C60B00C4E2C9 /* WeatherHub */ = {
 			isa = PBXGroup;
 			children = (
+				0AC9A646272D6B0C00B91D48 /* NewPasswordRequest */,
+				0AAF084C2727405700439813 /* PasswordResetRequest */,
 				0A1A67DD2724C62100C4E2C9 /* AuthRequest */,
 				0A1A67E2272566E100C4E2C9 /* AuthResponse */,
 			);
@@ -526,9 +578,9 @@
 		0A42DA4D265A8F290095DB1C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0A1A67ED2725B46600C4E2C9 /* User */,
-				0A5C4D172714E67C00454197 /* Cache */,
 				0ACBF922271326AD0045B9EF /* Common */,
+				0A5C4D172714E67C00454197 /* Cache */,
+				0A1A67ED2725B46600C4E2C9 /* User */,
 				0ACBF93A2713691C0045B9EF /* Location */,
 				0A1A67DC2724C60B00C4E2C9 /* WeatherHub */,
 				0ACBF925271346F60045B9EF /* Aeris */,
@@ -653,6 +705,7 @@
 				0ACBF9502714232C0045B9EF /* UIView+Reusable.swift */,
 				0A5138962647F85A0026640F /* UIViewController.swift */,
 				0AD28E662711ABD4007EEEF2 /* UIViewController+Loading.swift */,
+				0AC9A644272CA6EC00B91D48 /* UIViewController+Success.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -663,6 +716,7 @@
 				0A5138B0264800F60026640F /* Router.swift */,
 				0A5138BF2648309F0026640F /* Presentable.swift */,
 				0AD28E6C2711C25E007EEEF2 /* LoadingPresenter.swift */,
+				0AC9A642272CA62C00B91D48 /* SuccessPresenter.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -939,6 +993,8 @@
 				0A83EF32270F144C008D1BCF /* PersonalCoordinatorOutput.swift */,
 				0A7CEA6126498641008E2D2E /* Settings */,
 				0A8E620D271CB08300BB4F43 /* Auth */,
+				0AAF0833272699CE00439813 /* PasswordReset */,
+				0AAF08512727473500439813 /* NewPassword */,
 			);
 			path = Personal;
 			sourceTree = "<group>";
@@ -1107,7 +1163,6 @@
 				0A8E6214271CB08300BB4F43 /* AuthViewController.xib */,
 				0A8E6215271CB08300BB4F43 /* AuthViewOutput.swift */,
 				0A8E6216271CB08300BB4F43 /* AuthViewInput.swift */,
-				0A8E6223271CCF0600BB4F43 /* AuthViewController+Configuration.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1119,6 +1174,120 @@
 				0A8E6219271CB08300BB4F43 /* AuthModuleConfigurator.swift */,
 			);
 			path = Configurator;
+			sourceTree = "<group>";
+		};
+		0AAF0833272699CE00439813 /* PasswordReset */ = {
+			isa = PBXGroup;
+			children = (
+				0AAF0834272699CE00439813 /* Presenter */,
+				0AAF0838272699CE00439813 /* View */,
+				0AAF083D272699CE00439813 /* Configurator */,
+			);
+			path = PasswordReset;
+			sourceTree = "<group>";
+		};
+		0AAF0834272699CE00439813 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0AAF0835272699CE00439813 /* PasswordResetModuleOutput.swift */,
+				0AAF0836272699CE00439813 /* PasswordResetModuleInput.swift */,
+				0AAF0837272699CE00439813 /* PasswordResetPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0AAF0838272699CE00439813 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0AAF0839272699CE00439813 /* PasswordResetViewOutput.swift */,
+				0AAF083A272699CE00439813 /* PasswordResetViewController.swift */,
+				0AAF083B272699CE00439813 /* PasswordResetViewController.xib */,
+				0AAF083C272699CE00439813 /* PasswordResetViewInput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0AAF083D272699CE00439813 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				0AAF083E272699CE00439813 /* PasswordResetModuleConfigurator.swift */,
+				0AAF083F272699CE00439813 /* PasswordResetModuleTestConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		0AAF08492727361700439813 /* FieldConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				0AAF084A2727362300439813 /* FieldConfiguration.swift */,
+			);
+			path = FieldConfiguration;
+			sourceTree = "<group>";
+		};
+		0AAF084C2727405700439813 /* PasswordResetRequest */ = {
+			isa = PBXGroup;
+			children = (
+				0AAF084D2727406C00439813 /* PasswordResetRequestEntry.swift */,
+				0AAF084F2727407300439813 /* PasswordResetRequestEntity.swift */,
+			);
+			path = PasswordResetRequest;
+			sourceTree = "<group>";
+		};
+		0AAF08512727473500439813 /* NewPassword */ = {
+			isa = PBXGroup;
+			children = (
+				0AAF08522727473500439813 /* Presenter */,
+				0AAF08562727473500439813 /* View */,
+				0AAF085B2727473500439813 /* Configurator */,
+			);
+			path = NewPassword;
+			sourceTree = "<group>";
+		};
+		0AAF08522727473500439813 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0AAF08532727473500439813 /* NewPasswordPresenter.swift */,
+				0AAF08542727473500439813 /* NewPasswordModuleOutput.swift */,
+				0AAF08552727473500439813 /* NewPasswordModuleInput.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0AAF08562727473500439813 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0AAF08572727473500439813 /* NewPasswordViewOutput.swift */,
+				0AAF08582727473500439813 /* NewPasswordViewInput.swift */,
+				0AAF08592727473500439813 /* NewPasswordViewController.xib */,
+				0AAF085A2727473500439813 /* NewPasswordViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0AAF085B2727473500439813 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				0AAF085C2727473500439813 /* NewPasswordModuleTestConfigurator.swift */,
+				0AAF085D2727473500439813 /* NewPasswordModuleConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		0AC9A63F272CA41C00B91D48 /* SuccessView */ = {
+			isa = PBXGroup;
+			children = (
+				0AC9A640272CA43100B91D48 /* SuccessView.swift */,
+			);
+			path = SuccessView;
+			sourceTree = "<group>";
+		};
+		0AC9A646272D6B0C00B91D48 /* NewPasswordRequest */ = {
+			isa = PBXGroup;
+			children = (
+				0AC9A647272D6B2900B91D48 /* NewPasswordRequestEntry.swift */,
+				0AC9A649272D6B2E00B91D48 /* NewPasswordRequestEntity.swift */,
+			);
+			path = NewPasswordRequest;
 			sourceTree = "<group>";
 		};
 		0ACBF9042712F7450045B9EF /* OWMTemperature */ = {
@@ -1262,8 +1431,10 @@
 		0AD28E682711AE8A007EEEF2 /* Reusable */ = {
 			isa = PBXGroup;
 			children = (
+				0AAF08492727361700439813 /* FieldConfiguration */,
 				0AD28E5F2710B11B007EEEF2 /* PlaceTableViewCell */,
 				0AD28E692711AE93007EEEF2 /* LoadingView */,
+				0AC9A63F272CA41C00B91D48 /* SuccessView */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -1528,6 +1699,8 @@
 				0A83EF62270F91F4008D1BCF /* PlaceSearchViewController.xib in Resources */,
 				0AD28E632710B148007EEEF2 /* PlaceTableViewCell.xib in Resources */,
 				0A42DA5C265AC7AB0095DB1C /* WeatherInfoCell.xib in Resources */,
+				0AAF08632727473500439813 /* NewPasswordViewController.xib in Resources */,
+				0AAF0845272699CE00439813 /* PasswordResetViewController.xib in Resources */,
 				0A42DA43265A74440095DB1C /* DateCollecttionCell.xib in Resources */,
 				0A69889026434DC300F97207 /* Assets.xcassets in Resources */,
 			);
@@ -1658,9 +1831,12 @@
 				0A51388A26474A850026640F /* TabBarModuleConfigurator.swift in Sources */,
 				0A5138C02648309F0026640F /* Presentable.swift in Sources */,
 				0AD28E6B2711AF0E007EEEF2 /* LoadingView.swift in Sources */,
+				0AAF0848272699CE00439813 /* PasswordResetModuleTestConfigurator.swift in Sources */,
 				0A5C4D192714E6AD00454197 /* WeatherBackup.swift in Sources */,
 				0ACBF94027136AA00045B9EF /* PlaceEntity.swift in Sources */,
+				0AAF08502727407300439813 /* PasswordResetRequestEntity.swift in Sources */,
 				0A7CEA7226498641008E2D2E /* PlacesViewInput.swift in Sources */,
+				0AAF0846272699CE00439813 /* PasswordResetViewInput.swift in Sources */,
 				0AD28E672711ABD4007EEEF2 /* UIViewController+Loading.swift in Sources */,
 				0ACBF94D2713A1940045B9EF /* SavedPlacesEntry.swift in Sources */,
 				0A83EF49270F1651008D1BCF /* MapModuleInput.swift in Sources */,
@@ -1688,22 +1864,25 @@
 				0A7CEA7A26498641008E2D2E /* WeatherViewController.swift in Sources */,
 				0A83EFA4270F9AAA008D1BCF /* SearchTextField.swift in Sources */,
 				0ACBF930271347E90045B9EF /* AerisForecastEntity.swift in Sources */,
+				0AAF08602727473500439813 /* NewPasswordModuleInput.swift in Sources */,
 				0A8E6221271CB08300BB4F43 /* AuthModuleTestConfigurator.swift in Sources */,
 				0ACBF91C2712FF6C0045B9EF /* ServiceKeys.swift in Sources */,
 				0ACBF93727134EAC0045B9EF /* AerisUrlRoute.swift in Sources */,
 				0A42DA50265A91340095DB1C /* WeatherViewModel.swift in Sources */,
 				0A7CEA6F26498641008E2D2E /* PlacesModuleOutput.swift in Sources */,
 				0AD28E622710B148007EEEF2 /* PlaceTableViewCell.swift in Sources */,
-				0A8E6224271CCF0600BB4F43 /* AuthViewController+Configuration.swift in Sources */,
 				0A5C4D1C2714E74F00454197 /* CacheService.swift in Sources */,
+				0AAF0841272699CE00439813 /* PasswordResetModuleInput.swift in Sources */,
 				0A1A67F527260CD400C4E2C9 /* AccountTableCell.swift in Sources */,
 				0A83EF67270F91F4008D1BCF /* PlaceSearchModuleConfigurator.swift in Sources */,
 				0A1A67F12725BA1800C4E2C9 /* DetailedError.swift in Sources */,
 				0AD28E652710F309007EEEF2 /* PlaceViewModel.swift in Sources */,
 				0A7CEA352648AAFA008E2D2E /* Assets.swift in Sources */,
 				0A5138972647F85A0026640F /* UIViewController.swift in Sources */,
+				0AAF084B2727362400439813 /* FieldConfiguration.swift in Sources */,
 				0A83EF4F270F1651008D1BCF /* MapModuleTestConfigurator.swift in Sources */,
 				0A83EF4C270F1651008D1BCF /* MapViewInput.swift in Sources */,
+				0AAF0842272699CE00439813 /* PasswordResetPresenter.swift in Sources */,
 				0A8E621F271CB08300BB4F43 /* AuthViewOutput.swift in Sources */,
 				0ACBF9212713265F0045B9EF /* WeatherInteractor.swift in Sources */,
 				0A1A67DB2724C58100C4E2C9 /* AuthService.swift in Sources */,
@@ -1715,6 +1894,7 @@
 				0AD28E6F2711C55C007EEEF2 /* WeatherCoordinatorInput.swift in Sources */,
 				0A83EF5F270F91F4008D1BCF /* PlaceSearchPresenter.swift in Sources */,
 				0AD28E7C2711D6EA007EEEF2 /* YandexWeatherUrlRoute.swift in Sources */,
+				0AAF08662727473500439813 /* NewPasswordModuleConfigurator.swift in Sources */,
 				0A8E621D271CB08300BB4F43 /* AuthViewController.swift in Sources */,
 				0A51389F2647F8C20026640F /* Foundation.swift in Sources */,
 				0AD28E8E2711FBAC007EEEF2 /* YandexForecastDayEntry.swift in Sources */,
@@ -1725,9 +1905,11 @@
 				0A83EF63270F91F4008D1BCF /* PlaceSearchViewController.swift in Sources */,
 				0A42DA54265AAE410095DB1C /* DateViewModel.swift in Sources */,
 				0A7CEA7426498641008E2D2E /* PlacesViewController.swift in Sources */,
+				0AAF0840272699CE00439813 /* PasswordResetModuleOutput.swift in Sources */,
 				0A7CEA8726498641008E2D2E /* SettingsModuleTestConfigurator.swift in Sources */,
 				0AD28E852711DBB9007EEEF2 /* YandexWeatherResponseEntity.swift in Sources */,
 				0A8E6220271CB08300BB4F43 /* AuthViewInput.swift in Sources */,
+				0AAF085E2727473500439813 /* NewPasswordPresenter.swift in Sources */,
 				0ACBF939271351850045B9EF /* AerisService.swift in Sources */,
 				0ACBF9112712F7D60045B9EF /* OWMForecastDayEntity.swift in Sources */,
 				0A9C3EBA27261FE100053941 /* AccountCellModel.swift in Sources */,
@@ -1743,15 +1925,20 @@
 				0A83EF4E270F1651008D1BCF /* MapModuleConfigurator.swift in Sources */,
 				0A83EF34270F144C008D1BCF /* PersonalCoordinatorOutput.swift in Sources */,
 				0ACBF9152712F7E10045B9EF /* OWMResponseEntity.swift in Sources */,
+				0AAF08622727473500439813 /* NewPasswordViewInput.swift in Sources */,
 				0A1A67D82724C40100C4E2C9 /* AuthUrlRoute.swift in Sources */,
+				0AAF08642727473500439813 /* NewPasswordViewController.swift in Sources */,
+				0AAF08652727473500439813 /* NewPasswordModuleTestConfigurator.swift in Sources */,
 				0AD28E922711FBCC007EEEF2 /* YandexForecastEntry.swift in Sources */,
 				0ACBF92C271347DA0045B9EF /* AerisForecastDayEntity.swift in Sources */,
 				0A1A67E8272578B300C4E2C9 /* PasswordRepeatValidator.swift in Sources */,
 				0A7CEA8526498641008E2D2E /* SettingsViewController.swift in Sources */,
+				0AAF085F2727473500439813 /* NewPasswordModuleOutput.swift in Sources */,
 				0A69888726434DC000F97207 /* AppDelegate.swift in Sources */,
 				0A42DA4C265A852C0095DB1C /* DateStringBuilder.swift in Sources */,
 				0A8E621C271CB08300BB4F43 /* AuthModuleOutput.swift in Sources */,
 				0A7CEA7626498641008E2D2E /* PlacesModuleTestConfigurator.swift in Sources */,
+				0AAF0847272699CE00439813 /* PasswordResetModuleConfigurator.swift in Sources */,
 				0ACBF90D2712F7C80045B9EF /* OWMTemperatureEntity.swift in Sources */,
 				0A51388626474A850026640F /* TabBarViewOutput.swift in Sources */,
 				0A83EF2E270F0A7D008D1BCF /* BaseCoordinator.swift in Sources */,
@@ -1762,6 +1949,7 @@
 				0A83EF51270F57EC008D1BCF /* UIButton+Style.swift in Sources */,
 				0A83EF33270F144C008D1BCF /* PersonalCoordinator.swift in Sources */,
 				0AD28E732711CD5C007EEEF2 /* Urls.swift in Sources */,
+				0AAF084E2727406C00439813 /* PasswordResetRequestEntry.swift in Sources */,
 				0A42DA52265A91460095DB1C /* WeatherConditions.swift in Sources */,
 				0AD28E8A2711FB9E007EEEF2 /* YandexForecastPartEntry.swift in Sources */,
 				0A51388926474A850026640F /* TabBarModuleTestConfigurator.swift in Sources */,
@@ -1772,11 +1960,15 @@
 				0AD28E942711FBD3007EEEF2 /* YandexForecastEntity.swift in Sources */,
 				0A5138CA264832320026640F /* UINavigationController.swift in Sources */,
 				0ACBF91F271318C80045B9EF /* WeatherService.swift in Sources */,
+				0AC9A648272D6B2900B91D48 /* NewPasswordRequestEntry.swift in Sources */,
+				0AC9A641272CA43100B91D48 /* SuccessView.swift in Sources */,
 				0A42DA5B265AC7AB0095DB1C /* WeatherInfoCell.swift in Sources */,
 				0A83EF39270F1521008D1BCF /* WeatherCoordinator.swift in Sources */,
+				0AAF0843272699CE00439813 /* PasswordResetViewOutput.swift in Sources */,
 				0ACBF92E271347E40045B9EF /* AerisForecastEntry.swift in Sources */,
 				0A1A67E12724C64000C4E2C9 /* AuthRequestEntity.swift in Sources */,
 				0ACBF94327136DC70045B9EF /* StorageService.swift in Sources */,
+				0AC9A64A272D6B2E00B91D48 /* NewPasswordRequestEntity.swift in Sources */,
 				0ACBF934271347F70045B9EF /* AerisResponseEntity.swift in Sources */,
 				0ACBF92A271347D50045B9EF /* AerisForecastDayEntry.swift in Sources */,
 				0A5C4D1E2714F56D00454197 /* Date.swift in Sources */,
@@ -1793,17 +1985,21 @@
 				0A51388226474A850026640F /* TabBarModuleOutput.swift in Sources */,
 				0A42DA42265A74440095DB1C /* DateCollecttionCell.swift in Sources */,
 				0ACBF90B2712F7C10045B9EF /* OWMTemperatureEntry.swift in Sources */,
+				0AAF0844272699CE00439813 /* PasswordResetViewController.swift in Sources */,
 				0ACBF9512714232C0045B9EF /* UIView+Reusable.swift in Sources */,
 				0A83EF4B270F1651008D1BCF /* MapViewController.swift in Sources */,
 				0A83EF65270F91F4008D1BCF /* PlaceSearchViewOutput.swift in Sources */,
 				0A7CEA7D26498641008E2D2E /* WeatherViewOutput.swift in Sources */,
 				0A8E6222271CB08300BB4F43 /* AuthModuleConfigurator.swift in Sources */,
 				0A7CEA7F26498641008E2D2E /* WeatherModuleConfigurator.swift in Sources */,
+				0AC9A643272CA62C00B91D48 /* SuccessPresenter.swift in Sources */,
+				0AAF08612727473500439813 /* NewPasswordViewOutput.swift in Sources */,
 				0A7CEA8626498641008E2D2E /* SettingsViewInput.swift in Sources */,
 				0A5138B1264800F60026640F /* Router.swift in Sources */,
 				0A7CEA7826498641008E2D2E /* WeatherModuleOutput.swift in Sources */,
 				0ACBF9072712F7B00045B9EF /* OWMConditionsEntry.swift in Sources */,
 				0A7CEA8326498641008E2D2E /* SettingsViewOutput.swift in Sources */,
+				0AC9A645272CA6EC00B91D48 /* UIViewController+Success.swift in Sources */,
 				0A83EF9E270F9A90008D1BCF /* SearchBar.swift in Sources */,
 				0A42DA56265AAEB00095DB1C /* WeatherScreenViewModel.swift in Sources */,
 				0AD28E7F2711D947007EEEF2 /* YandexWeatherMetadataProvider.swift in Sources */,

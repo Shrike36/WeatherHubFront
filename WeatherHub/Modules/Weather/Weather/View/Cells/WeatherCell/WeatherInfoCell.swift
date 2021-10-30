@@ -68,7 +68,7 @@ private extension WeatherInfoCell {
 
     func configureTitle() {
         titleLabel.font = Constants.titleFont
-//        titleLabel.adjustsFontSizeToFitWidth = true
+        titleLabel.adjustsFontSizeToFitWidth = true
     }
 
     func configureImage() {

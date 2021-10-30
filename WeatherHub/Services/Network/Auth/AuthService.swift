@@ -36,4 +36,18 @@ public class AuthService {
             .process(user)
     }
 
+    public func resetPassword(for user: PasswordResetRequestEntity) -> Observer<Void> {
+        return builder
+            .route(.post, .resetPassword)
+            .build()
+            .process(user)
+    }
+
+    public func setNewPassword(_ model: NewPasswordRequestEntity) -> Observer<AuthResponseEntity> {
+        return builder
+            .route(.post, .newPassword)
+            .build()
+            .process(model)
+    }
+
 }

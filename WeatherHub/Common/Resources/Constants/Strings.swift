@@ -57,6 +57,8 @@ internal enum L10n {
   internal enum Common {
     /// Aeris
     internal static let aeris = L10n.tr("Localizable", "Common.aeris")
+    /// Done!
+    internal static let done = L10n.tr("Localizable", "Common.done")
     /// Loading...
     internal static let loading = L10n.tr("Localizable", "Common.loading")
     /// OpenWeatherMap
@@ -77,6 +79,25 @@ internal enum L10n {
     internal static let select = L10n.tr("Localizable", "Map.select")
   }
 
+  internal enum NewPassword {
+    /// Security code
+    internal static let code = L10n.tr("Localizable", "NewPassword.code")
+    /// New password
+    internal static let password = L10n.tr("Localizable", "NewPassword.password")
+    /// Repeat password
+    internal static let repeatPassword = L10n.tr("Localizable", "NewPassword.repeatPassword")
+    /// Set password
+    internal static let send = L10n.tr("Localizable", "NewPassword.send")
+    /// Set new password
+    internal static let title = L10n.tr("Localizable", "NewPassword.title")
+    internal enum Error {
+      /// Maybe security code is incorrect.
+      internal static let details = L10n.tr("Localizable", "NewPassword.error.details")
+      /// Could not set password
+      internal static let title = L10n.tr("Localizable", "NewPassword.error.title")
+    }
+  }
+
   internal enum Places {
     /// Remove
     internal static let remove = L10n.tr("Localizable", "Places.remove")
@@ -87,6 +108,21 @@ internal enum L10n {
       internal static let advice = L10n.tr("Localizable", "Places.error.advice")
       /// Could not find data for this place :(
       internal static let title = L10n.tr("Localizable", "Places.error.title")
+    }
+  }
+
+  internal enum ResetPassword {
+    /// We will send you an e-mail with security code needed to reset password
+    internal static let details = L10n.tr("Localizable", "ResetPassword.details")
+    /// Send code
+    internal static let send = L10n.tr("Localizable", "ResetPassword.send")
+    /// Reset password
+    internal static let title = L10n.tr("Localizable", "ResetPassword.title")
+    internal enum Error {
+      /// Check email. Maybe this user does not exist.
+      internal static let details = L10n.tr("Localizable", "ResetPassword.error.details")
+      /// Could not reset password
+      internal static let title = L10n.tr("Localizable", "ResetPassword.error.title")
     }
   }
 

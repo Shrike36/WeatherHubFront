@@ -5,4 +5,5 @@
 protocol AuthModuleOutput: AnyObject {
     var onErrorOccured: Closure<DetailedError>? { get set }
     var onAuthSuccess: EmptyClosure? { get set }
+    var onPasswordResetRequested: EmptyClosure? { get set }
 }

@@ -9,6 +9,8 @@
 // MARK: - Common
 
 "Common.loading" = "Загрузка...";
+"Common.done" = "Готово!";
+
 "Common.yandex" = "Яндекс";
 "Common.owm" = "OpenWeatherMap";
 "Common.aeris" = "Aeris";
@@ -75,3 +77,23 @@
 "Auth.hasAccount" = "Уже есть аккаунт?";
 
 "Auth.validation.passwordsNotMatching" = "Пароли не совпадают";
+
+
+// MARK: - Reset password
+
+"ResetPassword.title" = "Сброс пароля";
+"ResetPassword.details" = "Мы отправим код для сброса пароля на ваш e-mail";
+"ResetPassword.send" = "Отправить код";
+"ResetPassword.error.title" = "Не удалось сбросить пароль";
+"ResetPassword.error.details" = "Проверьте email. Возможно, такого пользователя не существует.";
+
+
+// MARK: - New password
+
+"NewPassword.title" = "Новый пароль";
+"NewPassword.code" = "Код подтверждения";
+"NewPassword.password" = "Новый пароль";
+"NewPassword.repeatPassword" = "Подтверждение пароля";
+"NewPassword.send" = "Установить";
+"NewPassword.error.title" = "Не удалось установить пароль";
+"NewPassword.error.details" = "Возможно, код подтверждения неверный";

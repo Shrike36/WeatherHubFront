@@ -10,8 +10,8 @@ import NodeKit
 enum AuthUrlRoute {
     case register
     case auth
-    case resetPasswordRequest
     case resetPassword
+    case newPassword
 }
 
 // MARK: - UrlRouteProvider
@@ -25,10 +25,10 @@ extension AuthUrlRoute: UrlRouteProvider {
             return try base + "/register"
         case .auth:
             return try base + "/auth"
-        case .resetPasswordRequest:
-            return try base + "reset_password_request"
         case .resetPassword:
-            return try base + "reset_pass"
+            return try base + "reset_password_request"
+        case .newPassword:
+            return try base + "reset_password"
         }
     }
 

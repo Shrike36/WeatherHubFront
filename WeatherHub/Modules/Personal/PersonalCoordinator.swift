@@ -51,7 +51,39 @@ private extension PersonalCoordinator {
             self?.router.dismissModule()
             self?.settingsInput?.updateState()
         }
+        components.output.onPasswordResetRequested = { [weak self] in
+            self?.showPasswordReset()
+        }
         router.present(components.view)
+    }
+
+    func showPasswordReset() {
+        let components = PasswordResetModuleConfigurator().configure()
+        components.output.onBackPressed = { [weak self] in
+            self?.router.popModule()
+        }
+        components.output.onErrorOccured = { [weak self] error in
+            self?.showErrorAlert(with: error)
+        }
+        components.output.onRequestSuccess = { [weak self] user in
+            self?.showNewPassword(for: user)
+        }
+        router.push(components.view)
+    }
+
+    func showNewPassword(for user: PasswordResetRequestEntity) {
+        let components = NewPasswordModuleConfigurator().configure(with: user)
+        components.output.onBackPressed = { [weak self] in
+            self?.router.popModule()
+        }
+        components.output.onErrorOccured = { [weak self] error in
+            self?.showErrorAlert(with: error)
+        }
+        components.output.onRequestSuccess = { [weak self] in
+            self?.router.dismissModule()
+            self?.settingsInput?.updateState()
+        }
+        router.push(components.view)
     }
 
     func showErrorAlert(with error: DetailedError) {

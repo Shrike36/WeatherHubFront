@@ -6,10 +6,17 @@ import UIKit
 
 final class TabBarViewController: UITabBarController {
 
-    // MARK: - Nested types
+    // MARK: - Constants
 
     private enum Constants {
         static let itemsFont: UIFont = .systemFont(ofSize: 10, weight: .medium)
+    }
+
+    // MARK: - Nested Types
+
+    private enum SlideDirection {
+        case left
+        case right
     }
 
     // MARK: - Properties
@@ -44,6 +51,38 @@ extension TabBarViewController: TabBarViewInput {
     }
 
 }
+
+// MARK: - UITabBarControllerDelegate
+
+extension TabBarViewController: UITabBarControllerDelegate {
+
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        guard
+            let fromView = selectedViewController?.view,
+            let toView = viewController.view, fromView != toView,
+            let newIndex = viewControllers?.firstIndex(of: viewController)
+        else {
+            return true
+        }
+
+        animate(from: fromView,
+                to: toView,
+                direction: newIndex < selectedIndex ? .left : .right)
+
+        return true
+    }
+
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        guard let tab = MainTab(rawValue: viewController.tabBarItem.tag) else {
+            return
+        }
+        let navigationController = viewController as? UINavigationController
+        output?.selectTab(tab, isInitial: navigationController?.viewControllers.isEmpty ?? true)
+    }
+
+}
+
+// MARK: - Private Methods
 
 private extension TabBarViewController {
 
@@ -87,33 +126,27 @@ private extension TabBarViewController {
         tabBarController(self, didSelect: childControllers[selectedIndex])
     }
 
-}
+    private func animate(from oldTabView: UIView, to newTabView: UIView, direction: SlideDirection) {
+        oldTabView.superview?.addSubview(newTabView)
 
-// MARK: - UITabBarControllerDelegate
+        let screenWidth = UIScreen.main.bounds.size.width
+        let offset = (direction == .right ? screenWidth : -screenWidth)
+        newTabView.center = CGPoint(x: oldTabView.center.x + offset, y: newTabView.center.y)
 
-extension TabBarViewController: UITabBarControllerDelegate {
+        view.isUserInteractionEnabled = false
 
-    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        guard let fromView = selectedViewController?.view, let toView = viewController.view, fromView != toView else {
-            return true
-        }
-
-        UIView.transition(
-            from: fromView,
-            to: toView,
-            duration: 0.3,
-            options: [.transitionCrossDissolve]
-        )
-
-        return true
-    }
-
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        guard let tab = MainTab(rawValue: viewController.tabBarItem.tag) else {
-            return
-        }
-        let navigationController = viewController as? UINavigationController
-        output?.selectTab(tab, isInitial: navigationController?.viewControllers.isEmpty ?? true)
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.0,
+                       usingSpringWithDamping: 1,
+                       initialSpringVelocity: 0,
+                       options: .curveEaseOut,
+                       animations: {
+            oldTabView.center = CGPoint(x: oldTabView.center.x - offset, y: oldTabView.center.y)
+            newTabView.center = CGPoint(x: newTabView.center.x - offset, y: newTabView.center.y)
+        }, completion: { _ in
+            oldTabView.removeFromSuperview()
+            self.view.isUserInteractionEnabled = true
+        })
     }
 
 }

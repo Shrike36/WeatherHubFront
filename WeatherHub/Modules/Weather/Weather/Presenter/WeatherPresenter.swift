@@ -50,13 +50,14 @@ extension WeatherPresenter: WeatherModuleInput {
         if let cachedWeather = cacheService.getCache(for: place) {
             viewModel = cachedWeather.weather
             updateView()
-        }
-        interactors.forEach {
-            $0.getForecast(for: place.coordinates) { [weak self] in
-                guard let self = self else {
-                    return
+        } else {
+            interactors.forEach {
+                $0.getForecast(for: place.coordinates) { [weak self] in
+                    guard let self = self else {
+                        return
+                    }
+                    self.updateViewIfResponsesAreReady()
                 }
-                self.updateViewIfResponsesAreReady()
             }
         }
     }
