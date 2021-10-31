@@ -67,12 +67,12 @@ public class StorageService {
         }
     }
 
-    public var user: UserEntry? {
+    public var user: UserEntity? {
         get {
             guard let email = try? keychain.get(Keys.userEmail), let token = try? keychain.get(Keys.token) else {
                 return nil
             }
-            return UserEntry(email: email, token: token)
+            return UserEntity(email: email, token: token)
         }
         set {
             if let user = newValue {

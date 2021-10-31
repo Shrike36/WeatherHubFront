@@ -3,7 +3,5 @@
 //
 
 protocol TabBarViewOutput {
-
     func selectTab(_ tab: MainTab, isInitial: Bool)
-
 }

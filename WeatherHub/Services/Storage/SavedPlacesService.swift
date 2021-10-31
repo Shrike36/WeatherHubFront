@@ -27,11 +27,11 @@ public class SavedPlacesService {
 
     // MARK: - Public Methods
 
-    public func isSaved(place: PlaceEntity) -> Bool {
+    func isSaved(place: PlaceEntity) -> Bool {
         return savedPlaces.contains { $0 == place }
     }
 
-    public func add(place: PlaceEntity) {
+    func add(place: PlaceEntity) {
         guard !isSaved(place: place) else {
             return
         }
@@ -39,13 +39,23 @@ public class SavedPlacesService {
         storageService.savedPlaces = savedPlaces
     }
 
-    public func remove(place: PlaceEntity) {
+    func add(places: [PlaceEntity]) {
+        savedPlaces += places.filter { !isSaved(place: $0) }
+        storageService.savedPlaces = savedPlaces
+    }
+
+    func remove(place: PlaceEntity) {
         savedPlaces.removeAll { $0 == place }
         storageService.savedPlaces = savedPlaces
     }
 
-    public func remove(at index: Int) {
+    func remove(at index: Int) {
         savedPlaces.remove(at: index)
+        storageService.savedPlaces = savedPlaces
+    }
+
+    func clear() {
+        savedPlaces.removeAll()
         storageService.savedPlaces = savedPlaces
     }
 

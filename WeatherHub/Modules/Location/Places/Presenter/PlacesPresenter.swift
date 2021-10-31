@@ -29,7 +29,7 @@ final class PlacesPresenter: PlacesModuleOutput {
 
     private let locationManager = LocationManager()
     private let geocoder = CLGeocoder()
-    private let savedPlacesService = SavedPlacesService.shared
+    private let placesService = PlacesSynchronizationService()
 
 }
 
@@ -78,15 +78,15 @@ extension PlacesPresenter: PlacesViewOutput {
     }
 
     func handlePlaceSelected(at index: Int) {
-        onPlaceSelected?(savedPlacesService.savedPlaces[index])
+        onPlaceSelected?(placesService.savedPlaces[index])
     }
 
     func handlePlacesAppear() {
-        view?.fillPlaces(savedPlacesService.savedPlaces.map { PlaceViewModel(title: $0.city, subtitle: $0.country) })
+        view?.fillPlaces(placesService.savedPlaces.map { PlaceViewModel(title: $0.city, subtitle: $0.country) })
     }
 
     func removePlace(at index: Int) {
-        savedPlacesService.remove(at: index)
+        placesService.remove(at: index)
     }
 
 }

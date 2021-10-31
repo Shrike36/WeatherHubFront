@@ -17,7 +17,7 @@ public struct NewPasswordRequestEntity {
 extension NewPasswordRequestEntity: DTOEncodable {
 
     public func toDTO() throws -> NewPasswordRequestEntry {
-        return.init(code: code,
+        return .init(code: code,
                     password: password)
     }
 

@@ -69,7 +69,7 @@ private extension NewPasswordPresenter {
                 guard let self = self else {
                     return
                 }
-                self.storageService.user = UserEntry(email: self.userModel.email, token: response.token)
+                self.storageService.user = UserEntity(email: self.userModel.email, token: response.token)
                 self.view?.showSuccess {
                     self.onRequestSuccess?()
                 }

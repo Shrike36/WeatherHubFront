@@ -34,7 +34,7 @@ final class WeatherPresenter: WeatherModuleOutput {
     private let storageService = StorageService()
     private let locationManager = LocationManager()
     private let geocoder = CLGeocoder()
-    private let savedPlacesService = SavedPlacesService.shared
+    private let placesService = PlacesSynchronizationService()
     private let cacheService = CacheService()
 
 }
@@ -73,7 +73,7 @@ extension WeatherPresenter: WeatherViewOutput {
     }
 
     func viewWillAppear() {
-        view?.setFavoriteState(isSaved: savedPlacesService.isSaved(place: place))
+        view?.setFavoriteState(isSaved: placesService.isSaved(place: place))
     }
 
     func layoutFinished() {
@@ -114,9 +114,9 @@ extension WeatherPresenter: WeatherViewOutput {
 
     func heartSelected(state isSelected: Bool) {
         if isSelected {
-            savedPlacesService.add(place: place)
+            placesService.add(place: place)
         } else {
-            savedPlacesService.remove(place: place)
+            placesService.remove(place: place)
         }
     }
 }
@@ -145,7 +145,7 @@ private extension WeatherPresenter {
 
     func updateView() {
         view?.configure(with: viewModel)
-        view?.setFavoriteState(isSaved: savedPlacesService.isSaved(place: place))
+        view?.setFavoriteState(isSaved: placesService.isSaved(place: place))
         view?.hideLoading()
     }
 

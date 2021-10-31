@@ -26,8 +26,13 @@ public struct PlaceEntity {
 
 extension PlaceEntity {
 
-    public var description: String {
-        [city, country].joined(separator: Constants.fieldDelimiter)
+    public var zipped: String {
+        [
+            city,
+            country,
+            String(coordinates.latitude),
+            String(coordinates.longitude)
+        ].joined(separator: Constants.fieldDelimiter)
     }
 
 }
@@ -38,6 +43,17 @@ extension PlaceEntity: Equatable {
 
     public static func == (lhs: PlaceEntity, rhs: PlaceEntity) -> Bool {
         return lhs.city == rhs.city && rhs.country == rhs.country
+    }
+
+}
+
+// MARK: - Hashable
+
+extension PlaceEntity: Hashable {
+
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(city)
+        hasher.combine(country)
     }
 
 }
@@ -77,4 +93,21 @@ extension PlaceEntity {
                      coordinates: coordinates)
     }
 
+    public static func from(zipped: String) -> PlaceEntity? {
+        let parts = zipped.components(separatedBy: Constants.fieldDelimiter)
+        guard parts.count == 4 else {
+            return nil
+        }
+        let city = parts[0]
+        let country = parts[1]
+        guard
+            let latitude = Double(parts[2]),
+            let longtitude = Double(parts[3])
+        else {
+            return nil
+        }
+        return PlaceEntity(city: city,
+                           country: country,
+                           coordinates: .init(latitude: latitude, longitude: longtitude))
+    }
 }

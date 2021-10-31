@@ -5,8 +5,6 @@
 //  Created by Дмитрий Демьянов on 30.10.2021.
 //
 
-import Foundation
-
 import NodeKit
 
 public struct NewPasswordRequestEntry: Codable {

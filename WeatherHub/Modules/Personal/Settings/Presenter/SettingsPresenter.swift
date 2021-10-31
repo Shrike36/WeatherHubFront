@@ -15,6 +15,7 @@ final class SettingsPresenter: SettingsModuleOutput {
     // MARK: - Private Properties
 
     private let storageService = StorageService()
+    private let placesService = PlacesSynchronizationService()
 
 }
 
@@ -25,6 +26,7 @@ extension SettingsPresenter: SettingsModuleInput {
     func updateState() {
         if let user = storageService.user {
             view?.setState(.authorized(email: user.email))
+            placesService.synchronize()
         } else {
             view?.setState(.unauthorized)
         }
@@ -46,6 +48,7 @@ extension SettingsPresenter: SettingsViewOutput {
     }
 
     func logoutRequested() {
+        placesService.clearLocal()
         storageService.user = nil
         updateState()
     }

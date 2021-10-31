@@ -16,6 +16,14 @@ final class TabBarPresenter: TabBarModuleOutput {
 
     private var currentTab: MainTab = .weather
 
+    private let placesService = PlacesSynchronizationService()
+
+    // MARK: - Internal Methods
+
+    func viewLoaded() {
+        placesService.synchronize()
+    }
+
 }
 
 // MARK: - TabBarModuleInput
@@ -38,6 +46,16 @@ extension TabBarPresenter: TabBarViewOutput {
         }
         onTabSelected?(tab)
         currentTab = tab
+    }
+
+}
+
+// MARK: - Private Methods
+
+private extension TabBarPresenter {
+
+    func synchronizeSavedPlaces() {
+        placesService.synchronize()
     }
 
 }

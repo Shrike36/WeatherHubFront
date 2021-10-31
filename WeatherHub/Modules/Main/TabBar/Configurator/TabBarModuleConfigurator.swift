@@ -15,6 +15,8 @@ final class TabBarModuleConfigurator {
     func configure() -> TabBarModuleComponents {
         let view = UIViewController.instantiate(ofType: TabBarViewController.self)
         let presenter = TabBarPresenter()
+        // Because view is loaded before presenter initialization
+        presenter.viewLoaded()
 
         presenter.view = view
         view.output = presenter

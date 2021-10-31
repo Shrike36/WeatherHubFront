@@ -70,7 +70,7 @@ private extension AuthPresenter {
         view?.showLoading()
         authService.register(user: authModel)
             .onCompleted { [weak self] response in
-                self?.storageService.user = UserEntry(email: email, token: response.token)
+                self?.storageService.user = UserEntity(email: email, token: response.token)
                 self?.view?.showSuccess {
                     self?.onAuthSuccess?()
                 }
@@ -93,7 +93,7 @@ private extension AuthPresenter {
         view?.showLoading()
         authService.signIn(user: authModel)
             .onCompleted { [weak self] response in
-                self?.storageService.user = UserEntry(email: email, token: response.token)
+                self?.storageService.user = UserEntity(email: email, token: response.token)
                 self?.view?.showSuccess {
                     self?.onAuthSuccess?()
                 }

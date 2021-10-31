@@ -9,11 +9,6 @@ import NodeKit
 
 public class AuthService {
 
-    // MARK: - Constants
-
-    private enum Keys {
-    }
-
     // MARK: - Private Properties
 
     private var builder: UrlChainsBuilder<AuthUrlRoute> {

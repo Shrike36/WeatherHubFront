@@ -53,7 +53,7 @@
 		0A69888726434DC000F97207 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A69888626434DC000F97207 /* AppDelegate.swift */; };
 		0A69889026434DC300F97207 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A69888F26434DC300F97207 /* Assets.xcassets */; };
 		0A69889326434DC300F97207 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A69889126434DC300F97207 /* LaunchScreen.storyboard */; };
-		0A69889E26434DC400F97207 /* WeatherHubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A69889D26434DC400F97207 /* WeatherHubTests.swift */; };
+		0A69889E26434DC400F97207 /* PlaceConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A69889D26434DC400F97207 /* PlaceConversionTests.swift */; };
 		0A6988DF264357EA00F97207 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A6988E1264357EA00F97207 /* Localizable.strings */; };
 		0A7CEA342648AAFA008E2D2E /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7CEA322648AAFA008E2D2E /* Strings.swift */; };
 		0A7CEA352648AAFA008E2D2E /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7CEA332648AAFA008E2D2E /* Assets.swift */; };
@@ -153,6 +153,16 @@
 		0AC9A645272CA6EC00B91D48 /* UIViewController+Success.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9A644272CA6EC00B91D48 /* UIViewController+Success.swift */; };
 		0AC9A648272D6B2900B91D48 /* NewPasswordRequestEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9A647272D6B2900B91D48 /* NewPasswordRequestEntry.swift */; };
 		0AC9A64A272D6B2E00B91D48 /* NewPasswordRequestEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9A649272D6B2E00B91D48 /* NewPasswordRequestEntity.swift */; };
+		0AC9A650272D96D500B91D48 /* PlacesUrlRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9A64F272D96D500B91D48 /* PlacesUrlRoute.swift */; };
+		0AC9A652272D96E000B91D48 /* PlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9A651272D96E000B91D48 /* PlacesService.swift */; };
+		0AC9A655272DA4BF00B91D48 /* AddPlacesRequestEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9A654272DA4BF00B91D48 /* AddPlacesRequestEntry.swift */; };
+		0AC9A657272DA4C500B91D48 /* AddPlacesRequestEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9A656272DA4C500B91D48 /* AddPlacesRequestEntity.swift */; };
+		0AC9A65A272DBD5100B91D48 /* ZippedPlaceEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9A659272DBD5100B91D48 /* ZippedPlaceEntry.swift */; };
+		0AC9A65C272DBD5700B91D48 /* ZippedPlaceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9A65B272DBD5700B91D48 /* ZippedPlaceEntity.swift */; };
+		0AC9A65F272DBE3500B91D48 /* DeletePlaceRequestEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9A65E272DBE3500B91D48 /* DeletePlaceRequestEntry.swift */; };
+		0AC9A661272DBE3D00B91D48 /* DeletePlaceRequestEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9A660272DBE3D00B91D48 /* DeletePlaceRequestEntity.swift */; };
+		0AC9A663272DBF7800B91D48 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9A662272DBF7800B91D48 /* UserEntity.swift */; };
+		0AC9A666272DC35B00B91D48 /* PlacesSynchronizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9A665272DC35B00B91D48 /* PlacesSynchronizationService.swift */; };
 		0ACBF9072712F7B00045B9EF /* OWMConditionsEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF9062712F7B00045B9EF /* OWMConditionsEntry.swift */; };
 		0ACBF9092712F7B60045B9EF /* OWMConditionsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF9082712F7B60045B9EF /* OWMConditionsEntity.swift */; };
 		0ACBF90B2712F7C10045B9EF /* OWMTemperatureEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF90A2712F7C10045B9EF /* OWMTemperatureEntry.swift */; };
@@ -217,13 +227,6 @@
 			remoteGlobalIDString = 0A69888226434DC000F97207;
 			remoteInfo = WeatherHub;
 		};
-		0A6988A526434DC400F97207 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0A69887B26434DC000F97207 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0A69888226434DC000F97207;
-			remoteInfo = WeatherHub;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -275,9 +278,8 @@
 		0A69888F26434DC300F97207 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A69889226434DC300F97207 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A69889926434DC400F97207 /* WeatherHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A69889D26434DC400F97207 /* WeatherHubTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherHubTests.swift; sourceTree = "<group>"; };
+		0A69889D26434DC400F97207 /* PlaceConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceConversionTests.swift; sourceTree = "<group>"; };
 		0A69889F26434DC400F97207 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A6988A426434DC400F97207 /* WeatherHubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherHubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A6988E0264357EA00F97207 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0A6988E52643582000F97207 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0A7CEA322648AAFA008E2D2E /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -379,6 +381,16 @@
 		0AC9A644272CA6EC00B91D48 /* UIViewController+Success.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Success.swift"; sourceTree = "<group>"; };
 		0AC9A647272D6B2900B91D48 /* NewPasswordRequestEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordRequestEntry.swift; sourceTree = "<group>"; };
 		0AC9A649272D6B2E00B91D48 /* NewPasswordRequestEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPasswordRequestEntity.swift; sourceTree = "<group>"; };
+		0AC9A64F272D96D500B91D48 /* PlacesUrlRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesUrlRoute.swift; sourceTree = "<group>"; };
+		0AC9A651272D96E000B91D48 /* PlacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesService.swift; sourceTree = "<group>"; };
+		0AC9A654272DA4BF00B91D48 /* AddPlacesRequestEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlacesRequestEntry.swift; sourceTree = "<group>"; };
+		0AC9A656272DA4C500B91D48 /* AddPlacesRequestEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlacesRequestEntity.swift; sourceTree = "<group>"; };
+		0AC9A659272DBD5100B91D48 /* ZippedPlaceEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZippedPlaceEntry.swift; sourceTree = "<group>"; };
+		0AC9A65B272DBD5700B91D48 /* ZippedPlaceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZippedPlaceEntity.swift; sourceTree = "<group>"; };
+		0AC9A65E272DBE3500B91D48 /* DeletePlaceRequestEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePlaceRequestEntry.swift; sourceTree = "<group>"; };
+		0AC9A660272DBE3D00B91D48 /* DeletePlaceRequestEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePlaceRequestEntity.swift; sourceTree = "<group>"; };
+		0AC9A662272DBF7800B91D48 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		0AC9A665272DC35B00B91D48 /* PlacesSynchronizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesSynchronizationService.swift; sourceTree = "<group>"; };
 		0ACBF9062712F7B00045B9EF /* OWMConditionsEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMConditionsEntry.swift; sourceTree = "<group>"; };
 		0ACBF9082712F7B60045B9EF /* OWMConditionsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMConditionsEntity.swift; sourceTree = "<group>"; };
 		0ACBF90A2712F7C10045B9EF /* OWMTemperatureEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMTemperatureEntry.swift; sourceTree = "<group>"; };
@@ -455,13 +467,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0A6988A126434DC400F97207 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -469,6 +474,7 @@
 			isa = PBXGroup;
 			children = (
 				0A1A67D62724C3E000C4E2C9 /* Auth */,
+				0AC9A64E272D96BC00B91D48 /* Places */,
 				0A1A67D52724C3C200C4E2C9 /* Weather */,
 			);
 			path = Network;
@@ -496,10 +502,8 @@
 		0A1A67DC2724C60B00C4E2C9 /* WeatherHub */ = {
 			isa = PBXGroup;
 			children = (
-				0AC9A646272D6B0C00B91D48 /* NewPasswordRequest */,
-				0AAF084C2727405700439813 /* PasswordResetRequest */,
-				0A1A67DD2724C62100C4E2C9 /* AuthRequest */,
-				0A1A67E2272566E100C4E2C9 /* AuthResponse */,
+				0AC9A64D272D96AD00B91D48 /* Places */,
+				0AC9A64C272D969A00B91D48 /* Auth */,
 			);
 			path = WeatherHub;
 			sourceTree = "<group>";
@@ -542,6 +546,7 @@
 			isa = PBXGroup;
 			children = (
 				0A1A67EE2725B48E00C4E2C9 /* UserEntry.swift */,
+				0AC9A662272DBF7800B91D48 /* UserEntity.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -761,7 +766,6 @@
 			children = (
 				0A69888326434DC000F97207 /* WeatherHub.app */,
 				0A69889926434DC400F97207 /* WeatherHubTests.xctest */,
-				0A6988A426434DC400F97207 /* WeatherHubUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -781,7 +785,7 @@
 		0A69889C26434DC400F97207 /* WeatherHubTests */ = {
 			isa = PBXGroup;
 			children = (
-				0A69889D26434DC400F97207 /* WeatherHubTests.swift */,
+				0A69889D26434DC400F97207 /* PlaceConversionTests.swift */,
 				0A69889F26434DC400F97207 /* Info.plist */,
 			);
 			path = WeatherHubTests;
@@ -1290,6 +1294,71 @@
 			path = NewPasswordRequest;
 			sourceTree = "<group>";
 		};
+		0AC9A64C272D969A00B91D48 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				0AC9A646272D6B0C00B91D48 /* NewPasswordRequest */,
+				0AAF084C2727405700439813 /* PasswordResetRequest */,
+				0A1A67DD2724C62100C4E2C9 /* AuthRequest */,
+				0A1A67E2272566E100C4E2C9 /* AuthResponse */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		0AC9A64D272D96AD00B91D48 /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				0AC9A653272DA4AF00B91D48 /* AddPlacesRequest */,
+				0AC9A65D272DBDE500B91D48 /* DeletePlaceRequest */,
+				0AC9A658272DBD3700B91D48 /* ZippedPlace */,
+			);
+			path = Places;
+			sourceTree = "<group>";
+		};
+		0AC9A64E272D96BC00B91D48 /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				0AC9A64F272D96D500B91D48 /* PlacesUrlRoute.swift */,
+				0AC9A651272D96E000B91D48 /* PlacesService.swift */,
+			);
+			path = Places;
+			sourceTree = "<group>";
+		};
+		0AC9A653272DA4AF00B91D48 /* AddPlacesRequest */ = {
+			isa = PBXGroup;
+			children = (
+				0AC9A654272DA4BF00B91D48 /* AddPlacesRequestEntry.swift */,
+				0AC9A656272DA4C500B91D48 /* AddPlacesRequestEntity.swift */,
+			);
+			path = AddPlacesRequest;
+			sourceTree = "<group>";
+		};
+		0AC9A658272DBD3700B91D48 /* ZippedPlace */ = {
+			isa = PBXGroup;
+			children = (
+				0AC9A659272DBD5100B91D48 /* ZippedPlaceEntry.swift */,
+				0AC9A65B272DBD5700B91D48 /* ZippedPlaceEntity.swift */,
+			);
+			path = ZippedPlace;
+			sourceTree = "<group>";
+		};
+		0AC9A65D272DBDE500B91D48 /* DeletePlaceRequest */ = {
+			isa = PBXGroup;
+			children = (
+				0AC9A65E272DBE3500B91D48 /* DeletePlaceRequestEntry.swift */,
+				0AC9A660272DBE3D00B91D48 /* DeletePlaceRequestEntity.swift */,
+			);
+			path = DeletePlaceRequest;
+			sourceTree = "<group>";
+		};
+		0AC9A664272DC34A00B91D48 /* Synchronization */ = {
+			isa = PBXGroup;
+			children = (
+				0AC9A665272DC35B00B91D48 /* PlacesSynchronizationService.swift */,
+			);
+			path = Synchronization;
+			sourceTree = "<group>";
+		};
 		0ACBF9042712F7450045B9EF /* OWMTemperature */ = {
 			isa = PBXGroup;
 			children = (
@@ -1450,6 +1519,7 @@
 		0AD28E702711CC2C007EEEF2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0AC9A664272DC34A00B91D48 /* Synchronization */,
 				0A1A67D42724C3B200C4E2C9 /* Network */,
 				0A5C4D1A2714E74100454197 /* Cache */,
 				0ACBF91D271318BA0045B9EF /* Common */,
@@ -1618,24 +1688,6 @@
 			productReference = 0A69889926434DC400F97207 /* WeatherHubTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0A6988A326434DC400F97207 /* WeatherHubUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0A6988B326434DC400F97207 /* Build configuration list for PBXNativeTarget "WeatherHubUITests" */;
-			buildPhases = (
-				0A6988A026434DC400F97207 /* Sources */,
-				0A6988A126434DC400F97207 /* Frameworks */,
-				0A6988A226434DC400F97207 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0A6988A626434DC400F97207 /* PBXTargetDependency */,
-			);
-			name = WeatherHubUITests;
-			productName = WeatherHubUITests;
-			productReference = 0A6988A426434DC400F97207 /* WeatherHubUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1650,10 +1702,6 @@
 						LastSwiftMigration = 1250;
 					};
 					0A69889826434DC400F97207 = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 0A69888226434DC000F97207;
-					};
-					0A6988A326434DC400F97207 = {
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = 0A69888226434DC000F97207;
 					};
@@ -1675,7 +1723,6 @@
 			targets = (
 				0A69888226434DC000F97207 /* WeatherHub */,
 				0A69889826434DC400F97207 /* WeatherHubTests */,
-				0A6988A326434DC400F97207 /* WeatherHubUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -1707,13 +1754,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0A69889726434DC400F97207 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0A6988A226434DC400F97207 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1829,6 +1869,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A51388A26474A850026640F /* TabBarModuleConfigurator.swift in Sources */,
+				0AC9A650272D96D500B91D48 /* PlacesUrlRoute.swift in Sources */,
 				0A5138C02648309F0026640F /* Presentable.swift in Sources */,
 				0AD28E6B2711AF0E007EEEF2 /* LoadingView.swift in Sources */,
 				0AAF0848272699CE00439813 /* PasswordResetModuleTestConfigurator.swift in Sources */,
@@ -1842,12 +1883,14 @@
 				0A83EF49270F1651008D1BCF /* MapModuleInput.swift in Sources */,
 				0A7CEA8226498641008E2D2E /* SettingsModuleInput.swift in Sources */,
 				0A7CEA6E26498641008E2D2E /* PlacesModuleInput.swift in Sources */,
+				0AC9A65C272DBD5700B91D48 /* ZippedPlaceEntity.swift in Sources */,
 				0ACBF94A271391820045B9EF /* SavedPlacesService.swift in Sources */,
 				0ACBF91A2712FCAB0045B9EF /* OWMService.swift in Sources */,
 				0A7CEA342648AAFA008E2D2E /* Strings.swift in Sources */,
 				0A5138D2264883F40026640F /* MainTab.swift in Sources */,
 				0AD28E832711DBAF007EEEF2 /* YandexWeatherResponseEntry.swift in Sources */,
 				0A5138B6264801050026640F /* MainRouter.swift in Sources */,
+				0AC9A652272D96E000B91D48 /* PlacesService.swift in Sources */,
 				0AD28E7D2711D6EA007EEEF2 /* YandexWeatherService.swift in Sources */,
 				0A51388826474A850026640F /* TabBarViewController.swift in Sources */,
 				0A5138BB26482EEB0026640F /* UIApplication.swift in Sources */,
@@ -1862,6 +1905,7 @@
 				0AD28E972711FCCD007EEEF2 /* YandexConditions.swift in Sources */,
 				0A7CEA8826498641008E2D2E /* SettingsModuleConfigurator.swift in Sources */,
 				0A7CEA7A26498641008E2D2E /* WeatherViewController.swift in Sources */,
+				0AC9A65A272DBD5100B91D48 /* ZippedPlaceEntry.swift in Sources */,
 				0A83EFA4270F9AAA008D1BCF /* SearchTextField.swift in Sources */,
 				0ACBF930271347E90045B9EF /* AerisForecastEntity.swift in Sources */,
 				0AAF08602727473500439813 /* NewPasswordModuleInput.swift in Sources */,
@@ -1870,6 +1914,7 @@
 				0ACBF93727134EAC0045B9EF /* AerisUrlRoute.swift in Sources */,
 				0A42DA50265A91340095DB1C /* WeatherViewModel.swift in Sources */,
 				0A7CEA6F26498641008E2D2E /* PlacesModuleOutput.swift in Sources */,
+				0AC9A666272DC35B00B91D48 /* PlacesSynchronizationService.swift in Sources */,
 				0AD28E622710B148007EEEF2 /* PlaceTableViewCell.swift in Sources */,
 				0A5C4D1C2714E74F00454197 /* CacheService.swift in Sources */,
 				0AAF0841272699CE00439813 /* PasswordResetModuleInput.swift in Sources */,
@@ -1891,6 +1936,7 @@
 				0A1A67EA2725AC2C00C4E2C9 /* AuthResponseEntry.swift in Sources */,
 				0AD28E6D2711C25E007EEEF2 /* LoadingPresenter.swift in Sources */,
 				0ACBF93E27136A990045B9EF /* PlaceEntry.swift in Sources */,
+				0AC9A65F272DBE3500B91D48 /* DeletePlaceRequestEntry.swift in Sources */,
 				0AD28E6F2711C55C007EEEF2 /* WeatherCoordinatorInput.swift in Sources */,
 				0A83EF5F270F91F4008D1BCF /* PlaceSearchPresenter.swift in Sources */,
 				0AD28E7C2711D6EA007EEEF2 /* YandexWeatherUrlRoute.swift in Sources */,
@@ -1904,6 +1950,7 @@
 				0A83EF66270F91F4008D1BCF /* PlaceSearchModuleTestConfigurator.swift in Sources */,
 				0A83EF63270F91F4008D1BCF /* PlaceSearchViewController.swift in Sources */,
 				0A42DA54265AAE410095DB1C /* DateViewModel.swift in Sources */,
+				0AC9A661272DBE3D00B91D48 /* DeletePlaceRequestEntity.swift in Sources */,
 				0A7CEA7426498641008E2D2E /* PlacesViewController.swift in Sources */,
 				0AAF0840272699CE00439813 /* PasswordResetModuleOutput.swift in Sources */,
 				0A7CEA8726498641008E2D2E /* SettingsModuleTestConfigurator.swift in Sources */,
@@ -1936,6 +1983,7 @@
 				0AAF085F2727473500439813 /* NewPasswordModuleOutput.swift in Sources */,
 				0A69888726434DC000F97207 /* AppDelegate.swift in Sources */,
 				0A42DA4C265A852C0095DB1C /* DateStringBuilder.swift in Sources */,
+				0AC9A657272DA4C500B91D48 /* AddPlacesRequestEntity.swift in Sources */,
 				0A8E621C271CB08300BB4F43 /* AuthModuleOutput.swift in Sources */,
 				0A7CEA7626498641008E2D2E /* PlacesModuleTestConfigurator.swift in Sources */,
 				0AAF0847272699CE00439813 /* PasswordResetModuleConfigurator.swift in Sources */,
@@ -1948,6 +1996,7 @@
 				0ACBF94527136F590045B9EF /* Decodable.swift in Sources */,
 				0A83EF51270F57EC008D1BCF /* UIButton+Style.swift in Sources */,
 				0A83EF33270F144C008D1BCF /* PersonalCoordinator.swift in Sources */,
+				0AC9A655272DA4BF00B91D48 /* AddPlacesRequestEntry.swift in Sources */,
 				0AD28E732711CD5C007EEEF2 /* Urls.swift in Sources */,
 				0AAF084E2727406C00439813 /* PasswordResetRequestEntry.swift in Sources */,
 				0A42DA52265A91460095DB1C /* WeatherConditions.swift in Sources */,
@@ -2007,6 +2056,7 @@
 				0A7CEA7326498641008E2D2E /* PlacesViewOutput.swift in Sources */,
 				0ACBF9092712F7B60045B9EF /* OWMConditionsEntity.swift in Sources */,
 				0A7CEA7726498641008E2D2E /* WeatherModuleInput.swift in Sources */,
+				0AC9A663272DBF7800B91D48 /* UserEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2014,14 +2064,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A69889E26434DC400F97207 /* WeatherHubTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0A6988A026434DC400F97207 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				0A69889E26434DC400F97207 /* PlaceConversionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2032,11 +2075,6 @@
 			isa = PBXTargetDependency;
 			target = 0A69888226434DC000F97207 /* WeatherHub */;
 			targetProxy = 0A69889A26434DC400F97207 /* PBXContainerItemProxy */;
-		};
-		0A6988A626434DC400F97207 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0A69888226434DC000F97207 /* WeatherHub */;
-			targetProxy = 0A6988A526434DC400F97207 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2278,46 +2316,6 @@
 			};
 			name = Release;
 		};
-		0A6988B426434DC400F97207 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UW95XYP4NP;
-				INFOPLIST_FILE = WeatherHubUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ru.vsu.demyanov.WeatherHubUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WeatherHub;
-			};
-			name = Debug;
-		};
-		0A6988B526434DC400F97207 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UW95XYP4NP;
-				INFOPLIST_FILE = WeatherHubUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ru.vsu.demyanov.WeatherHubUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WeatherHub;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2344,15 +2342,6 @@
 			buildConfigurations = (
 				0A6988B126434DC400F97207 /* Debug */,
 				0A6988B226434DC400F97207 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0A6988B326434DC400F97207 /* Build configuration list for PBXNativeTarget "WeatherHubUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0A6988B426434DC400F97207 /* Debug */,
-				0A6988B526434DC400F97207 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
