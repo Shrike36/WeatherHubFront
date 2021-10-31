@@ -33,3 +33,6 @@ Podfile.lock
 
 # Exported environment variables for XcodeCoverage
 env.sh
+
+## Firebase
+WeatherHub/Application/GoogleService-Info.plist

@@ -30,6 +30,7 @@ final class PlacesPresenter: PlacesModuleOutput {
     private let locationManager = LocationManager()
     private let geocoder = CLGeocoder()
     private let placesService = PlacesSynchronizationService()
+    private let analyticsService = FirebaseService()
 
 }
 
@@ -47,7 +48,10 @@ extension PlacesPresenter: PlacesModuleInput {
                 self?.onPlaceSelected?(nil)
                 return
             }
-            self?.onPlaceSelected?(PlaceEntity.from(place: placemark))
+            let place = PlaceEntity.from(place: placemark)
+            self?.analyticsService.track(event: .placeSelected,
+                                         parameters: [FirebaseService.Parameters.placeName: place?.description ?? PlaceEntity.undefined])
+            self?.onPlaceSelected?(place)
         }
     }
 
@@ -66,6 +70,7 @@ extension PlacesPresenter: PlacesViewOutput {
             handleNoLocation()
             return
         }
+        analyticsService.track(event: .chooseCurrentPlace)
         handleLocationSelected(currentLocation.coordinate)
     }
 

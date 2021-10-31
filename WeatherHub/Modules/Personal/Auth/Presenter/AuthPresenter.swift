@@ -20,6 +20,7 @@ final class AuthPresenter: AuthModuleOutput {
 
     private let authService = AuthService()
     private let storageService = StorageService()
+    private let analyticsService = FirebaseService()
 
 }
 
@@ -35,6 +36,7 @@ extension AuthPresenter: AuthViewOutput {
     func viewLoaded() {
         view?.setupInitialState()
         view?.setState(state, animated: false)
+        analyticsService.track(event: .authOpened)
     }
 
     func performMainAction() {

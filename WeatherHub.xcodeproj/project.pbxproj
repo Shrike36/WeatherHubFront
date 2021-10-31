@@ -163,6 +163,8 @@
 		0AC9A661272DBE3D00B91D48 /* DeletePlaceRequestEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9A660272DBE3D00B91D48 /* DeletePlaceRequestEntity.swift */; };
 		0AC9A663272DBF7800B91D48 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9A662272DBF7800B91D48 /* UserEntity.swift */; };
 		0AC9A666272DC35B00B91D48 /* PlacesSynchronizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9A665272DC35B00B91D48 /* PlacesSynchronizationService.swift */; };
+		0AC9A66D272EB67300B91D48 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9A66C272EB67300B91D48 /* FirebaseService.swift */; };
+		0AC9A66F272ED85000B91D48 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0AC9A66E272ED85000B91D48 /* GoogleService-Info.plist */; };
 		0ACBF9072712F7B00045B9EF /* OWMConditionsEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF9062712F7B00045B9EF /* OWMConditionsEntry.swift */; };
 		0ACBF9092712F7B60045B9EF /* OWMConditionsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF9082712F7B60045B9EF /* OWMConditionsEntity.swift */; };
 		0ACBF90B2712F7C10045B9EF /* OWMTemperatureEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF90A2712F7C10045B9EF /* OWMTemperatureEntry.swift */; };
@@ -391,6 +393,8 @@
 		0AC9A660272DBE3D00B91D48 /* DeletePlaceRequestEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePlaceRequestEntity.swift; sourceTree = "<group>"; };
 		0AC9A662272DBF7800B91D48 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 		0AC9A665272DC35B00B91D48 /* PlacesSynchronizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesSynchronizationService.swift; sourceTree = "<group>"; };
+		0AC9A66C272EB67300B91D48 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		0AC9A66E272ED85000B91D48 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0ACBF9062712F7B00045B9EF /* OWMConditionsEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMConditionsEntry.swift; sourceTree = "<group>"; };
 		0ACBF9082712F7B60045B9EF /* OWMConditionsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMConditionsEntity.swift; sourceTree = "<group>"; };
 		0ACBF90A2712F7C10045B9EF /* OWMTemperatureEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMTemperatureEntry.swift; sourceTree = "<group>"; };
@@ -677,6 +681,7 @@
 		0A5138902647F7AA0026640F /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				0AC9A66E272ED85000B91D48 /* GoogleService-Info.plist */,
 				0A69888626434DC000F97207 /* AppDelegate.swift */,
 				0A69889126434DC300F97207 /* LaunchScreen.storyboard */,
 			);
@@ -1359,6 +1364,14 @@
 			path = Synchronization;
 			sourceTree = "<group>";
 		};
+		0AC9A66B272EB66500B91D48 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				0AC9A66C272EB67300B91D48 /* FirebaseService.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
 		0ACBF9042712F7450045B9EF /* OWMTemperature */ = {
 			isa = PBXGroup;
 			children = (
@@ -1519,6 +1532,7 @@
 		0AD28E702711CC2C007EEEF2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0AC9A66B272EB66500B91D48 /* Analytics */,
 				0AC9A664272DC34A00B91D48 /* Synchronization */,
 				0A1A67D42724C3B200C4E2C9 /* Network */,
 				0A5C4D1A2714E74100454197 /* Cache */,
@@ -1743,6 +1757,7 @@
 				0A6988DF264357EA00F97207 /* Localizable.strings in Resources */,
 				0A7CEA8426498641008E2D2E /* SettingsViewController.xib in Resources */,
 				0A1A67F627260CD400C4E2C9 /* AccountTableCell.xib in Resources */,
+				0AC9A66F272ED85000B91D48 /* GoogleService-Info.plist in Resources */,
 				0A83EF62270F91F4008D1BCF /* PlaceSearchViewController.xib in Resources */,
 				0AD28E632710B148007EEEF2 /* PlaceTableViewCell.xib in Resources */,
 				0A42DA5C265AC7AB0095DB1C /* WeatherInfoCell.xib in Resources */,
@@ -1944,6 +1959,7 @@
 				0A8E621D271CB08300BB4F43 /* AuthViewController.swift in Sources */,
 				0A51389F2647F8C20026640F /* Foundation.swift in Sources */,
 				0AD28E8E2711FBAC007EEEF2 /* YandexForecastDayEntry.swift in Sources */,
+				0AC9A66D272EB67300B91D48 /* FirebaseService.swift in Sources */,
 				0A51388526474A850026640F /* TabBarViewInput.swift in Sources */,
 				0ACBF90F2712F7D10045B9EF /* OWMForecastDayEntry.swift in Sources */,
 				0A7CEA7026498641008E2D2E /* PlacesPresenter.swift in Sources */,

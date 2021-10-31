@@ -16,6 +16,7 @@ final class SettingsPresenter: SettingsModuleOutput {
 
     private let storageService = StorageService()
     private let placesService = PlacesSynchronizationService()
+    private let analyticsService = FirebaseService()
 
 }
 
@@ -24,12 +25,7 @@ final class SettingsPresenter: SettingsModuleOutput {
 extension SettingsPresenter: SettingsModuleInput {
 
     func updateState() {
-        if let user = storageService.user {
-            view?.setState(.authorized(email: user.email))
-            placesService.synchronize()
-        } else {
-            view?.setState(.unauthorized)
-        }
+        updateState(afterSignIn: true)
     }
 
 }
@@ -40,7 +36,7 @@ extension SettingsPresenter: SettingsViewOutput {
 
     func viewLoaded() {
         view?.setupInitialState()
-        updateState()
+        updateState(afterSignIn: false)
     }
 
     func loginRequested() {
@@ -50,7 +46,26 @@ extension SettingsPresenter: SettingsViewOutput {
     func logoutRequested() {
         placesService.clearLocal()
         storageService.user = nil
-        updateState()
+        updateState(afterSignIn: false)
+        analyticsService.track(event: .logout)
+    }
+
+}
+
+// MARK: - Private Methods
+
+private extension SettingsPresenter {
+
+    func updateState(afterSignIn: Bool) {
+        if let user = storageService.user {
+            view?.setState(.authorized(email: user.email))
+            if afterSignIn {
+                placesService.synchronize()
+                analyticsService.track(event: .authSuccess)
+            }
+        } else {
+            view?.setState(.unauthorized)
+        }
     }
 
 }

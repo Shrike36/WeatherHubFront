@@ -23,6 +23,7 @@ final class MapPresenter: MapModuleOutput {
     // MARK: - Private Properties
 
     private let locationManager = LocationManager()
+    private let analyticsService = FirebaseService()
 
 }
 
@@ -38,6 +39,7 @@ extension MapPresenter: MapViewOutput {
     func viewLoaded() {
         view?.setupInitialState()
         findCurrentLocation()
+        analyticsService.track(event: .mapOpen)
     }
 
     func handleLocationSelected(_ location: CLLocationCoordinate2D) {

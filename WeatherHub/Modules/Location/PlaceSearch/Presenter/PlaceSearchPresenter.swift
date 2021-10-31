@@ -19,6 +19,8 @@ final class PlaceSearchPresenter: NSObject, PlaceSearchModuleOutput {
     private let searchCompleter = MKLocalSearchCompleter()
     private var search: MKLocalSearch?
 
+    private let analyticsService = FirebaseService()
+
 }
 
 // MARK: - PlaceSearchModuleInput
@@ -35,6 +37,7 @@ extension PlaceSearchPresenter: PlaceSearchViewOutput {
         searchCompleter.delegate = self
         searchCompleter.region = MKCoordinateRegion(.world)
         searchCompleter.resultTypes = .address
+        analyticsService.track(event: .searchOpen)
     }
 
     func inputChanged(text: String) {
@@ -66,11 +69,5 @@ extension PlaceSearchPresenter: MKLocalSearchCompleterDelegate {
     func completerDidUpdateResults(_ completer: MKLocalSearchCompleter) {
         view?.fillResults(completer.results.map { PlaceViewModel(title: $0.title, subtitle: $0.subtitle) })
     }
-
-}
-
-// MARK: - Private Methods
-
-private extension PlaceSearchPresenter {
 
 }

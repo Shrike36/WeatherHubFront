@@ -40,6 +40,9 @@ target 'WeatherHub' do
   pod 'KeychainAccess',  '~> 4.2.2'
 
 
+  pod 'Firebase/Analytics', '~> 8.9.0'
+
+
   target 'WeatherHubTests' do
     inherit! :search_paths
     # Pods for testing

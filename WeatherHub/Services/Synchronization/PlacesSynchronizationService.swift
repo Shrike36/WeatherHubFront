@@ -14,6 +14,7 @@ class PlacesSynchronizationService {
     private let localService = SavedPlacesService.shared
     private let networkService = PlacesService()
     private let storageService = StorageService()
+    private let analyticsService = FirebaseService()
 
     // MARK: - Public Properties
 
@@ -44,6 +45,8 @@ class PlacesSynchronizationService {
         if let user = storageService.user {
             _ = networkService.add(places: [place], for: user)
         }
+        analyticsService.track(event: .addFavorite,
+                               parameters: [FirebaseService.Parameters.placeName: place.description])
     }
 
     public func remove(place: PlaceEntity) {
@@ -51,6 +54,8 @@ class PlacesSynchronizationService {
         if let user = storageService.user {
             _ = networkService.delete(place: place, for: user)
         }
+        analyticsService.track(event: .removeFavorite,
+                               parameters: [FirebaseService.Parameters.placeName: place.description])
     }
 
     public func remove(at index: Int) {
@@ -59,6 +64,8 @@ class PlacesSynchronizationService {
         if let user = storageService.user {
             _ = networkService.delete(place: place, for: user)
         }
+        analyticsService.track(event: .removeFavorite,
+                               parameters: [FirebaseService.Parameters.placeName: place.description])
     }
 
     public func clearLocal() {

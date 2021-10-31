@@ -14,9 +14,12 @@ public struct PlaceEntity {
 
     private enum Constants {
         static let fieldDelimiter = ";"
+        static let descriptionDelimiter = ", "
     }
 
     // MARK: - Public Properties
+
+    static let undefined: String = "not found"
 
     public let city: String
     public let country: String
@@ -24,9 +27,13 @@ public struct PlaceEntity {
 
 }
 
-extension PlaceEntity {
+public extension PlaceEntity {
 
-    public var zipped: String {
+    var description: String {
+        return [city, country].joined(separator: Constants.descriptionDelimiter)
+    }
+
+    var zipped: String {
         [
             city,
             country,
