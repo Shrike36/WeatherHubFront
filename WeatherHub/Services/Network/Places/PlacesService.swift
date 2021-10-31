@@ -25,14 +25,14 @@ public class PlacesService {
     public func add(places: [PlaceEntity], for user: UserEntity) -> Observer<Void> {
         let requestModel = AddPlacesRequestEntity(email: user.email, token: user.token, places: places)
         return builder
-            .route(.post, .addPlaces)
+            .route(.post, .places)
             .build()
             .process(requestModel)
     }
 
     public func getPlaces(for user: UserEntity) -> Observer<[ZippedPlaceEntity]> {
         return builder
-            .route(.get, .getPlaces)
+            .route(.get, .places)
             .set(query: [
                 "email": user.email,
                 "token": user.token
@@ -44,7 +44,7 @@ public class PlacesService {
     public func delete(place: PlaceEntity, for user: UserEntity) -> Observer<Void> {
         let requestModel = DeletePlaceRequestEntity(email: user.email, token: user.token, place: place)
         return builder
-            .route(.delete, .deletePlace)
+            .route(.delete, .places)
             .build()
             .process(requestModel)
     }

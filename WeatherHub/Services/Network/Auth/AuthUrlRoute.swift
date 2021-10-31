@@ -26,9 +26,9 @@ extension AuthUrlRoute: UrlRouteProvider {
         case .auth:
             return try base + "/auth"
         case .resetPassword:
-            return try base + "reset_password_request"
+            return try base + "/reset_password_request"
         case .newPassword:
-            return try base + "reset_password"
+            return try base + "/reset_password"
         }
     }
 

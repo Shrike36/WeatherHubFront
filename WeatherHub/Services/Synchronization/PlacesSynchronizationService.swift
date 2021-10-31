@@ -24,8 +24,6 @@ class PlacesSynchronizationService {
     // MARK: - Public Methods
 
     public func synchronize() {
-        // TODO: - Remove
-        return ()
         guard let user = storageService.user else {
             return
         }
@@ -43,8 +41,6 @@ class PlacesSynchronizationService {
 
     public func add(place: PlaceEntity) {
         localService.add(place: place)
-        // TODO: - Remove
-        return ()
         if let user = storageService.user {
             _ = networkService.add(places: [place], for: user)
         }
@@ -52,8 +48,6 @@ class PlacesSynchronizationService {
 
     public func remove(place: PlaceEntity) {
         localService.remove(place: place)
-        // TODO: - Remove
-        return ()
         if let user = storageService.user {
             _ = networkService.delete(place: place, for: user)
         }
@@ -62,8 +56,6 @@ class PlacesSynchronizationService {
     public func remove(at index: Int) {
         let place = savedPlaces[index]
         localService.remove(at: index)
-        // TODO: - Remove
-        return ()
         if let user = storageService.user {
             _ = networkService.delete(place: place, for: user)
         }
