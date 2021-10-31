@@ -165,6 +165,9 @@
 		0AC9A666272DC35B00B91D48 /* PlacesSynchronizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9A665272DC35B00B91D48 /* PlacesSynchronizationService.swift */; };
 		0AC9A66D272EB67300B91D48 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9A66C272EB67300B91D48 /* FirebaseService.swift */; };
 		0AC9A66F272ED85000B91D48 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0AC9A66E272ED85000B91D48 /* GoogleService-Info.plist */; };
+		0AC9A672272EDC4300B91D48 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9A671272EDC4300B91D48 /* EmptyView.swift */; };
+		0AC9A674272EDE3000B91D48 /* UIViewController+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9A673272EDE3000B91D48 /* UIViewController+Empty.swift */; };
+		0AC9A676272EE0AD00B91D48 /* EmptyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC9A675272EE0AD00B91D48 /* EmptyPresenter.swift */; };
 		0ACBF9072712F7B00045B9EF /* OWMConditionsEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF9062712F7B00045B9EF /* OWMConditionsEntry.swift */; };
 		0ACBF9092712F7B60045B9EF /* OWMConditionsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF9082712F7B60045B9EF /* OWMConditionsEntity.swift */; };
 		0ACBF90B2712F7C10045B9EF /* OWMTemperatureEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACBF90A2712F7C10045B9EF /* OWMTemperatureEntry.swift */; };
@@ -395,6 +398,9 @@
 		0AC9A665272DC35B00B91D48 /* PlacesSynchronizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesSynchronizationService.swift; sourceTree = "<group>"; };
 		0AC9A66C272EB67300B91D48 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		0AC9A66E272ED85000B91D48 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0AC9A671272EDC4300B91D48 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		0AC9A673272EDE3000B91D48 /* UIViewController+Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Empty.swift"; sourceTree = "<group>"; };
+		0AC9A675272EE0AD00B91D48 /* EmptyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyPresenter.swift; sourceTree = "<group>"; };
 		0ACBF9062712F7B00045B9EF /* OWMConditionsEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMConditionsEntry.swift; sourceTree = "<group>"; };
 		0ACBF9082712F7B60045B9EF /* OWMConditionsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMConditionsEntity.swift; sourceTree = "<group>"; };
 		0ACBF90A2712F7C10045B9EF /* OWMTemperatureEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OWMTemperatureEntry.swift; sourceTree = "<group>"; };
@@ -714,6 +720,7 @@
 				0A5138C9264832320026640F /* UINavigationController.swift */,
 				0ACBF9502714232C0045B9EF /* UIView+Reusable.swift */,
 				0A5138962647F85A0026640F /* UIViewController.swift */,
+				0AC9A673272EDE3000B91D48 /* UIViewController+Empty.swift */,
 				0AD28E662711ABD4007EEEF2 /* UIViewController+Loading.swift */,
 				0AC9A644272CA6EC00B91D48 /* UIViewController+Success.swift */,
 			);
@@ -725,6 +732,7 @@
 			children = (
 				0A5138B0264800F60026640F /* Router.swift */,
 				0A5138BF2648309F0026640F /* Presentable.swift */,
+				0AC9A675272EE0AD00B91D48 /* EmptyPresenter.swift */,
 				0AD28E6C2711C25E007EEEF2 /* LoadingPresenter.swift */,
 				0AC9A642272CA62C00B91D48 /* SuccessPresenter.swift */,
 			);
@@ -1372,6 +1380,14 @@
 			path = Analytics;
 			sourceTree = "<group>";
 		};
+		0AC9A670272EDC2500B91D48 /* EmptyView */ = {
+			isa = PBXGroup;
+			children = (
+				0AC9A671272EDC4300B91D48 /* EmptyView.swift */,
+			);
+			path = EmptyView;
+			sourceTree = "<group>";
+		};
 		0ACBF9042712F7450045B9EF /* OWMTemperature */ = {
 			isa = PBXGroup;
 			children = (
@@ -1515,6 +1531,7 @@
 			children = (
 				0AAF08492727361700439813 /* FieldConfiguration */,
 				0AD28E5F2710B11B007EEEF2 /* PlaceTableViewCell */,
+				0AC9A670272EDC2500B91D48 /* EmptyView */,
 				0AD28E692711AE93007EEEF2 /* LoadingView */,
 				0AC9A63F272CA41C00B91D48 /* SuccessView */,
 			);
@@ -1907,6 +1924,7 @@
 				0A5138B6264801050026640F /* MainRouter.swift in Sources */,
 				0AC9A652272D96E000B91D48 /* PlacesService.swift in Sources */,
 				0AD28E7D2711D6EA007EEEF2 /* YandexWeatherService.swift in Sources */,
+				0AC9A676272EE0AD00B91D48 /* EmptyPresenter.swift in Sources */,
 				0A51388826474A850026640F /* TabBarViewController.swift in Sources */,
 				0A5138BB26482EEB0026640F /* UIApplication.swift in Sources */,
 				0ACBF932271347F20045B9EF /* AerisResponseEntry.swift in Sources */,
@@ -1977,6 +1995,7 @@
 				0ACBF9112712F7D60045B9EF /* OWMForecastDayEntity.swift in Sources */,
 				0A9C3EBA27261FE100053941 /* AccountCellModel.swift in Sources */,
 				0A7CEA8126498641008E2D2E /* SettingsPresenter.swift in Sources */,
+				0AC9A672272EDC4300B91D48 /* EmptyView.swift in Sources */,
 				0ACBF94F2713A1990045B9EF /* SavedPlacesEntity.swift in Sources */,
 				0A83EF61270F91F4008D1BCF /* PlaceSearchModuleInput.swift in Sources */,
 				0A19859926FFD34000809DA6 /* LocationManager.swift in Sources */,
@@ -2024,6 +2043,7 @@
 				0A8E621B271CB08300BB4F43 /* AuthModuleInput.swift in Sources */,
 				0AD28E942711FBD3007EEEF2 /* YandexForecastEntity.swift in Sources */,
 				0A5138CA264832320026640F /* UINavigationController.swift in Sources */,
+				0AC9A674272EDE3000B91D48 /* UIViewController+Empty.swift in Sources */,
 				0ACBF91F271318C80045B9EF /* WeatherService.swift in Sources */,
 				0AC9A648272D6B2900B91D48 /* NewPasswordRequestEntry.swift in Sources */,
 				0AC9A641272CA43100B91D48 /* SuccessView.swift in Sources */,

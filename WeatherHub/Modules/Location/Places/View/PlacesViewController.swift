@@ -62,6 +62,7 @@ extension PlacesViewController: PlacesViewInput {
     func fillPlaces(_ places: [PlaceViewModel]) {
         cellModels = places
         placesTable.reloadData()
+        places.isEmpty ? showEmptyView(with: L10n.Places.empty) : hideEmptyView()
     }
 
 }
@@ -152,6 +153,7 @@ private extension PlacesViewController {
     func removeCell(at indexPath: IndexPath) {
         cellModels.remove(at: indexPath.row)
         placesTable.deleteRows(at: [indexPath], with: .automatic)
+        cellModels.isEmpty ? showEmptyView(with: L10n.Places.empty) : hideEmptyView()
     }
 
 }

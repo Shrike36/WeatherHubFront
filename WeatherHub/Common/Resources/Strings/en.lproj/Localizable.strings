@@ -27,6 +27,7 @@
 
 "Places.title" = "Saved places";
 "Places.remove" = "Remove";
+"Places.empty" = "You have no saved places.\nTo save a place, press ❤ on weather screen";
 "Places.error.title" = "Could not find data for this place :(";
 "Places.error.advice" = "Try again or select another place";
 

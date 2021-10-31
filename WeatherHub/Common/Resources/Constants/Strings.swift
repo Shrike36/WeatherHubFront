@@ -99,6 +99,8 @@ internal enum L10n {
   }
 
   internal enum Places {
+    /// You have no saved places.\nTo save a place, press ❤ on weather screen
+    internal static let empty = L10n.tr("Localizable", "Places.empty")
     /// Remove
     internal static let remove = L10n.tr("Localizable", "Places.remove")
     /// Saved places
